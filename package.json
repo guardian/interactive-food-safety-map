@@ -30,6 +30,7 @@
       "d3-geo": "npm:d3-geo@^1.2.4",
       "d3-queue": "npm:d3-queue@^3.0.3",
       "d3-request": "npm:d3-request@^1.0.2",
+      "d3-scale": "npm:d3-scale@^1.0.3",
       "d3-selection": "npm:d3-selection@^1.0.2",
       "guardian/iframe-messenger": "github:guardian/iframe-messenger@master",
       "json": "github:systemjs/plugin-json@^0.1.0",

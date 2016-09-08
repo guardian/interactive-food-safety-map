@@ -25,6 +25,7 @@ System.config({
     "d3-geo": "npm:d3-geo@1.2.4",
     "d3-queue": "npm:d3-queue@3.0.3",
     "d3-request": "npm:d3-request@1.0.2",
+    "d3-scale": "npm:d3-scale@1.0.3",
     "d3-selection": "npm:d3-selection@1.0.2",
     "guardian/iframe-messenger": "github:guardian/iframe-messenger@master",
     "json": "github:systemjs/plugin-json@0.1.2",
@@ -139,11 +140,26 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "d3-array": "npm:d3-array@1.0.1"
     },
+    "npm:d3-interpolate@1.1.1": {
+      "d3-color": "npm:d3-color@1.0.1"
+    },
     "npm:d3-request@1.0.2": {
       "d3-collection": "npm:d3-collection@1.0.1",
       "d3-dispatch": "npm:d3-dispatch@1.0.1",
       "d3-dsv": "npm:d3-dsv@1.0.1",
       "xmlhttprequest": "npm:xmlhttprequest@1.8.0"
+    },
+    "npm:d3-scale@1.0.3": {
+      "d3-array": "npm:d3-array@1.0.1",
+      "d3-collection": "npm:d3-collection@1.0.1",
+      "d3-color": "npm:d3-color@1.0.1",
+      "d3-format": "npm:d3-format@1.0.2",
+      "d3-interpolate": "npm:d3-interpolate@1.1.1",
+      "d3-time": "npm:d3-time@1.0.2",
+      "d3-time-format": "npm:d3-time-format@2.0.2"
+    },
+    "npm:d3-time-format@2.0.2": {
+      "d3-time": "npm:d3-time@1.0.2"
     },
     "npm:duplexer2@0.0.2": {
       "readable-stream": "npm:readable-stream@1.1.14"
