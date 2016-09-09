@@ -19,16 +19,16 @@ export default function(err, gb, ni) {
     let niData = topojson.feature(ni, ni.objects.lgd);
     let mapData = {
         type: "FeatureCollection",
-        features: gbData.features.concat(niData.features) 
+        features: gbData.features.concat(niData.features)
     };
 
     // link map and fsa data
     let fsaDataMissingList = [];
     mapData.features.map((d, i) => {
         let code = idToFsaCode[d.id];
-        d.properties.code = code; 
+        d.properties.code = code;
 
-        if (d.properties.code) { 
+        if (d.properties.code) {
             // to double check if fsa has all lads
             fsaData[code].id = d.id;
         } else {
@@ -42,7 +42,7 @@ export default function(err, gb, ni) {
     let mapDataMiss = Object.keys(fsaData).filter(key => fsaData[key].id === undefined);
     mapDataMiss.forEach(lad => console.log(lad.code, lad.name, lad.count.all.rateFail, "(no map data)"));
     console.log(fsaData, "miss number:", mapDataMiss.length);
-    
+
     fsaDataMissingList.forEach(index => {
         // 1 to represent null data for coloring
         mapData.features[index].properties.code = mapData.features[index].id;
@@ -52,22 +52,23 @@ export default function(err, gb, ni) {
                 "restaurant": 1,
                 "takeaway": 1
         }};
-    }); 
+    });
     console.log(mapData);
 
     /* draw */
     let width, height;
-    width = getWindowSize().width;    
+    width = getWindowSize().width;
     width = width < maxWidth ? width : maxWidth;
     height = width * ratioHeight;
     //console.log(width, height);
 
-    let max = 0.25; 
-    //Math.max.apply(null, Object.keys(fsaData).map(key => fsaData[key].count.all.rateFail));    
+    let max = 0.27;
+    //let max = Math.max.apply(null, fsaData.map(lad => lad.rateFail));
     let fill = d3_scaleLinear()
-    .domain([0, 0.5, 0.1, 0.15, 0.2, max, 1]) // 1 means no data
-    .range(["white" ,"blue", "green", "yellow", "orange", "red", "black"]);
-    console.log("max:", max);
+    .domain([0, 0.5, 0.1, 0.15, 0.2, max, 1])
+    .range(["#eaeaea" ,"#dcdcdc", "#bdbdbd", "#aad8f1", "#197caa", "#005689", "#f6f6f6"]);
+    //console.log("max:", max);
+
 
     let projection = d3_geoAlbers()
     .center([1.4, 55.4])
@@ -93,10 +94,10 @@ export default function(err, gb, ni) {
     svg.append("path")
     .attr("id", (d, i) => "p" + i)
     .attr("data-lad-name", (d, i) => d.properties.name)
-    .attr("fill", d => { 
+    .attr("fill", d => {
         let lad = fsaData[d.properties.code];
         let rate = lad.count.all.rateFail;
-        let color = fill(rate); 
+        let color = fill(rate);
         if (rate > 0.1) console.log(lad.name, lad.count.all.rateFail, color);
         return color;
     })
@@ -108,5 +109,5 @@ export default function(err, gb, ni) {
     .attr("transform", d => "translate(" + path.centroid(d) + ")")
     .attr("id", (d, i) => "t" + i)
     .attr("fill", d => fsaData[d.properties.code].rateFail > 0.1 ? "#333" : "transparent")
-    .text((d, i) => i + ". " + d.properties.name); 
+    .text((d, i) => i + ". " + d.properties.name);
 }

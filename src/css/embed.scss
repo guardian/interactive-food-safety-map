@@ -18,9 +18,12 @@ path {
     stroke-width: 0.2px;
 }
 path:hover {
-    fill: #333;
-    transition: fill .25s ease;
+    //fill: #333;
+    stroke:#333;
+    stroke-width: 0.5px;
+    transition: stroke .25s ease;
     cursor: pointer;
+    z-index: 999;
 }
 
 text {
