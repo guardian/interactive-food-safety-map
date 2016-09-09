@@ -5,6 +5,7 @@ import {scaleLinear as d3_scaleLinear} from 'd3-scale';
 import {getWindowSize} from '../lib/windowSize';
 import fsaData from '../../assets/data/fsa.json!json';
 import idToFsaCode from '../../assets/data/fsa_map.json!json';
+import drawUpdate from './drawUpdate.js';
 
 const maxWidth = 620;
 const ratioHeight = 1.82;
@@ -26,26 +27,26 @@ export default function(err, gb, ni) {
     let fsaDataMissingList = [];
     mapData.features.map((d, i) => {
         let code = idToFsaCode[d.id];
-        d.properties.code = code;
+        d.code = code;
 
-        if (d.properties.code) {
+        if (d.code) {
             // to double check if fsa has all lads
             fsaData[code].id = d.id;
         } else {
             // miss-matched lad
             fsaDataMissingList.push(i);
-            console.log(d.id, d.properties.name, "(no fsa data)");
+            console.log(d.id, d.name, "(no fsa data)");
         }
         return d;
     });
 
     let mapDataMiss = Object.keys(fsaData).filter(key => fsaData[key].id === undefined);
     mapDataMiss.forEach(lad => console.log(lad.code, lad.name, lad.count.all.rateFail, "(no map data)"));
-    console.log(fsaData, "miss number:", mapDataMiss.length);
+    //console.log(fsaData, "miss number:", mapDataMiss.length);
 
     fsaDataMissingList.forEach(index => {
         // 1 to represent null data for coloring
-        mapData.features[index].properties.code = mapData.features[index].id;
+        mapData.features[index].code = mapData.features[index].id;
         fsaData[mapData.features[index].id] = {
             count: {
                 "all" : 1,
@@ -53,7 +54,7 @@ export default function(err, gb, ni) {
                 "takeaway": 1
         }};
     });
-    console.log(mapData);
+    //console.log(mapData);
 
     /* draw */
     let width, height;
@@ -62,10 +63,10 @@ export default function(err, gb, ni) {
     height = width * ratioHeight;
     //console.log(width, height);
 
-    let max = 0.27;
+    let max = 0.25;
     //let max = Math.max.apply(null, fsaData.map(lad => lad.rateFail));
     let fill = d3_scaleLinear()
-    .domain([0, 0.5, 0.1, 0.15, 0.2, max, 1])
+    .domain([0, 0.5, 0.1, 0.15, 0.25, max, 1])
     .range(["#eaeaea" ,"#dcdcdc", "#bdbdbd", "#aad8f1", "#197caa", "#005689", "#f6f6f6"]);
     //console.log("max:", max);
 
@@ -93,12 +94,12 @@ export default function(err, gb, ni) {
 
     svg.append("path")
     .attr("id", (d, i) => "p" + i)
-    .attr("data-lad-name", (d, i) => d.properties.name)
+    .attr("data-lad-name", (d, i) => d.name)
     .attr("fill", d => {
-        let lad = fsaData[d.properties.code];
+        let lad = fsaData[d.code];
         let rate = lad.count.all.rateFail;
         let color = fill(rate);
-        if (rate > 0.1) console.log(lad.name, lad.count.all.rateFail, color);
+        //if (rate > 0.1) console.log(lad.name, lad.count.all.rateFail, color);
         return color;
     })
     .attr("d", path);
@@ -108,6 +109,6 @@ export default function(err, gb, ni) {
     .attr("dy", ".35em")
     .attr("transform", d => "translate(" + path.centroid(d) + ")")
     .attr("id", (d, i) => "t" + i)
-    .attr("fill", d => fsaData[d.properties.code].rateFail > 0.1 ? "#333" : "transparent")
-    .text((d, i) => i + ". " + d.properties.name);
+    .attr("fill", d => fsaData[d.code].count.all.rateFail > 0.2 ? "#333" : "transparent")
+    .text((d, i) => d.name + " (" + d.code + ")");
 }
