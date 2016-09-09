@@ -7,5 +7,7 @@ deploy
 cfg/aws-keys.json
 npm-debug.log
 *.swp
+*.swm
 *.swn
+*.swo
 *.DS_Store

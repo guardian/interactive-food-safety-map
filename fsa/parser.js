@@ -158,9 +158,20 @@ lads.map(function(lad) {
     });
     return lad; 
 });
-console.log("min:", Math.min.apply(null, lads.map(function(lad) { return lad.count.all.rateFail; })));
-console.log("max:", Math.max.apply(null, lads.map(function(lad) { return lad.count.all.rateFail; })));
 //console.log(lads);
+
+/* ranges */
+function getRange(type) {
+    return {
+        min: Math.min.apply(null, lads.map(function(lad) { return lad.count[type].rateFail;})),
+        max: Math.max.apply(null, lads.map(function(lad) { return lad.count[type].rateFail;}))
+    };
+}
+var ranges = {};
+Object.keys(lads[0].count).forEach(function(type) { 
+    ranges[type] = getRange(type);
+});
+console.log(ranges);
 
 /* arr to obj for topojson mapping */
 var ladObj = {};
@@ -172,7 +183,11 @@ lads.map(function(lad) {
     };    
 });
 
-fs.writeFile(dst, JSON.stringify(/*lads*/ladObj), function (err) {
+var output = {
+    ranges: ranges,
+    lads: ladObj
+};
+fs.writeFile(dst, JSON.stringify(output), function (err) {
       if (err) return console.log(err);
         console.log('sfa file saved');
 });
