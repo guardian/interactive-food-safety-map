@@ -3,8 +3,9 @@ import {select as d3_select} from 'd3-selection';
 import {scaleLinear as d3_scaleLinear} from 'd3-scale';
 import {getWindowSize} from '../lib/windowSize';
 import fsaData from '../../assets/data/fsa.json!json';
-import dataLinker from './dataLinker.js';
-import drawUpdate from './drawUpdate.js';
+import dataLinker from './mergeFsaDataToMapData.js';
+import updateColours from './updateMapColourOnBtnClick.js';
+import updateSummary from './updateSummary.js';
 
 const maxWidth = 620;
 const ratioHeight = 1.82;
@@ -56,16 +57,17 @@ export default function(err, gb, ni) {
     .attr("id", (d, i) => "p" + i)
     .attr("data-lad-name", (d, i) => d.name)
     .attr("fill", d => fill(d.count.all.rateFail))
-    .attr("d", path);
+    .attr("d", path)
+    .on("mouseenter", d => updateSummary(d));
 
     let texts = svg.append("text")
     .attr("dy", ".35em")
     .attr("transform", d => "translate(" + path.centroid(d) + ")")
     .attr("id", (d, i) => "t" + i)
     .attr("fill", d => d.count.all.rateFail > 0.2 ? "#333" : "transparent")
-    .text((d, i) => d.name + " (" + d.code + ")");
+    .text((d, i) => d.name + " (" + d.count.all.rateFail + ")");
 
 
     /* update events */
-    drawUpdate(texts, paths, fill);
+    updateColours(texts, paths, fill);
 }
