@@ -22,6 +22,7 @@ System.config({
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
+    "d3-collection": "npm:d3-collection@1.0.1",
     "d3-geo": "npm:d3-geo@1.2.4",
     "d3-queue": "npm:d3-queue@3.0.3",
     "d3-request": "npm:d3-request@1.0.2",

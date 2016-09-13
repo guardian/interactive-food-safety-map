@@ -12,7 +12,7 @@ export default function(texts, paths, fill) {
         );
     
         texts.attr("fill", d => 
-            d.count[type].rateFail > 0.2 ? 
+            d.count[type].rateFail > 0.4 ? 
             "#333" : "transparent"
         );
     }
