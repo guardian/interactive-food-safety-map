@@ -27,12 +27,18 @@
   "jspm": {
     "configFile": "src/js/config.js",
     "dependencies": {
+      "d3-array": "npm:d3-array@^1.0.1",
+      "d3-axis": "npm:d3-axis@^1.0.3",
       "d3-collection": "npm:d3-collection@^1.0.1",
+      "d3-force": "npm:d3-force@^1.0.2",
+      "d3-format": "npm:d3-format@^1.0.2",
       "d3-geo": "npm:d3-geo@^1.2.4",
       "d3-queue": "npm:d3-queue@^3.0.3",
       "d3-request": "npm:d3-request@^1.0.2",
       "d3-scale": "npm:d3-scale@^1.0.3",
       "d3-selection": "npm:d3-selection@^1.0.2",
+      "d3-selection-multi": "npm:d3-selection-multi@^1.0.0",
+      "d3-transition": "npm:d3-transition@^1.0.2",
       "guardian/iframe-messenger": "github:guardian/iframe-messenger@master",
       "json": "github:systemjs/plugin-json@^0.1.0",
       "reqwest": "github:ded/reqwest@^1.1.5",

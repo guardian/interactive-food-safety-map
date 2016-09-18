@@ -1,0 +1,1173 @@
+"Shetland_Islands",780,0,-195,14.8
+		<text transform="matrix(1 0 0 1 -190.7039 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">She</text>
+	</g>
+"Orkney_Islands",540,30.33333396911621,15,-15.2
+		<text transform="matrix(1 0 0 1 19.1041 4.002344e-05)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ork</text>
+	</g>
+"Comhairle_nan_Eilean_Siar__x28_Western_Isles_x29_",90,60.66666793823242,345,14.8
+		<text transform="matrix(1 0 0 1 346.7101 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Com</text>
+	</g>
+"Highland",330,91,135,-15.2
+		<text transform="matrix(1 0 0 1 139.854 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">i</tspan><tspan x="13.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">g</tspan></text>
+	</g>
+"Moray",510,121.33333587646484,-15,-45.2
+		<text transform="matrix(1 0 0 1 -11.9458 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">M</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Aberdeenshire",630,151.6666717529297,-105,-75.2
+		<text transform="matrix(1 0 0 1 -101.4598 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Abe</text>
+	</g>
+"Aberdeen_City",690,151.6666717529297,-135,-75.2
+		<text transform="matrix(1 0 0 1 -131.4598 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Abe</text>
+	</g>
+"Angus",570,182,-15,-75.2
+		<text transform="matrix(1 0 0 1 -11.7239 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">A</tspan><tspan x="8.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">n</tspan><tspan x="16.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">g</tspan></text>
+	</g>
+"Perth_and_Kinross",450,212.3333282470703,45,-105.2
+		<text transform="matrix(1 0 0 1 50.3042 -90)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">P</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">er</tspan></text>
+	</g>
+"Dundee_City",570,242.6666717529297,-45,-135.2
+		<text transform="matrix(1 0 0 1 -42.3898 -120)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Dun</text>
+	</g>
+"Stirling",390,273,105,-135.2
+		<text transform="matrix(1 0 0 1 112.2181 -120)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sti</text>
+	</g>
+"Fife",540,273,15,-135.2
+		<text transform="matrix(1 0 0 1 22.1041 -120)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Fif</text>
+	</g>
+"Argyll_and_Bute",240,303.3333435058594,225,-165.2
+		<text transform="matrix(1 0 0 1 229.6561 -150)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">A</tspan><tspan x="8.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="13.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">g</tspan></text>
+	</g>
+"Clackmannanshire",480,303.3333435058594,45,-165.2
+		<text transform="matrix(1 0 0 1 50.7181 -150)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cla</text>
+	</g>
+"West_Dunbartonshire",360,333.6666564941406,75,-165.2
+		<text transform="matrix(1 0 0 1 77.8921 -150)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"East_Dunbartonshire",420,333.6666564941406,45,-165.2
+		<text transform="matrix(1 0 0 1 49.6981 -150)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Falkirk",450,333.6666564941406,45,-165.2
+		<text transform="matrix(1 0 0 1 51.0421 -150)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">F</tspan><tspan x="7.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">al</tspan></text>
+	</g>
+"East_Lothian",630,333.6666564941406,-105,-165.2
+		<text transform="matrix(1 0 0 1 -100.3019 -150)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Inverclyde",330,364,75,-165.2
+		<text transform="matrix(1 0 0 1 80.2622 -150)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">I</tspan><tspan x="4.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">n</tspan><tspan x="12.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"Renfrewshire",360,364,75,-165.2
+		<text transform="matrix(1 0 0 1 78.4562 -150)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">en</tspan></text>
+	</g>
+"Glasgow_City",390,364,75,-165.2
+		<text transform="matrix(1 0 0 1 80.2681 -150)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Gla</text>
+	</g>
+"North_Lanarkshire",450,364,45,-165.2
+		<text transform="matrix(1 0 0 1 49.4282 -150)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"West_Lothian",480,364,45,-165.2
+		<text transform="matrix(1 0 0 1 47.8921 -150)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"Edinburgh__x28_City_of_x29_",510,364,45,-165.2
+		<text transform="matrix(1 0 0 1 50.2142 -150)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">E</tspan><tspan x="8.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">di</tspan></text>
+	</g>
+"Midlothian",540,364,15,-135.2
+		<text transform="matrix(1 0 0 1 18.5042 -120)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mid</text>
+	</g>
+"North_Ayrshire",300,394.3333435058594,165,-165.2
+		<text transform="matrix(1 0 0 1 169.4282 -150)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"East_Renfrewshire",390,394.3333435058594,105,-165.2
+		<text transform="matrix(1 0 0 1 109.6981 -150)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"South_Lanarkshire",450,424.6666564941406,75,-195.2
+		<text transform="matrix(1 0 0 1 78.9542 -180)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Scottish_Borders",630,424.6666564941406,-75,-165.2
+		<text transform="matrix(1 0 0 1 -70.2538 -150)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">co</tspan></text>
+	</g>
+"East_Ayrshire",390,455,105,-195.2
+		<text transform="matrix(1 0 0 1 109.6981 -180)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"South_Ayrshire",360,485.3333435058594,105,-225.2
+		<text transform="matrix(1 0 0 1 108.9542 -210)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Northumberland",720,485.3333435058594,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 3.002344e-05)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Causeway_Coast_and_Glens",120,515.6666870117188,-15,44.8
+		<text transform="matrix(1 0 0 1 -11.2319 60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cau</text>
+	</g>
+"Dumfries_and_Galloway",450,515.6666870117188,75,-255.2
+		<text transform="matrix(1 0 0 1 75.8281 -240.0001)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Dum</text>
+	</g>
+"Carlisle_City",630,546,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.8699 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Car</text>
+	</g>
+"Gateshead",720,576.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.1039 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">G</tspan><tspan x="8.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan><tspan x="15.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">t</tspan></text>
+	</g>
+"Newcastle_Upon_Tyne",720,546,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.8818 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">New</text>
+	</g>
+"North_Tyneside",750,515.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"South_Tyneside",780,576.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Derry_City_and_Strabane",0,576.3333129882812,75,-15.2
+		<text transform="matrix(1 0 0 1 79.6442 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Der</text>
+	</g>
+"Mid_and_East_Antrim",180,576.3333129882812,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.4958 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mid</text>
+	</g>
+"Sunderland",780,606.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.3339 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sun</text>
+	</g>
+"Mid_Ulster",90,606.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.4958 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mid</text>
+	</g>
+"Antrim_and_Newtownabbey",150,606.6666870117188,-45,-15.2
+		<text transform="matrix(1 0 0 1 -40.7038 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">A</tspan><tspan x="8.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">n</tspan><tspan x="16.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">t</tspan></text>
+	</g>
+"Allerdale",540,606.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -8.3639 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">All</text>
+	</g>
+"Durham",750,606.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.9799 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Dur</text>
+	</g>
+"Hartlepool",810,606.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.7998 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Har</text>
+	</g>
+"Lisburn_and_Castlereagh_City",180,667.3333129882812,-45,-45.2
+		<text transform="matrix(1 0 0 1 -38.466 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Lis</text>
+	</g>
+"Belfast_City",180,637,-45,-45.2
+		<text transform="matrix(1 0 0 1 -39.5099 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">el</tspan></text>
+	</g>
+"Ards_and_North_Down",240,637,-75,-45.2
+		<text transform="matrix(1 0 0 1 -70.6558 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">A</tspan><tspan x="8.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="13.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">d</tspan></text>
+	</g>
+"Eden",630,637,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1477 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">E</tspan><tspan x="8.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">de</tspan></text>
+	</g>
+"Darlington",750,637,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3918 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">D</tspan><tspan x="8.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ar</tspan></text>
+	</g>
+"Stockton_On_Tees",780,637,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.4678 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sto</text>
+	</g>
+"Middlesbrough",810,667.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.4958 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mid</text>
+	</g>
+"Redcar_and_Cleveland",840,637,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.3098 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ed</tspan></text>
+	</g>
+"Fermanagh_and_Omagh",0,667.3333129882812,75,-45.2
+		<text transform="matrix(1 0 0 1 80.5502 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">F</tspan><tspan x="7.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">er</tspan></text>
+	</g>
+"Armagh_City_x2C_Banbridge_and_Craigavon",120,667.3333129882812,-15,-45.2
+		<text transform="matrix(1 0 0 1 -12.7319 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Arm</text>
+	</g>
+"Copeland",510,667.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.2979 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cop</text>
+	</g>
+"Richmondshire",720,667.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.4319 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ric</text>
+	</g>
+"Scarborough",900,667.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.0259 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ca</tspan></text>
+	</g>
+"Newry_x2C_Mourne_and_Down",180,697.6666870117188,-15,-75.2
+		<text transform="matrix(1 0 0 1 -12.8818 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">New</text>
+	</g>
+"South_Lakeland",630,697.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Hambleton",810,697.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.9919 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ham</text>
+	</g>
+"Ryedale",870,697.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.9618 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">y</tspan><tspan x="15.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">e</tspan></text>
+	</g>
+"Barrow-in-Furness",540,728,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.1339 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bar</text>
+	</g>
+"Lancaster_City",630,728,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1299 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">L</tspan><tspan x="7.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">an</tspan></text>
+	</g>
+"Craven",690,728,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.7798 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">C</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="12.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Harrogate",780,728,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.7998 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Har</text>
+	</g>
+"Ribble_Valley",660,758.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.0439 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Rib</text>
+	</g>
+"York",840,758.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.6299 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Y</tspan><tspan x="6.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"East_Riding_of_Yorkshire",930,758.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Blackpool",540,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.5459 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bla</text>
+	</g>
+"Fylde",570,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.4019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Fyl</text>
+	</g>
+"Wyre",600,758.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.2338 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">yr</tspan></text>
+	</g>
+"Preston",630,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.7858 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Pre</text>
+	</g>
+"Hyndburn",660,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.2938 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">yn</tspan></text>
+	</g>
+"Burnley",690,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.6619 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bur</text>
+	</g>
+"Pendle",690,758.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1058 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">P</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">en</tspan></text>
+	</g>
+"Bradford",750,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.0439 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="13.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Leeds",780,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3618 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">L</tspan><tspan x="7.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ee</tspan></text>
+	</g>
+"Selby",840,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -8.7719 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">el</tspan></text>
+	</g>
+"Hull_City",930,788.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.6499 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ul</tspan></text>
+	</g>
+"South_Ribble",600,819,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Chorley",630,849.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.5018 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cho</text>
+	</g>
+"Blackburn",630,819,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.5459 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bla</text>
+	</g>
+"Rossendale",690,819,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.7518 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">os</tspan></text>
+	</g>
+"Rochdale",720,849.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0278 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">oc</tspan></text>
+	</g>
+"Calderdale",720,819,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.2819 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cal</text>
+	</g>
+"Kirklees",750,819,-15,-15.2
+		<text transform="matrix(1 0 0 1 -8.9939 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Kir</text>
+	</g>
+"Wakefield",810,819,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.1399 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ak</tspan></text>
+	</g>
+"North_Lincolnshire",900,819,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Sefton",540,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -8.8978 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ef</tspan></text>
+	</g>
+"West_Lancashire",600,849.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.1079 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"Wigan",630,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.496 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">i</tspan><tspan x="16.1,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">g</tspan></text>
+	</g>
+"Bolton",660,849.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.8339 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ol</tspan></text>
+	</g>
+"Salford",660,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -8.8079 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sal</text>
+	</g>
+"Bury",690,849.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.6619 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bur</text>
+	</g>
+"Tameside",720,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.0499 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">am</tspan></text>
+	</g>
+"Oldham",720,849.3333129882812,15,-15.2
+		<text transform="matrix(1 0 0 1 19.7761 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Old</text>
+	</g>
+"Barnsley",780,849.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.1339 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bar</text>
+	</g>
+"Doncaster",840,849.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.0898 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Don</text>
+	</g>
+"North_East_Lincolnshire",960,849.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Wirral",570,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.6919 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ir</tspan></text>
+	</g>
+"Liverpool",570,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.0299 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">L</tspan><tspan x="7.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">i</tspan><tspan x="11,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"Knowsley",600,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.0898 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Kno</text>
+	</g>
+"St_Helens",600,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -5.8439 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">St</text>
+	</g>
+"Halton",630,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.2119 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Hal</text>
+	</g>
+"Warrington",630,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.8799 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ar</tspan></text>
+	</g>
+"Trafford",660,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.9178 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="8.1,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="13,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Manchester",690,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.1878 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Man</text>
+	</g>
+"Stockport",720,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.4678 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sto</text>
+	</g>
+"High_Peak",750,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.146 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">i</tspan><tspan x="13.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">g</tspan></text>
+	</g>
+"Sheffield",780,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.7039 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">She</text>
+	</g>
+"Rotherham",810,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3018 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ot</tspan></text>
+	</g>
+"Bassetlaw",870,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.428 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bas</text>
+	</g>
+"West_Lindsey",930,879.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.1079 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"Anglesey",390,910,105,254.8
+		<text transform="matrix(1 0 0 1 108.2761 270)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">A</tspan><tspan x="8.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">n</tspan><tspan x="16.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">g</tspan></text>
+	</g>
+"Flintshire",540,940.3333129882812,45,224.8
+		<text transform="matrix(1 0 0 1 52.2301 240)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Fli</text>
+	</g>
+"Cheshire_West_and_Chester",600,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1779 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Che</text>
+	</g>
+"North_East_Derbyshire",750,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Chesterfield",780,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1779 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Che</text>
+	</g>
+"Bolsover",810,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.8339 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ol</tspan></text>
+	</g>
+"Mansfield",840,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.1878 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Man</text>
+	</g>
+"Lincoln_City",930,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.5819 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Lin</text>
+	</g>
+"East_Lindsey",990,910,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Conwy",480,940.3333129882812,45,224.8
+		<text transform="matrix(1 0 0 1 48.4922 240)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Con</text>
+	</g>
+"Denbighshire",510,940.3333129882812,45,224.8
+		<text transform="matrix(1 0 0 1 48.2342 240)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Den</text>
+	</g>
+"Cheshire_East",690,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1779 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Che</text>
+	</g>
+"Staffordshire_Moorlands",720,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.2399 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sta</text>
+	</g>
+"Derbyshire_Dales",750,940.3333129882812,15,-15.2
+		<text transform="matrix(1 0 0 1 19.6442 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Der</text>
+	</g>
+"Amber_Valley",780,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.9139 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Amb</text>
+	</g>
+"Ashfield",810,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.2379 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ash</text>
+	</g>
+"Gedling",840,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.4597 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">G</tspan><tspan x="8.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ed</tspan></text>
+	</g>
+"Newark_and_Sherwood",870,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.8818 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">New</text>
+	</g>
+"North_Kesteven",930,940.3333129882812,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Wrexham",570,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.9939 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">re</tspan></text>
+	</g>
+"Newcastle-Under-Lyme",690,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.8818 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">New</text>
+	</g>
+"Stoke-On-Trent",720,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.4678 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sto</text>
+	</g>
+"Derby_City",750,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3558 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Der</text>
+	</g>
+"Erewash",780,1001,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.9117 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ere</text>
+	</g>
+"Broxtowe",810,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3618 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bro</text>
+	</g>
+"Nottingham_City",840,1001,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.4158 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Not</text>
+	</g>
+"Rushcliffe",870,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0519 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">us</tspan></text>
+	</g>
+"Boston",990,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.7159 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">os</tspan></text>
+	</g>
+"North_Norfolk",1140,970.6666870117188,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Gwynedd",420,1001,105,194.8
+		<text transform="matrix(1 0 0 1 106.8722 210)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">G</tspan><tspan x="8.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">w</tspan><tspan x="19.1,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">y</tspan></text>
+	</g>
+"Stafford",720,1001,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.2399 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sta</text>
+	</g>
+"East_Staffordshire",750,1001,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"South_Derbyshire",780,1001,15,-15.2
+		<text transform="matrix(1 0 0 1 18.9542 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"North_West_Leicestershire",810,1031.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Charnwood",840,1001,15,-15.2
+		<text transform="matrix(1 0 0 1 18.7261 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cha</text>
+	</g>
+"Melton",870,1031.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0338 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">M</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">el</tspan></text>
+	</g>
+"South_Kesteven",930,1001,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"South_Holland",990,1001,-75,-15.2
+		<text transform="matrix(1 0 0 1 -71.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"King_x27_s_Lynn_and_West_Norfolk",1050,1001,-105,-15.2
+		<text transform="matrix(1 0 0 1 -100.4038 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Kin</text>
+	</g>
+"Broadland",1170,1001,-195,-15.2
+		<text transform="matrix(1 0 0 1 -190.3618 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bro</text>
+	</g>
+"Shropshire",600,1031.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 20.0341 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Shr</text>
+	</g>
+"Telford_and_Wrekin_Council",630,1031.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 20.8562 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">el</tspan></text>
+	</g>
+"South_Staffordshire",660,1031.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 18.9542 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Cannock_Chase",690,1031.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 18.7202 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Can</text>
+	</g>
+"Lichfield",750,1031.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -8.7419 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Lic</text>
+	</g>
+"Tamworth",780,1031.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.0499 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">am</tspan></text>
+	</g>
+"Hinckley_and_Bosworth",810,1061.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 19.2482 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Hin</text>
+	</g>
+"Leicester_City",840,1031.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -8.9999 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">L</tspan><tspan x="7.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ei</tspan></text>
+	</g>
+"Rutland",900,1031.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.6018 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ut</tspan></text>
+	</g>
+"Peterborough_City",960,1031.3333740234375,-45,-15.2
+		<text transform="matrix(1 0 0 1 -39.5398 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">P</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">et</tspan></text>
+	</g>
+"Fenland",990,1031.3333740234375,-45,-15.2
+		<text transform="matrix(1 0 0 1 -40.8598 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">F</tspan><tspan x="7.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">en</tspan></text>
+	</g>
+"Breckland",1110,1031.3333740234375,-135,-15.2
+		<text transform="matrix(1 0 0 1 -130.0378 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bre</text>
+	</g>
+"Norwich_City",1170,1031.3333740234375,-165,-15.2
+		<text transform="matrix(1 0 0 1 -160.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Great_Yarmouth",1200,1031.3333740234375,-165,-15.2
+		<text transform="matrix(1 0 0 1 -160.2238 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Gre</text>
+	</g>
+"Wolverhampton",690,1061.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 18.4501 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ol</tspan></text>
+	</g>
+"Dudley",690,1092,15,-15.2
+		<text transform="matrix(1 0 0 1 17.8442 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Dud</text>
+	</g>
+"Sandwell",720,1092,15,-15.2
+		<text transform="matrix(1 0 0 1 19.1941 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">San</text>
+	</g>
+"Walsall",720,1061.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 18.7081 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">al</tspan></text>
+	</g>
+"Birmingham",750,1061.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 21.3241 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bir</text>
+	</g>
+"North_Warwickshire",780,1061.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 19.4282 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Nuneaton_and_Bedworth",810,1092,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.2818 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nun</text>
+	</g>
+"Blaby",840,1092,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.5459 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bla</text>
+	</g>
+"Oadby_and_Wigston",840,1061.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 18.4141 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">O</tspan><tspan x="8.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ad</tspan></text>
+	</g>
+"Harborough",870,1092,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.7998 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Har</text>
+	</g>
+"Corby",900,1061.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.0978 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cor</text>
+	</g>
+"East_Northamptonshire",930,1092,15,-15.2
+		<text transform="matrix(1 0 0 1 19.6981 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"South_Norfolk",1170,1061.6666259765625,-255,-15.2
+		<text transform="matrix(1 0 0 1 -251.0459 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Waveney",1200,1061.6666259765625,-255,-15.2
+		<text transform="matrix(1 0 0 1 -252.7379 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan><tspan x="18.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"Wyre_Forest",660,1122.3333740234375,45,-15.2
+		<text transform="matrix(1 0 0 1 47.7662 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">yr</tspan></text>
+	</g>
+"Bromsgrove",720,1122.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 19.6382 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bro</text>
+	</g>
+"Solihull",750,1122.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 20.9042 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ol</tspan></text>
+	</g>
+"Coventry",780,1092,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.9558 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">C</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">o</tspan><tspan x="14.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"Rugby",810,1122.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 18.4381 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">u</tspan><tspan x="16.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">g</tspan></text>
+	</g>
+"Daventry",870,1092,15,-15.2
+		<text transform="matrix(1 0 0 1 18.7501 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">D</tspan><tspan x="8.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan><tspan x="15.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"Kettering",900,1092,15,-15.2
+		<text transform="matrix(1 0 0 1 19.9202 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">K</tspan><tspan x="8.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">et</tspan></text>
+	</g>
+"Huntingdonshire",960,1122.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.6478 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">un</tspan></text>
+	</g>
+"East_Cambridgeshire",1050,1122.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Forest_Heath",1080,1122.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.7738 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">F</tspan><tspan x="7.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Mid_Suffolk",1140,1122.3333740234375,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.4958 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mid</text>
+	</g>
+"Ceredigion",420,1152.6666259765625,105,74.8
+		<text transform="matrix(1 0 0 1 110.2262 90)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cer</text>
+	</g>
+"Powys",510,1152.6666259765625,45,74.8
+		<text transform="matrix(1 0 0 1 47.4361 90)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Po</tspan><tspan x="14.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">w</tspan></text>
+	</g>
+"Worcester_City",690,1152.6666259765625,105,-15.2
+		<text transform="matrix(1 0 0 1 107.8621 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Redditch",750,1152.6666259765625,75,-15.2
+		<text transform="matrix(1 0 0 1 78.6902 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ed</tspan></text>
+	</g>
+"Stratford-on-Avon",750,1183,-45,-15.2
+		<text transform="matrix(1 0 0 1 -38.4058 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Str</text>
+	</g>
+"Warwick",780,1122.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 18.1201 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ar</tspan></text>
+	</g>
+"Northampton",870,1122.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.5718 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Wellingborough",900,1122.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.226 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">el</tspan></text>
+	</g>
+"Bedford",930,1122.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.2738 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ed</tspan></text>
+	</g>
+"South_Cambridgeshire",990,1122.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Cambridge_City",1020,1122.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.0619 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cam</text>
+	</g>
+"St_Edmundsbury",1080,1152.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -35.8439 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">St</text>
+	</g>
+"Suffolk_Coastal",1200,1152.6666259765625,-105,-15.2
+		<text transform="matrix(1 0 0 1 -99.4619 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Suf</text>
+	</g>
+"Herefordshire",630,1183,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.6438 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">er</tspan></text>
+	</g>
+"Malvern_Hills",690,1183,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.1898 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mal</text>
+	</g>
+"Wychavon",720,1183,-45,-15.2
+		<text transform="matrix(1 0 0 1 -42.7139 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">y</tspan><tspan x="19.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">c</tspan></text>
+	</g>
+"South_Northamptonshire",870,1152.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Milton_Keynes",900,1152.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.7319 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mil</text>
+	</g>
+"Central_Bedfordshire",930,1152.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1838 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cen</text>
+	</g>
+"Babergh",1110,1152.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.3159 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bab</text>
+	</g>
+"Ipswich",1170,1183,-15,-15.2
+		<text transform="matrix(1 0 0 1 -8.9639 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ips</text>
+	</g>
+"Tewkesbury",720,1213.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 17.6342 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ew</tspan></text>
+	</g>
+"Cherwell",810,1183,-75,-15.2
+		<text transform="matrix(1 0 0 1 -71.1779 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Che</text>
+	</g>
+"Aylesbury_Vale",840,1183,-75,-15.2
+		<text transform="matrix(1 0 0 1 -69.6599 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">A</tspan><tspan x="8.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">yl</tspan></text>
+	</g>
+"Luton",960,1152.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.0018 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Lut</text>
+	</g>
+"North_Hertfordshire",960,1152.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 19.4282 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Stevenage",990,1183,-45,-15.2
+		<text transform="matrix(1 0 0 1 -39.1438 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ste</text>
+	</g>
+"East_Hertfordshire",1020,1152.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Uttlesford",1050,1183,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.2158 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">U</tspan><tspan x="8.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">t</tspan><tspan x="13.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">t</tspan></text>
+	</g>
+"Braintree",1080,1183,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.0439 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="13.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Colchester",1110,1183,-15,-15.2
+		<text transform="matrix(1 0 0 1 -9.5099 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Col</text>
+	</g>
+"Tendring",1140,1183,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1418 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">en</tspan></text>
+	</g>
+"Pembrokeshire",330,1243.6666259765625,135,14.8
+		<text transform="matrix(1 0 0 1 137.1121 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">P</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">em</tspan></text>
+	</g>
+"Carmarthenshire",420,1243.6666259765625,75,14.8
+		<text transform="matrix(1 0 0 1 80.1302 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Car</text>
+	</g>
+"Forest_of_Dean",660,1243.6666259765625,-45,14.8
+		<text transform="matrix(1 0 0 1 -39.7738 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">F</tspan><tspan x="7.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Gloucester_City",690,1243.6666259765625,-45,14.8
+		<text transform="matrix(1 0 0 1 -39.9598 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Glo</text>
+	</g>
+"Cheltenham",720,1243.6666259765625,-45,14.8
+		<text transform="matrix(1 0 0 1 -41.1779 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Che</text>
+	</g>
+"Cotswold",750,1243.6666259765625,-45,14.8
+		<text transform="matrix(1 0 0 1 -39.9418 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cot</text>
+	</g>
+"West_Oxfordshire",810,1243.6666259765625,-75,14.8
+		<text transform="matrix(1 0 0 1 -72.1079 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"Oxford_City",840,1213.3333740234375,-75,-15.2
+		<text transform="matrix(1 0 0 1 -70.0859 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">O</tspan><tspan x="8.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">xf</tspan></text>
+	</g>
+"Dacorum",900,1183,-75,-15.2
+		<text transform="matrix(1 0 0 1 -70.9619 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">D</tspan><tspan x="8.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ac</tspan></text>
+	</g>
+"St_Albans_City",930,1183,-75,-15.2
+		<text transform="matrix(1 0 0 1 -65.8439 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">St</text>
+	</g>
+"Welwyn_Hatfield",960,1183,-75,-15.2
+		<text transform="matrix(1 0 0 1 -71.226 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">el</tspan></text>
+	</g>
+"Broxbourne",990,1183,-75,-15.2
+		<text transform="matrix(1 0 0 1 -70.3618 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bro</text>
+	</g>
+"Harlow",1020,1183,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.7998 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Har</text>
+	</g>
+"Epping_Forest",1050,1213.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.574 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Epp</text>
+	</g>
+"Chelmsford",1110,1213.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1779 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Che</text>
+	</g>
+"Maldon",1140,1213.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.1898 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mal</text>
+	</g>
+"Swansea",420,1274,75,14.8
+		<text transform="matrix(1 0 0 1 78.1501 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sw</tspan><tspan x="16.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Neath_Port_Talbot",480,1274,45,14.8
+		<text transform="matrix(1 0 0 1 48.9182 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nea</text>
+	</g>
+"Rhondda_Cynon_Taf",510,1274,45,14.8
+		<text transform="matrix(1 0 0 1 48.0482 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Rho</text>
+	</g>
+"Merthyr_Tydfil",540,1243.6666259765625,15,14.8
+		<text transform="matrix(1 0 0 1 18.3782 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">M</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">er</tspan></text>
+	</g>
+"Caerphilly",540,1274,45,14.8
+		<text transform="matrix(1 0 0 1 49.3922 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cae</text>
+	</g>
+"Blaenau_Gwent",570,1243.6666259765625,15,14.8
+		<text transform="matrix(1 0 0 1 20.4541 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bla</text>
+	</g>
+"Torfaen",570,1274,45,14.8
+		<text transform="matrix(1 0 0 1 49.9442 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Monmouthshire",630,1274,15,14.8
+		<text transform="matrix(1 0 0 1 16.6442 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">M</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">on</tspan></text>
+	</g>
+"Stroud",690,1274,-15,14.8
+		<text transform="matrix(1 0 0 1 -8.4058 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Str</text>
+	</g>
+"Vale_of_White_Horse",780,1274,15,44.8
+		<text transform="matrix(1 0 0 1 20.7361 60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">V</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">al</tspan></text>
+	</g>
+"South_Oxfordshire",810,1274,15,-45.2
+		<text transform="matrix(1 0 0 1 18.9542 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Wycombe",840,1243.6666259765625,-75,14.8
+		<text transform="matrix(1 0 0 1 -72.7139 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">y</tspan><tspan x="19.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">c</tspan></text>
+	</g>
+"Chiltern",870,1183,-75,-15.2
+		<text transform="matrix(1 0 0 1 -69.8159 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Chi</text>
+	</g>
+"Three_Rivers",930,1213.3333740234375,-75,-15.2
+		<text transform="matrix(1 0 0 1 -70.5778 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Thr</text>
+	</g>
+"Watford",900,1213.3333740234375,-75,-15.2
+		<text transform="matrix(1 0 0 1 -71.6639 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan><tspan x="18.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">t</tspan></text>
+	</g>
+"Harrow",930,1243.6666259765625,-15,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -10.7998 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Har</text>
+	</g>
+"Hertsmere",960,1213.3333740234375,-75,-15.2
+		<text transform="matrix(1 0 0 1 -70.6438 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">er</tspan></text>
+	</g>
+"Barnet",960,1274,-15,-75.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -10.1339 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bar</text>
+	</g>
+"Haringey",960,1243.6666259765625,15,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 19.2002 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Har</text>
+	</g>
+"Enfield",990,1213.3333740234375,-15,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -10.1218 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Enf</text>
+	</g>
+"Waltham_Forest",1020,1213.3333740234375,-15,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -11.2919 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">al</tspan></text>
+	</g>
+"Redbridge",1020,1243.6666259765625,15,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 18.6902 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ed</tspan></text>
+	</g>
+"Havering",1050,1213.3333740234375,15,14.8" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 18.3422 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan><tspan x="16.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"Brentwood",1080,1213.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.0378 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bre</text>
+	</g>
+"Basildon",1140,1243.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.428 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bas</text>
+	</g>
+"Southend-On-Sea",1140,1274,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0459 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Rochford",1170,1243.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0278 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">oc</tspan></text>
+	</g>
+"Bridgend",480,1304.3333740234375,75,14.8
+		<text transform="matrix(1 0 0 1 81.3241 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bri</text>
+	</g>
+"Cardiff",570,1304.3333740234375,45,14.8
+		<text transform="matrix(1 0 0 1 50.1301 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Car</text>
+	</g>
+"Newport",570,1304.3333740234375,75,14.8
+		<text transform="matrix(1 0 0 1 77.1182 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">New</text>
+	</g>
+"South_Gloucestershire",690,1304.3333740234375,15,-15.2
+		<text transform="matrix(1 0 0 1 18.9542 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Swindon",780,1304.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.4819 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="6.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">wi</tspan></text>
+	</g>
+"Windsor_and_Maidenhead",870,1274,-75,-15.2
+		<text transform="matrix(1 0 0 1 -72.1019 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">in</tspan></text>
+	</g>
+"South_Buckinghamshire",870,1213.3333740234375,-75,-15.2
+		<text transform="matrix(1 0 0 1 -71.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Slough",810,1274,15,-15.2
+		<text transform="matrix(1 0 0 1 20.9641 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Slo</text>
+	</g>
+"Hillingdon",870,1243.6666259765625,-15,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -8.7539 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Hil</text>
+	</g>
+"Hounslow",900,1274,-45,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -42.3298 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Ealing",900,1243.6666259765625,-15,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -9.4199 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eal</text>
+	</g>
+"Richmond-Upon-Thames",960,1365,-75,-75.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -69.4319 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ric</text>
+	</g>
+"Brent",900,1304.3333740234375,15,-75.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 19.9622 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bre</text>
+	</g>
+"Hammersmith_and_Fulham",930,1304.3333740234375,-45,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -43.9919 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ham</text>
+	</g>
+"Kensington_and_Chelsea",930,1334.6666259765625,-15,-75.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -11.6459 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">K</tspan><tspan x="8.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">en</tspan></text>
+	</g>
+"Wandsworth",960,1304.3333740234375,-45,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -43.2899 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">an</tspan></text>
+	</g>
+"Westminster",930,1274,15,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 17.8921 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"Camden",990,1243.6666259765625,-45,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -43.0619 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cam</text>
+	</g>
+"Lambeth",1020,1334.6666259765625,-75,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -72.912 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">L</tspan><tspan x="7.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">am</tspan></text>
+	</g>
+"Islington",1050,1274,-75,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -67.1759 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Isl</text>
+	</g>
+"City_of_London_Corporation",990,1274,-15,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -8.1659 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">C</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">i</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">t</tspan></text>
+	</g>
+"Southwark",990,1304.3333740234375,-15,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -11.0458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Hackney",1020,1274,-15,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -11.3699 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Hac</text>
+	</g>
+"Tower_Hamlets",1020,1304.3333740234375,-15,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -12.5999 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">o</tspan><tspan x="14.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">w</tspan></text>
+	</g>
+"Lewisham",1020,1365,-15,-75.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -12.2579 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">L</tspan><tspan x="7.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ew</tspan></text>
+	</g>
+"Newham",1110,1334.6666259765625,-75,-75.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -72.8818 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">New</text>
+	</g>
+"Greenwich",1080,1334.6666259765625,-45,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -40.2238 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Gre</text>
+	</g>
+"Barking_and_Dagenham",1080,1243.6666259765625,-15,14.8" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -10.1339 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bar</text>
+	</g>
+"Bexley",1080,1304.3333740234375,-15,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -11.0099 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">e</tspan><tspan x="14.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">x</tspan></text>
+	</g>
+"Dartford",1110,1274,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3918 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">D</tspan><tspan x="8.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ar</tspan></text>
+	</g>
+"Thurrock",1110,1243.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.9398 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Thu</text>
+	</g>
+"Medway",1080,1304.3333740234375,-15,14.8
+		<text transform="matrix(1 0 0 1 -12.7979 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">M</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ed</tspan></text>
+	</g>
+"Castle_Point",1110,1304.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.1639 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cas</text>
+	</g>
+"Vale_of_Glamorgan",510,1334.6666259765625,75,-15.2
+		<text transform="matrix(1 0 0 1 80.7361 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">V</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">al</tspan></text>
+	</g>
+"North_Somerset",600,1334.6666259765625,135,14.8
+		<text transform="matrix(1 0 0 1 139.4282 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Bristol",630,1304.3333740234375,75,14.8
+		<text transform="matrix(1 0 0 1 81.3241 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bri</text>
+	</g>
+"Bath_and_North_East_Somerset",660,1334.6666259765625,75,-15.2
+		<text transform="matrix(1 0 0 1 80.0821 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan><tspan x="15,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">t</tspan></text>
+	</g>
+"West_Berkshire",810,1304.3333740234375,-45,14.8
+		<text transform="matrix(1 0 0 1 -42.1079 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"Reading",840,1334.6666259765625,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.9678 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ea</tspan></text>
+	</g>
+"Wokingham",840,1304.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -13.3979 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ok</tspan></text>
+	</g>
+"Bracknell_Forest",870,1334.6666259765625,-75,-45.2
+		<text transform="matrix(1 0 0 1 -70.0439 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="13.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Surrey_Heath",870,1304.3333740234375,-15,44.8
+		<text transform="matrix(1 0 0 1 -9.9238 60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sur</text>
+	</g>
+"Woking",870,1365,15,-15.2
+		<text transform="matrix(1 0 0 1 16.6021 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ok</tspan></text>
+	</g>
+"Runnymede",900,1334.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -42.1678 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">un</tspan></text>
+	</g>
+"Spelthorne",960,1334.6666259765625,-105,-45.2
+		<text transform="matrix(1 0 0 1 -100.4999 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Spe</text>
+	</g>
+"Elmbridge",900,1365,-15,-45.2
+		<text transform="matrix(1 0 0 1 -11.7779 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Elm</text>
+	</g>
+"Kingston-Upon-Thames",930,1365,-15,-45.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -10.4039 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Kin</text>
+	</g>
+"Epsom_and_Ewell",960,1395.3333740234375,-45,-45.2
+		<text transform="matrix(1 0 0 1 -40.6679 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eps</text>
+	</g>
+"Merton",990,1334.6666259765625,-45,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -41.6218 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">M</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">er</tspan></text>
+	</g>
+"Sutton",990,1365,-45,-15.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -39.7678 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sut</text>
+	</g>
+"Croydon",1050,1395.3333740234375,-75,-75.2" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -70.0978 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cro</text>
+	</g>
+"Bromley",1050,1304.3333740234375,-45,14.8" fill="#FF6600" fill-opacity="0.2" width="30" height="30.3"/>
+		<text transform="matrix(1 0 0 1 -40.3618 30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bro</text>
+	</g>
+"Gravesham",1050,1365,-15,-45.2
+		<text transform="matrix(1 0 0 1 -10.2299 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">G</tspan><tspan x="8.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="13.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Swale",1140,1334.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.85 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Sw</tspan><tspan x="16.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Canterbury_City",1170,1334.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.2798 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Can</text>
+	</g>
+"Thanet",1200,1334.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.4119 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Tha</text>
+	</g>
+"Mendip",660,1365,75,14.8
+		<text transform="matrix(1 0 0 1 76.9682 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">M</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">en</tspan></text>
+	</g>
+"Wiltshire",750,1365,-15,-75.2
+		<text transform="matrix(1 0 0 1 -10.1039 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">il</tspan></text>
+	</g>
+"Basingstoke_and_Deane",810,1365,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.428 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bas</text>
+	</g>
+"Hart",840,1365,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.7998 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Har</text>
+	</g>
+"Rushmoor",870,1395.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.0519 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">us</tspan></text>
+	</g>
+"Guildford",900,1395.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.2239 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Gui</text>
+	</g>
+"Mole_Valley",930,1395.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.3578 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">M</tspan><tspan x="11.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ol</tspan></text>
+	</g>
+"Reigate_and_Banstead",960,1425.6666259765625,-15,-45.2
+		<text transform="matrix(1 0 0 1 -9.5099 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ei</tspan></text>
+	</g>
+"Tandridge",1020,1395.3333740234375,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.2678 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">an</tspan></text>
+	</g>
+"Sevenoaks",1020,1425.6666259765625,-45,-75.2
+		<text transform="matrix(1 0 0 1 -40.3079 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ev</tspan></text>
+	</g>
+"Tonbridge_and_Malling",1080,1395.3333740234375,-75,-45.2
+		<text transform="matrix(1 0 0 1 -71.4658 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">on</tspan></text>
+	</g>
+"Maidstone",1080,1365,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.1538 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mai</text>
+	</g>
+"Ashford",1110,1365,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.2379 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Ash</text>
+	</g>
+"Dover",1170,1365,-75,-15.2
+		<text transform="matrix(1 0 0 1 -71.5378 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">D</tspan><tspan x="9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">o</tspan><tspan x="16.1,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"West_Somerset",510,1395.3333740234375,165,-15.2
+		<text transform="matrix(1 0 0 1 167.8921 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"Sedgemoor",570,1395.3333740234375,135,-15.2
+		<text transform="matrix(1 0 0 1 139.4642 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ed</tspan></text>
+	</g>
+"Test_Valley",780,1395.3333740234375,-15,-45.2
+		<text transform="matrix(1 0 0 1 -10.0259 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"East_Hampshire",840,1395.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.3019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Waverley",930,1425.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -42.7379 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan><tspan x="18.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"Crawley",990,1395.3333740234375,-75,14.8
+		<text transform="matrix(1 0 0 1 -69.7798 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">C</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">r</tspan><tspan x="12.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan></text>
+	</g>
+"Mid_Sussex",990,1425.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.4958 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mid</text>
+	</g>
+"Tunbridge_Wells",1110,1395.3333740234375,-105,-15.2
+		<text transform="matrix(1 0 0 1 -101.9458 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Tun</text>
+	</g>
+"Shepway",1140,1395.3333740234375,-105,-15.2
+		<text transform="matrix(1 0 0 1 -100.7039 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">She</text>
+	</g>
+"North_Devon",450,1425.6666259765625,105,-15.2
+		<text transform="matrix(1 0 0 1 109.4282 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"Taunton_Deane",540,1425.6666259765625,75,-15.2
+		<text transform="matrix(1 0 0 1 78.7802 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">au</tspan></text>
+	</g>
+"South_Somerset",630,1425.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 18.9542 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Southampton",780,1425.6666259765625,15,-15.2
+		<text transform="matrix(1 0 0 1 18.9542 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Eastleigh",810,1425.6666259765625,-45,-45.2
+		<text transform="matrix(1 0 0 1 -40.3019 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Winchester_City",810,1395.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -12.1019 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="12.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">in</tspan></text>
+	</g>
+"Chichester",900,1425.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -39.8159 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Chi</text>
+	</g>
+"Horsham",930,1456,-105,-15.2
+		<text transform="matrix(1 0 0 1 -100.9678 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.6,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Lewes",1020,1456,-75,-15.2
+		<text transform="matrix(1 0 0 1 -72.2579 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">L</tspan><tspan x="7.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ew</tspan></text>
+	</g>
+"Wealden",1050,1425.6666259765625,-75,-15.2
+		<text transform="matrix(1 0 0 1 -72.6479 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ea</tspan></text>
+	</g>
+"Rother",1080,1425.6666259765625,-75,-15.2
+		<text transform="matrix(1 0 0 1 -70.3018 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">R</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ot</tspan></text>
+	</g>
+"Hastings",1080,1456,-75,-15.2
+		<text transform="matrix(1 0 0 1 -71.0939 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Has</text>
+	</g>
+"Torridge",390,1456,135,-15.2
+		<text transform="matrix(1 0 0 1 139.9442 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Mid_Devon",510,1456,75,-45.2
+		<text transform="matrix(1 0 0 1 78.5042 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Mid</text>
+	</g>
+"West_Dorset",660,1456,15,-45.2
+		<text transform="matrix(1 0 0 1 17.8921 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"North_Dorset",690,1456,15,-45.2
+		<text transform="matrix(1 0 0 1 19.4282 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Nor</text>
+	</g>
+"East_Dorset",750,1456,-15,-45.2
+		<text transform="matrix(1 0 0 1 -10.3019 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"New_Forest",780,1456,-15,-45.2
+		<text transform="matrix(1 0 0 1 -12.8818 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">New</text>
+	</g>
+"Fareham",810,1456,-105,-15.2
+		<text transform="matrix(1 0 0 1 -99.5458 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">F</tspan><tspan x="7.2,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ar</tspan></text>
+	</g>
+"Gosport",840,1456,-105,-15.2
+		<text transform="matrix(1 0 0 1 -100.9019 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">G</tspan><tspan x="8.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">os</tspan></text>
+	</g>
+"Portsmouth",870,1456,-105,-15.2
+		<text transform="matrix(1 0 0 1 -100.0198 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">P</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Havant",870,1425.6666259765625,-45,-15.2
+		<text transform="matrix(1 0 0 1 -41.6578 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">H</tspan><tspan x="9.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">a</tspan><tspan x="16.3,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">v</tspan></text>
+	</g>
+"Arun",900,1456,-105,-15.2
+		<text transform="matrix(1 0 0 1 -100.9019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Aru</text>
+	</g>
+"Worthing",930,1486.3333740234375,-75,-45.2
+		<text transform="matrix(1 0 0 1 -72.1379 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Adur",960,1456,-75,-15.2
+		<text transform="matrix(1 0 0 1 -71.9878 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">A</tspan><tspan x="8.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">du</tspan></text>
+	</g>
+"Brighton_and_Hove",990,1456,-75,-15.2
+		<text transform="matrix(1 0 0 1 -68.6759 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Bri</text>
+	</g>
+"Eastbourne",1050,1456,-75,-15.2
+		<text transform="matrix(1 0 0 1 -70.3019 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"West_Devon",420,1486.3333740234375,135,-45.2
+		<text transform="matrix(1 0 0 1 137.8921 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">es</tspan></text>
+	</g>
+"Exeter_City",510,1486.3333740234375,105,-45.2
+		<text transform="matrix(1 0 0 1 109.1762 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">E</tspan><tspan x="8.1,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">x</tspan><tspan x="15,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">e</tspan></text>
+	</g>
+"East_Devon",540,1486.3333740234375,105,-45.2
+		<text transform="matrix(1 0 0 1 109.6981 -30)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Eas</text>
+	</g>
+"Purbeck",690,1486.3333740234375,-15,-45.2
+		<text transform="matrix(1 0 0 1 -10.4698 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">P</tspan><tspan x="8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ur</tspan></text>
+	</g>
+"Poole",720,1456,-15,14.8
+		<text transform="matrix(1 0 0 1 -11.0818 30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">P</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">oo</tspan></text>
+	</g>
+"Bournemouth",750,1486.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -11.7838 0)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">B</tspan><tspan x="8.5,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Christchurch",780,1486.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -10.4398 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Chr</text>
+	</g>
+"Isle_of_Wight",840,1486.3333740234375,-15,-15.2
+		<text transform="matrix(1 0 0 1 -7.1759 0)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Isl</text>
+	</g>
+"Teignbridge",480,1516.6666259765625,105,-75.2
+		<text transform="matrix(1 0 0 1 110.8922 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ei</tspan></text>
+	</g>
+"Weymouth_and_Portland",690,1516.6666259765625,-15,-45.2
+		<text transform="matrix(1 0 0 1 -12.7619 -30)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">W</tspan><tspan x="11.9,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">e</tspan><tspan x="18.4,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">y</tspan></text>
+	</g>
+"Cornwall",330,1547,165,-75.2
+		<text transform="matrix(1 0 0 1 169.9022 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Cor</text>
+	</g>
+"Plymouth_City",420,1547,105,-75.2
+		<text transform="matrix(1 0 0 1 110.5921 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">P</tspan><tspan x="7.8,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">l</tspan><tspan x="11.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">y</tspan></text>
+	</g>
+"South_Hams",450,1547,105,-75.2
+		<text transform="matrix(1 0 0 1 108.9542 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">S</tspan><tspan x="7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">ou</tspan></text>
+	</g>
+"Torbay",510,1547,75,-75.2
+		<text transform="matrix(1 0 0 1 79.9442 -60)" enable-background="new    "><tspan x="0,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">T</tspan><tspan x="7.7,0" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">or</tspan></text>
+	</g>
+"Isles_of_Scilly",120,1577.3333740234375,315,-75.2
+		<text transform="matrix(1 0 0 1 322.8241 -60)" fill="#333333" font-family="'GuardianTitlepiece'" font-size="12">Isl</text>
+	</g>

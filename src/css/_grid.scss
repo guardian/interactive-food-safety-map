@@ -1,0 +1,27 @@
+.grid-map {
+	svg {
+		g.lads {
+			g.lad {
+				rect {
+					//fill:#333;
+					fill-opacity:1;//0.2;
+				}
+				line.border {
+					stroke:#333;
+					stroke-width:1;
+					shape-rendering: crispEdges;
+				}
+				text {
+					@include fs-textSans(1);
+					font-size: 12px;
+					fill:#333;
+					text-anchor:middle;
+					//display: none;
+					text-transform: uppercase;
+				}
+			}
+			
+
+		}
+	}
+}

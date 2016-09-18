@@ -1,0 +1,52 @@
+.square-map {
+	
+	width: 40 * 30px;
+	height: (40*1.82) * 30px;
+
+	svg {
+	
+		g.lad {
+			circle {
+				fill:#333;
+				fill-opacity:0.2;
+			}
+			rect {
+				fill:#333;
+				fill-opacity:0.2;
+			}
+			line {
+				stroke:#ddd;
+				stroke-width:1;
+			}
+			text {
+				@include fs-textSans(1);
+				font-size: 12px;
+				fill:#333;
+				text-anchor:middle;
+				//display: none;
+				text-transform: uppercase;
+			}
+			&:hover {
+				text {
+					display: block;
+				}
+			}
+			&.london {
+				rect {
+					fill:#ff6600;
+				}
+			}
+		}
+
+		g.grid {
+			line {
+				stroke:#eee;
+				stroke-width:1;
+				stroke-dasharray:1,1;
+
+			}
+		}
+
+	}
+
+}

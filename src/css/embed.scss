@@ -12,25 +12,28 @@ body {
 }
 
 // map
-path {
-    stroke: #fff;
-    stroke-linejoin: round;
-    stroke-width: 0.2px;
-}
-path:hover {
-    stroke:#333;
-    stroke-width: 0.5px;
-    transition: stroke .25s ease;
-    cursor: pointer;
-    z-index: 999;
+.map-gb {
+    path {
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 0.2px;
+    }
+    path:hover {
+        stroke:#333;
+        stroke-width: 0.5px;
+        transition: stroke .25s ease;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    text {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        text-anchor: middle;
+        pointer-events: none;
+    }
 }
 
-text {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    text-anchor: middle;
-    pointer-events: none;
-}
 
 // btn
 .btns {
@@ -50,14 +53,20 @@ text {
 
 // summary
 .summary {
-    position: absolute;
+    position: relative;//absolute;
     top: 45px;
     width: 100%;
     max-width: 480px;
     span {
     //fs-data(*)
-}}
-
+    }
+}
 
 /* atomic css*/
 .d-n { display: none; }
+.v-v { visibility: visible; }
+.v-h { visibility: hidden; }
+
+@import "failingrate-chart";
+@import "square-map";
+@import "grid";

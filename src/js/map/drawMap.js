@@ -77,14 +77,14 @@ export default function drawMap(err, gb, ni) {
         .range(["#eaeaea",'#f1eef6','#d7b5d8','#df65b0','#dd1c77','#980043',"#f6f6f6"])
 
     console.log(data)
-    data.features.forEach(feat=>{
+    /*data.features.forEach(feat=>{
         console.log(feat.name,feat.count.all.rateFail,fillThreshold(feat.count.all.rateFail),fillLinear(feat.count.all.rateFail))
-    })
+    })*/
 
     let projection = d3_geoAlbers()
     .center([1.4, 55.4])
     .rotate([4.4, 0])
-    .parallels([50, 60])
+    //.parallels([50, 60])
     //.scale(3400)
     //.scale(2800)
     .scale(5800 * (rh>1?1:rh))
@@ -107,7 +107,11 @@ export default function drawMap(err, gb, ni) {
     .attr("id", (d, i) => "p" + i)
     .attr("data-lad-name", (d, i) => d.name)
     .attr("fill", d => fillThreshold(d.count.all.rateFail))
-    .attr("d", path)
+    .attr("d", d=>{
+        let centroid=path.centroid(d);
+        console.log(d.id,',"'+d.name+'",',centroid[0],",",centroid[1]);
+        return path(d);
+    })
     .on("mouseenter", d => updateSummary(d));
 
     let texts = svg.append("text")
