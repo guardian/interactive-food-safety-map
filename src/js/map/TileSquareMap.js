@@ -26,6 +26,12 @@ import {
 	nest
 } from 'd3-collection'
 
+import {
+	format as d3_format
+} from 'd3-format';
+
+import Tooltip from '../lib/Tooltip'
+
 export default function TileSquareMap(data,options) {
 
 	console.log("TileSquareMap",data,options.fsaData)
@@ -97,6 +103,8 @@ export default function TileSquareMap(data,options) {
 		bottom:0
 	};
 
+	let tooltip;
+
 	let WIDTH,
 		HEIGHT;
 
@@ -111,6 +119,22 @@ export default function TileSquareMap(data,options) {
 
 	function buildVisual() {
 		
+		tooltip=new Tooltip({
+	    	container:options.container,
+	    	margins:margins,
+	    	title:false,
+	    	indicators:[
+	    		{
+	    			id:"t_lad_name"//,
+	    			//title:"LA"
+	    		},
+	    		{
+	    			id:"t_lad_failrate"//,
+	    			//title:"Failrate"
+	    		}
+	    	]
+	    });
+
 		let box=options.container.getBoundingClientRect();
 		WIDTH=box.width;
 		HEIGHT=box.height;
@@ -154,7 +178,23 @@ export default function TileSquareMap(data,options) {
     				.attr("transform",d=>{
     					let x=xscale(d.x),
     						y=yscale(d.y);
+    					d.position={x:x,y:y}
     					return `translate(${x},${y})`
+    				})
+    				.on("mouseenter",d=>{
+    					tooltip.show([
+								{
+									id:"t_lad_name",
+									value:d.name
+								},
+								{
+									id:"t_lad_failrate",
+									value: d3_format(",.2%")(d.info.count.all.rateFail)
+								}
+							],
+							d.position.x,
+							d.position.y+margins.top+square_side/2
+						);
     				})
 
     	lad.append("rect")

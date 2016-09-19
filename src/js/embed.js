@@ -104,10 +104,10 @@ window.init = function init(el, config) {
 	    	new TileSquareMap(local_authorities,{
 	    		container:el.querySelector(".grid-map"),
 		    	margins:{
-		    		left:15,
-		    		right:15,
-		    		bottom:15,
-		    		top:15
+		    		left:20,
+		    		right:20,
+		    		bottom:20,
+		    		top:20
 		    	},
 		    	fsaData:fsaData
 	    	})
