@@ -27,6 +27,8 @@
   "jspm": {
     "configFile": "src/js/config.js",
     "dependencies": {
+      "awesomplete": "npm:awesomplete@^1.1.1",
+      "d3": "npm:d3@^4.2.3",
       "d3-array": "npm:d3-array@^1.0.1",
       "d3-axis": "npm:d3-axis@^1.0.3",
       "d3-collection": "npm:d3-collection@^1.0.1",

@@ -67,6 +67,8 @@ body {
 .v-v { visibility: visible; }
 .v-h { visibility: hidden; }
 
+@import "awesomplete";
+@import "madlib";
 @import "failingrate-chart";
 @import "square-map";
 @import "grid";

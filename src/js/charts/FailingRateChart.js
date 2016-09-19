@@ -42,16 +42,18 @@ export default function FailingRateChart(data,options) {
 
 	buckets=[0,0.1,0.2,0.3,0.4,0.5]
 	buckets=[0.05,0.1,0.15,0.2,0.25,0.251]
+	buckets=[0.05,0.1,0.15,0.2,0.5,0.51]
 
 	let fillThreshold = d3_scaleThreshold()
         .domain(buckets)
         //.range(["#eaeaea",'#f1eef6','#d7b5d8','#df65b0','#dd1c77','#980043'])
-        .range(["#f6f6f6","#eaeaea","#f9f1c5","#ffe900","#ffce00"])
+        //.range(["#f6f6f6","#eaeaea","#f9f1c5","#ffe900","#ffce00"])
+        .range(["#f6f6f6","#eaeaea","#ffd400","#ffa300","#ff5b3a","#cc2b12"])
 
 	console.log(data.lads)
 
 	let lads=d3_entries(data.lads).map(d=>{
-										d.key=d.value.count.all.rateFail;
+										d.key=d.value.count[options.indicator].rateFail;
 								    	return d;
 								    })
 
@@ -60,6 +62,8 @@ export default function FailingRateChart(data,options) {
 	lads=lads.sort((a,b)=>{
     	return +a.key - +b.key;
     })
+
+	let rate;
 
     /*let nested_data=d3_nest()
         .key(d=>{
@@ -132,7 +136,7 @@ export default function FailingRateChart(data,options) {
     						"class":"rates",
     						"transform":`translate(${margins.left},${margins.top})`
     					});
-    	let rate=rates
+    	rate=rates
 			    		.selectAll("g.rate")
 			    		//.data(nested_data)
 			    		.data(lads)
@@ -146,7 +150,10 @@ export default function FailingRateChart(data,options) {
 			    				return `translate(${x},${y})`;
 			    			})
 			    			.on("mouseenter",d=>{
-			    				rate.classed("show",r=>r.value.name===d.value.name)
+			    				highlightLAD(d);
+			    				if(options.mouseEnterCallback) {
+			    					options.mouseEnterCallback.call(this,d)
+			    				}
 			    			})
 		let w=(WIDTH/lads.length);
 		rate.append("rect")
@@ -214,7 +221,7 @@ export default function FailingRateChart(data,options) {
 
 		let xbar=xaxis
 			.selectAll("g.bar")
-			.data(buckets.filter(d=>(d>0)))
+			.data([0.05,0.1,0.15,0.2,0.5])
 			.enter()
 			.append("g")
 				.attr("class","bar")
@@ -264,10 +271,21 @@ export default function FailingRateChart(data,options) {
 		mean_bar
 			.append("text")
 				.attrs({
-					x:0,
-					y:-2
+					x:xscale.range()[1],
+					y:-2,
+					"class":"avg"
 				})
 				.text(d=>("National avg "+d3_format(".0%")(d)))
+
+    }
+
+    function highlightLAD(d) {
+    	rate.classed("show",r=>r.value.name===d.value.name)
+    }
+
+    this.highlightLAD = (d) => {
+
+    	highlightLAD(d);
 
     }
 

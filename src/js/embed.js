@@ -1,6 +1,8 @@
 import iframeMessenger from 'guardian/iframe-messenger';
 import embedHTML from './text/embed.html!text';
 
+//import d3 from 'd3';
+
 import {
 	selection
 } from 'd3-selection-multi'
@@ -13,10 +15,13 @@ import fsaMap from  '../assets/data/fsa_map.json!json';
 import FailingRateChart from './charts/FailingRateChart';
 import lads_info from '../assets/data/lads_info.json!json';
 
+import {postcodeLookup} from './lib/postcode'
+
 import SquareMap from './map/SquareMap';
 import TileSquareMap from './map/TileSquareMap';
 
 import {queue as d3_queue} from 'd3-queue';
+import {select} from 'd3-selection';
 import {
 	csv,
 	json
@@ -24,6 +29,7 @@ import {
 import {
 	values
 } from "d3-collection"
+import Awesomplete from 'awesomplete';
 
 window.init = function init(el, config) {
     iframeMessenger.enableAutoResize();
@@ -112,32 +118,134 @@ window.init = function init(el, config) {
 		    	fsaData:fsaData
 	    	})
 
+	    	let localNames=local_authorities.map(d=>d.name);
+	    	let form=document.querySelector(".hp-location__form");
+		    let input=document.querySelector(".hp-madlib__input__text");
+		    new Awesomplete(input, {list: localNames});
+
+		    select(input)
+		    	.on("focus",()=>{
+		    		//console.log(event)
+		    		event.preventDefault();
+		    		console.log("FOCUS")
+		    	})
+		    	.on('awesomplete-selectcomplete', () => {
+			    	console.log("!!!!")
+			        //bean.fire(this.els.form, 'submit');
+			    })
+
+			select(form)
+				.on("submit",(d)=>{
+
+					event.preventDefault();
+
+					console.log("SUBMIT")
+
+					let inputboxVal = input.value;
+		            if (!inputboxVal) {
+		            	return;
+		            } else if (localNames.indexOf(inputboxVal) !== -1) {
+		                console.log("SHOW",inputboxVal);
+		            }
+		            else { // not a constituency
+		            	let sanitizedPostcode = inputboxVal.toUpperCase().replace(/\s/g, '');
+						let postcodeRegex = /^([A-Z][A-Z0-9]?[A-Z0-9]?[A-Z0-9]?[0-9][A-Z0-9]{2})$/i;
+						if (postcodeRegex.test(sanitizedPostcode)) {
+							let url = `https://interactive.guim.co.uk/2016/may/ukelex/postcodes/${sanitizedPostcode}.json`;
+							//return json(url,callback());
+							json(url,(data)=>{
+								console.log("YES!",data)
+								if(!data) {
+									console.log("BOOOOOH")
+									return;
+								}
+								console.log(inputboxVal,"->",data.adminDistrictCode)
+							})
+						} else {
+							console.log(`${sanitizedPostcode} (length ${sanitizedPostcode.length})`)
+							console.log("WROOONG");
+							//return new Promise((resolve, reject) => reject('Invalid postcode'));
+						}
+		            }
+				})
+
 	    });
 
-    /*csv("../assets/data/grid.csv",d=>{
-    	d.x = +d.x;
-    	d.y = +d.y;
-    	return d;
-    },(data)=>{
+    
 
+    
 
+    /*select(".hp-location__form")
+    	.on('submit', () => {
+	        let inputboxVal = document.querySelector(".hp-madlib__input__text").value;
+	        
+	        if (localNames.indexOf(inputboxVal) !== -1) {
+	            this.showResultByName(inputboxVal);
+	        } else { // not a constituency
+	            postcodeLookup(inputboxVal).then(
+	                postcodeJson => this.postcodeFn(postcodeJson),
+	                failReason => {
+	                    if (typeof failReason === 'string') this.showError(failReason);
+	                    else if (failReason.status === 404) this.showError('Invalid postcode');
+	                    else this.showError('Error retrieving postcode');
+	                }
+	            );
+	        }
+    	})
+    	.select("input")*/
 
-    	// new StaticMap("../assets/imgs/LADS.svg",{
-	    // 	container:el.querySelector(".square-map")
-	    // });	
-    })*/
 
     
     //fetchMapData(drawMap);
+    let charts={
+    	"all":new FailingRateChart(fsaData,{
+		    	container:el.querySelector("#c1.failingrate-chart"),
+		    	indicator:"all",
+		    	margins:{
+		    		left:30,
+		    		right:30,
+		    		bottom:10,
+		    		top:30
+		    	},
+		    	mouseEnterCallback:(d=>{
+		    		charts.restaurant.highlightLAD(d);
+		    		charts.takeaway.highlightLAD(d);
+		    	})
+		    }),
+    	"restaurant":new FailingRateChart(fsaData,{
+		    	container:el.querySelector("#c2.failingrate-chart"),
+		    	indicator:"restaurant",
+		    	margins:{
+		    		left:30,
+		    		right:30,
+		    		bottom:10,
+		    		top:30
+		    	},
+		    	mouseEnterCallback:(d=>{
+		    		charts.all.highlightLAD(d);
+		    		charts.takeaway.highlightLAD(d);
+		    	})
+		    }),
+    	"takeaway":new FailingRateChart(fsaData,{
+		    	container:el.querySelector("#c3.failingrate-chart"),
+		    	indicator:"takeaway",
+		    	margins:{
+		    		left:30,
+		    		right:30,
+		    		bottom:10,
+		    		top:30
+		    	},
+		    	mouseEnterCallback:(d=>{
+		    		charts.all.highlightLAD(d);
+		    		charts.restaurant.highlightLAD(d);
+		    	})
+		    })
+    };
     
-    new FailingRateChart(fsaData,{
-    	container:el.querySelector(".failingrate-chart"),
-    	margins:{
-    		left:30,
-    		right:30,
-    		bottom:10,
-    		top:30
-    	}
-    })
+    
+
+    
+
+    
 
 };

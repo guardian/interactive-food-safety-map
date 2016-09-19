@@ -3,12 +3,21 @@
 		g.lads {
 			g.lad {
 				rect {
-					//fill:#333;
 					fill-opacity:1;//0.2;
+					stroke:#bdbdbd;
+					stroke-width:1;
+					stroke-opacity:0;
+					shape-rendering: crispEdges;
+				}
+				&:hover {
+					rect {
+						stroke-opacity:0.75;
+					}
 				}
 				line.border {
-					stroke:#333;
+					stroke:#bdbdbd;
 					stroke-width:1;
+					stroke-opacity:0;
 					shape-rendering: crispEdges;
 				}
 				text {
@@ -18,6 +27,16 @@
 					text-anchor:middle;
 					//display: none;
 					text-transform: uppercase;
+				}
+				&[data-region='london'] {
+					line.border {
+						stroke-opacity:1;
+					}
+				}
+				&[data-region='scotland'] {
+					line.border {
+						stroke-opacity:1;
+					}
 				}
 			}
 			

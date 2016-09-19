@@ -19,9 +19,11 @@ System.config({
   },
 
   map: {
+    "awesomplete": "npm:awesomplete@1.1.1",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
+    "d3": "npm:d3@4.2.3",
     "d3-array": "npm:d3-array@1.0.1",
     "d3-axis": "npm:d3-axis@1.0.3",
     "d3-collection": "npm:d3-collection@1.0.1",
@@ -98,6 +100,9 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "npm:util@0.10.3"
     },
+    "npm:awesomplete@1.1.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:babel-runtime@5.8.38": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -146,6 +151,21 @@ System.config({
     "npm:core-util-is@1.0.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
+    "npm:d3-brush@1.0.2": {
+      "d3-dispatch": "npm:d3-dispatch@1.0.1",
+      "d3-drag": "npm:d3-drag@1.0.1",
+      "d3-interpolate": "npm:d3-interpolate@1.1.1",
+      "d3-selection": "npm:d3-selection@1.0.2",
+      "d3-transition": "npm:d3-transition@1.0.2"
+    },
+    "npm:d3-chord@1.0.2": {
+      "d3-array": "npm:d3-array@1.0.1",
+      "d3-path": "npm:d3-path@1.0.2"
+    },
+    "npm:d3-drag@1.0.1": {
+      "d3-dispatch": "npm:d3-dispatch@1.0.1",
+      "d3-selection": "npm:d3-selection@1.0.2"
+    },
     "npm:d3-dsv@1.0.3": {
       "commander": "npm:commander@2.9.0",
       "iconv-lite": "npm:iconv-lite@0.4.13",
@@ -182,15 +202,18 @@ System.config({
       "d3-color": "npm:d3-color@1.0.1",
       "d3-format": "npm:d3-format@1.0.2",
       "d3-interpolate": "npm:d3-interpolate@1.1.1",
-      "d3-time": "npm:d3-time@1.0.2",
+      "d3-time": "npm:d3-time@1.0.3",
       "d3-time-format": "npm:d3-time-format@2.0.2"
     },
     "npm:d3-selection-multi@1.0.0": {
       "d3-selection": "npm:d3-selection@1.0.2",
       "d3-transition": "npm:d3-transition@1.0.2"
     },
+    "npm:d3-shape@1.0.3": {
+      "d3-path": "npm:d3-path@1.0.2"
+    },
     "npm:d3-time-format@2.0.2": {
-      "d3-time": "npm:d3-time@1.0.2"
+      "d3-time": "npm:d3-time@1.0.3"
     },
     "npm:d3-transition@1.0.2": {
       "d3-color": "npm:d3-color@1.0.1",
@@ -199,6 +222,47 @@ System.config({
       "d3-interpolate": "npm:d3-interpolate@1.1.1",
       "d3-selection": "npm:d3-selection@1.0.2",
       "d3-timer": "npm:d3-timer@1.0.3"
+    },
+    "npm:d3-zoom@1.0.3": {
+      "d3-dispatch": "npm:d3-dispatch@1.0.1",
+      "d3-drag": "npm:d3-drag@1.0.1",
+      "d3-interpolate": "npm:d3-interpolate@1.1.1",
+      "d3-selection": "npm:d3-selection@1.0.2",
+      "d3-transition": "npm:d3-transition@1.0.2"
+    },
+    "npm:d3@4.2.3": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "d3-array": "npm:d3-array@1.0.1",
+      "d3-axis": "npm:d3-axis@1.0.3",
+      "d3-brush": "npm:d3-brush@1.0.2",
+      "d3-chord": "npm:d3-chord@1.0.2",
+      "d3-collection": "npm:d3-collection@1.0.1",
+      "d3-color": "npm:d3-color@1.0.1",
+      "d3-dispatch": "npm:d3-dispatch@1.0.1",
+      "d3-drag": "npm:d3-drag@1.0.1",
+      "d3-dsv": "npm:d3-dsv@1.0.3",
+      "d3-ease": "npm:d3-ease@1.0.1",
+      "d3-force": "npm:d3-force@1.0.2",
+      "d3-format": "npm:d3-format@1.0.2",
+      "d3-geo": "npm:d3-geo@1.2.4",
+      "d3-hierarchy": "npm:d3-hierarchy@1.0.2",
+      "d3-interpolate": "npm:d3-interpolate@1.1.1",
+      "d3-path": "npm:d3-path@1.0.2",
+      "d3-polygon": "npm:d3-polygon@1.0.1",
+      "d3-quadtree": "npm:d3-quadtree@1.0.1",
+      "d3-queue": "npm:d3-queue@3.0.3",
+      "d3-random": "npm:d3-random@1.0.1",
+      "d3-request": "npm:d3-request@1.0.2",
+      "d3-scale": "npm:d3-scale@1.0.3",
+      "d3-selection": "npm:d3-selection@1.0.2",
+      "d3-shape": "npm:d3-shape@1.0.3",
+      "d3-time": "npm:d3-time@1.0.3",
+      "d3-time-format": "npm:d3-time-format@2.0.2",
+      "d3-timer": "npm:d3-timer@1.0.3",
+      "d3-transition": "npm:d3-transition@1.0.2",
+      "d3-voronoi": "npm:d3-voronoi@1.0.2",
+      "d3-zoom": "npm:d3-zoom@1.0.3",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:duplexer2@0.0.2": {
       "readable-stream": "npm:readable-stream@1.1.14"

@@ -82,13 +82,12 @@ export default function TileSquareMap(data,options) {
 		d.borders=borders;
 	})
 
-	let buckets=[0,0.1,0.2,0.3,0.4,0.5]
-	buckets=[0.05,0.1,0.15,0.2,0.25,0.251]
+	let buckets=[0.05,0.1,0.15,0.2,0.5,0.51]
 
 	let fillThreshold = d3_scaleThreshold()
         .domain(buckets)
         //.range(["#eaeaea",'#f1eef6','#d7b5d8','#df65b0','#dd1c77','#980043'])
-        .range(["#f6f6f6","#eaeaea","#f9f1c5","#ffe900","#ffce00"])
+        .range(["#f6f6f6","#eaeaea","#ffd400","#ffa300","#ff5b3a","#cc2b12"])
 /*
 #f6f6f6 0-5%
 #eaeaea 5-10%
@@ -139,7 +138,7 @@ export default function TileSquareMap(data,options) {
 		WIDTH=box.width;
 		HEIGHT=box.height;
 
-		let square_side=30;
+		let square_side=15;
 
 		WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 		HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;
@@ -209,16 +208,16 @@ export default function TileSquareMap(data,options) {
     				if(!d.index) {
     					return "#fff";
     				}
-    				console.log(d)
+    				//console.log(d)
     				return fillThreshold(d.info.count.all.rateFail)
     			})
 
-    	lad.append("text")
+    	/*lad.append("text")
     			.attrs({
     				x:0,
     				y:0
     			})
-    			.text(d=>d.name.slice(0,3))
+    			.text(d=>d.name.slice(0,3))*/
 
     	lad.filter(d=>d.borders.top)
     			.append("line")
