@@ -6,6 +6,7 @@ build
 deploy
 cfg/aws-keys.json
 npm-debug.log
+fsa/FSA.csv
 *.swp
 *.swm
 *.swn
