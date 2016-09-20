@@ -217,8 +217,8 @@ export default function TileSquareMap(data,options) {
     			.append("line")
     			.attrs({
     				"class":"border",
-    				x1:-square_side/2,
-    				x2:square_side/2,
+    				x1:-square_side/2-0.5,
+    				x2:square_side/2+0.5,
     				y1:-square_side/2,
     				y2:-square_side/2
     			})
@@ -227,8 +227,8 @@ export default function TileSquareMap(data,options) {
     			.append("line")
     			.attrs({
     				"class":"border",
-    				x1:-square_side/2,
-    				x2:square_side/2,
+    				x1:-square_side/2-0.5,
+    				x2:square_side/2+0.5,
     				y1:square_side/2,
     				y2:square_side/2
     			})
@@ -239,8 +239,8 @@ export default function TileSquareMap(data,options) {
     				"class":"border",
     				x1:-square_side/2,
     				x2:-square_side/2,
-    				y1:-square_side/2,
-    				y2:square_side/2
+    				y1:-square_side/2-0.5,
+    				y2:square_side/2+0.5
     			})
 
     	lad.filter(d=>d.borders.right)
@@ -249,8 +249,8 @@ export default function TileSquareMap(data,options) {
     				"class":"border",
     				x1:square_side/2,
     				x2:square_side/2,
-    				y1:-square_side/2,
-    				y2:square_side/2
+    				y1:-square_side/2-0.5,
+    				y2:square_side/2+0.5
     			})
     
     	

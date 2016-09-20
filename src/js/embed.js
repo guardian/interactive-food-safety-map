@@ -31,6 +31,15 @@ import {
 	values
 } from "d3-collection"
 
+/*
+tooltip text
+tooltip background
+map scale
+wrong text in lookup form
+remove mouseenter event -> only click
+show text after lookup [link + avg + bla bla bla]
+titles
+*/
 
 window.init = function init(el, config) {
     iframeMessenger.enableAutoResize();
@@ -60,9 +69,9 @@ window.init = function init(el, config) {
     })*/
 
     d3_queue()
-	    .defer(csv, "../../assets/data/grid3.csv")
-	    .defer(csv, "../../assets/data/centroids.csv")
-	    .defer(json, "../../assets/data/lads_info.json")
+	    .defer(csv, config.assetPath+"/assets/data/grid3.csv")
+	    .defer(csv, config.assetPath+"/assets/data/centroids.csv")
+	    .defer(json, config.assetPath+"/assets/data/lads_info.json")
 	    .await((err, grid, centroids,lads_info)=>{
 	    	console.log(grid)
 	    	
