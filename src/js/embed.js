@@ -111,8 +111,8 @@ window.init = function init(el, config) {
 
 	    	console.log(local_authorities);
 
-	    	new TileSquareMap(local_authorities,{
-	    		container:el.querySelector(".grid-map"),
+	    	let map=new TileSquareMap(local_authorities,{
+	    		container:el.querySelector(".map"),
 	    		indicator:"all",
 		    	margins:{
 		    		left:20,
@@ -120,7 +120,10 @@ window.init = function init(el, config) {
 		    		bottom:20,
 		    		top:20
 		    	},
-		    	fsaData:fsaData
+		    	fsaData:fsaData,
+		    	mouseEnterCallback:(name) => {
+		    		values(charts).forEach(c=>c.highlightLAD(name))
+		    	}
 	    	})
 
 	    	new LookupLocalAuthority({
@@ -135,6 +138,7 @@ window.init = function init(el, config) {
 	    			}
 	    			console.log("SHOWING",name)
 	    			values(charts).forEach(c=>c.highlightLAD(name))
+	    			map.highlightLAD(name)
 	    		}
 	    	})
 
@@ -151,6 +155,7 @@ window.init = function init(el, config) {
 				    	mouseEnterCallback:(d=>{
 				    		charts.restaurant.highlightLAD(d);
 				    		charts.takeaway.highlightLAD(d);
+				    		map.highlightLAD(d)
 				    	})
 				    }),
 		    	"restaurant":new FailingRateChart(fsaData,{

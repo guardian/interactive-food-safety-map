@@ -189,12 +189,11 @@ export default function FailingRateChart(data,options) {
 				})
 
 		rate.append("text")
-				//.filter(d=>(d.value.name==="Birmingham"))
 				.attrs({
 					x:w,
 					y:-5
 				})
-				.text(d=>(d.value.name+" "+d.key))
+				.text(d=>(d.value.name+" "+d3_format(",.2%")(+d.key)))
 
 		rate.append("rect")
 				.attrs({

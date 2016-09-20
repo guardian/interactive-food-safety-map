@@ -1,3 +1,6 @@
+.map {
+	position: relative;
+}
 .grid-map {
 	svg {
 		g.lads {
@@ -9,9 +12,10 @@
 					stroke-opacity:0;
 					shape-rendering: crispEdges;
 				}
-				&:hover {
+				&:hover,
+				&.highlight {
 					rect {
-						stroke-opacity:0.75;
+						stroke-opacity:1;
 					}
 				}
 				line.border {

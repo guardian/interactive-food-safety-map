@@ -30,7 +30,7 @@ import {
 	format as d3_format
 } from 'd3-format';
 
-import Tooltip from '../lib/Tooltip'
+import Tooltip from '../components/Tooltip'
 
 export default function TileSquareMap(data,options) {
 
@@ -130,11 +130,12 @@ export default function TileSquareMap(data,options) {
 		let yscale=d3_scaleLinear().domain(extents.y).range([0,HEIGHT-(margins.top+margins.bottom)]);
 
 		let svg=select(options.container)
-    				.append("svg")
-    				.attrs({
-    					width:WIDTH,
-    					height:HEIGHT
-    				})
+					.select(".grid-map")
+	    				.append("svg")
+	    				.attrs({
+	    					width:WIDTH,
+	    					height:HEIGHT
+	    				})
 
     	let grid=svg.append("g")
     					.attrs({
@@ -165,6 +166,9 @@ export default function TileSquareMap(data,options) {
     				})
     				.on("mouseenter",d=>{
 						highlightLAD(d.name);
+						if(options.mouseEnterCallback) {
+							options.mouseEnterCallback.call(this,d.name)
+						}
     				})
 
     	lad.append("rect")
@@ -255,8 +259,8 @@ export default function TileSquareMap(data,options) {
 					value: d3_format(",.2%")(_lad.info.count[options.indicator].rateFail)
 				}
 			],
-			_lad.position.x,
-			_lad.position.y+margins.top+square_side/2
+			_lad.position.x+square_side/2,
+			_lad.position.y-square_side/2
 		);
 
     }
