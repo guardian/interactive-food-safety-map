@@ -120,20 +120,33 @@ export default function TileSquareMap(data,options) {
 		let box=options.container.getBoundingClientRect();
 		WIDTH=box.width;
 		HEIGHT=box.height;
-
-		square_side=WIDTH/extents.x[1];
+		
+		square_side=Math.floor((WIDTH-(margins.left+margins.right))/extents.x[1]);
 		
 		//WIDTH=extents.x[1]*square_side+margins.right+margins.left;
-		HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;
-
+		HEIGHT=extents.y[1]*square_side+(margins.top+margins.bottom);
+		console.log("EXTENTS",extents)
 		if(HEIGHT>600) {
 			HEIGHT=600;
-			square_side=(HEIGHT-(margins.top+margins.bottom))/extents.y[1];
+			square_side=Math.floor((HEIGHT-(margins.top+margins.bottom))/extents.y[1]);
 			WIDTH=extents.x[1]*square_side+margins.right+margins.left;
+			HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;			
+			alert("H:"+WIDTH+","+HEIGHT+","+square_side)
+		} else {
+			alert("W:"+WIDTH+","+HEIGHT+","+square_side)
 		}
-
+		
+		
 		let xscale=d3_scaleLinear().domain(extents.x).range([0,WIDTH-(margins.left+margins.right)]);
 		let yscale=d3_scaleLinear().domain(extents.y).range([0,HEIGHT-(margins.top+margins.bottom)]);
+
+		/*xscale=(x)=>{
+			return x*square_side
+		}
+
+		yscale=(y)=>{
+			return y*square_side
+		}*/
 
 		let svg=select(options.container)
 					.select(".grid-map")

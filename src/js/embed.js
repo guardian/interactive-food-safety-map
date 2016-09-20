@@ -112,12 +112,11 @@ window.init = function init(el, config) {
 	    	let map=new TileSquareMap(local_authorities,{
 	    		container:el.querySelector(".map"),
 	    		indicator:"all",
-	    		square_side:20,
 		    	margins:{
-		    		left:20,
-		    		right:20,
-		    		bottom:20,
-		    		top:20
+		    		left:10,
+		    		right:10,
+		    		bottom:10,
+		    		top:10
 		    	},
 		    	fsaData:fsaData,
 		    	mouseEnterCallback:(name) => {
@@ -128,6 +127,12 @@ window.init = function init(el, config) {
 	    	new LookupLocalAuthority({
 	    		container:el.querySelector(".js-location"),
 	    		list:local_authorities.map(d=>(d.name)),
+	    		avgs:{
+	    			"S":0.1,
+	    			"E":0.06,
+	    			"W":0.03,
+	    			"N":0.03
+	    		},
 	    		submitCallback:(d,type)=>{
 	    			let name=d;
 	    			if(type==="id") {
@@ -148,7 +153,7 @@ window.init = function init(el, config) {
 				    	indicator:"all",
 				    	margins:{
 				    		left:10,
-				    		right:90,
+				    		right:30,
 				    		bottom:20,
 				    		top:10
 				    	},
@@ -163,7 +168,7 @@ window.init = function init(el, config) {
 				    	indicator:"restaurant",
 				    	margins:{
 				    		left:10,
-				    		right:90,
+				    		right:30,
 				    		bottom:20,
 				    		top:10
 				    	},
@@ -178,7 +183,7 @@ window.init = function init(el, config) {
 				    	indicator:"takeaway",
 				    	margins:{
 				    		left:10,
-				    		right:90,
+				    		right:30,
 				    		bottom:20,
 				    		top:10
 				    	},

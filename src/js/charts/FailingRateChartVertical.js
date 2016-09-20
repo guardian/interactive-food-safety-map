@@ -194,7 +194,8 @@ export default function FailingRateChartVertical(data,options) {
 				.attr("y",0)
 				.attr("dx","0.25em")
 				.attr("dy","0.3em")
-				.text(d=>(d.value.name+" "+d3_format(",.2%")(+d.key)))
+				//.text(d=>(d.value.name+" "+d3_format(",.2%")(+d.key)))
+				.text(d=>(d3_format(",.1%")(+d.key)))
 
 		rate.append("rect")
 				.attrs({
