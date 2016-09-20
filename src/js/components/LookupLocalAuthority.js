@@ -16,6 +16,7 @@ export default function LookupLocalAuthority(options) {
 	let form=container.querySelector(".hp-location__form");
     let input=form.querySelector(".hp-madlib__input__text");
     let btn=form.querySelector(".hp-madlib__input__btn");
+    let error=form.querySelector(".lookup-error");
     new Awesomplete(input, {list: list});
 
     select(input)
@@ -55,6 +56,7 @@ export default function LookupLocalAuthority(options) {
 						console.log("YES!",data)
 						if(!data) {
 							console.log("BOOOOOH")
+							showError("Invalid postcode");
 							return;
 						}
 						console.log(inputboxVal,"->",data.adminDistrictCode)
@@ -65,6 +67,7 @@ export default function LookupLocalAuthority(options) {
 				} else {
 					console.log(`${sanitizedPostcode} (length ${sanitizedPostcode.length})`)
 					console.log("WROOONG");
+					showError("Invalid postcode");
 					//return new Promise((resolve, reject) => reject('Invalid postcode'));
 				}
             }
@@ -73,5 +76,23 @@ export default function LookupLocalAuthority(options) {
 		.on("click",()=>{
 			select(form).dispatch("submit")
 		})
+
+	this.setItem=(name)=>{
+		input.value=name;
+		select(form).dispatch("submit");
+	}
+
+	let errorTimeout;
+
+	function showError(str) {
+        if (errorTimeout) window.clearTimeout(errorTimeout);
+        error.innerHTML = str;
+        error.classList.add('lookup-error--visible');
+        errorTimeout = window.setTimeout(() => {clearError()}, 4000)
+    }
+
+    function clearError() {
+        error.classList.remove('lookup-error--visible');
+    }
 
 }

@@ -91,11 +91,20 @@ export default function FailingRateChartVertical(data,options) {
 
     function buildVisual() {
 
-    	let box=options.container.getBoundingClientRect();
+    	
+		select(options.container)
+					.append("h2")
+					.html(options.title)
+
+    	let chart=select(options.container)
+    				.append("div")
+    				.attr("class","chart")
+
+    	let box=chart.node().getBoundingClientRect();
 		WIDTH=box.width;
 		HEIGHT=box.height;
 
-    	let svg=select(options.container)
+		let svg=chart
     				.append("svg")
     				.attrs({
     					width:WIDTH,
@@ -149,13 +158,13 @@ export default function FailingRateChartVertical(data,options) {
 			    				//console.log(d,x,y)
 			    				return `translate(${x},${y})`;
 			    			})
-			    			.on("mouseenter",function(d){
+			    			/*.on("mouseenter",function(d){
 			    				highlightLAD(d.value.name);
 			    				if(options.mouseEnterCallback) {
 			    					console.log(d)
 			    					options.mouseEnterCallback.call(this,d.value.name)
 			    				}
-			    			})
+			    			})*/
 		let h=(HEIGHT/lads.length);
 		h=1;
 		rate.append("rect")

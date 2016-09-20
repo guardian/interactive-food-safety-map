@@ -47,5 +47,25 @@
 			
 
 		}
+		g.legend {
+			text {
+				@include fs-textSans(1);
+				font-size: 11px;
+				color:#333;
+			}
+			g.range {
+				text {
+					@include fs-textSans(1);
+					font-size: 11px;
+					color:#333;
+					text-anchor:middle;
+				}
+				&:last-child {
+					text {
+						text-anchor:end;
+					}
+				}
+			}
+		}
 	}
 }

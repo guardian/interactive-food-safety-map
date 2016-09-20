@@ -36,7 +36,7 @@ export default function TileSquareMap(data,options) {
 
 	console.log("TileSquareMap",data,options.fsaData)
 
-	let colors={
+	/*let colors={
 			"london":"#efd255",
 			"east":"#ff6600",
 			"wales":"#7e0023",
@@ -48,7 +48,7 @@ export default function TileSquareMap(data,options) {
 			"north-west":"#008bc9",
 			"north-east":"#bc0074",
 			"yorkshire-and-the-humber":"#ff7200"
-		};
+		};*/
 
 	data.forEach(d=>{
 		d.info=options.fsaData.lads[d.index];
@@ -107,14 +107,20 @@ export default function TileSquareMap(data,options) {
 	    	title:false,
 	    	indicators:[
 	    		{
-	    			id:"t_lad_name"//,
-	    			//title:"LA"
+	    			id:"t_lad_name"
 	    		},
 	    		{
-	    			id:"t_lad_failrate"//,
-	    			//title:"Failrate"
+	    			id:"t_lad_failrate"
+	    		},
+	    		{
+	    			id:"t_lad_sum"
+	    		},
+	    		{
+	    			id:"t_lad_sumfail"
 	    		}
-	    	]
+	    		
+	    	],
+	    	html:"<div class='content'><span id='t_lad_sumfail' class='value'></span> out of <span id='t_lad_sum' class='value'></span> failed the FSA hygiene inspection in <span id='t_lad_name' class='value b'></span>, a <span id='t_lad_failrate' class='value'>XX</span></div><div class='name'><span id='t_lad_name' class='value'></span></div>"
 	    });
 
 		let box=options.container.getBoundingClientRect();
@@ -184,9 +190,15 @@ export default function TileSquareMap(data,options) {
     					return `translate(${x},${y})`
     				})
     				.on("mouseenter",d=>{
-						highlightLAD(d.name);
+						highlightLAD(d.name,true);
 						if(options.mouseEnterCallback) {
 							options.mouseEnterCallback.call(this,d.name)
+						}
+    				})
+    				.on("click",d=>{
+						highlightLAD(d.name);
+						if(options.mouseClickCallback) {
+							options.mouseClickCallback.call(this,d.name)
 						}
     				})
 
@@ -253,15 +265,107 @@ export default function TileSquareMap(data,options) {
     				y2:square_side/2+0.5
     			})
     
-    	
-    				//.classed("b-b",d=>d.borders.bottom)
-    				//.classed("b-l",d=>d.borders.left)
-    				//.classed("b-r",d=>d.borders.right)
+    	let legend_width=200,
+    		legend_height=10;
+    	let legend=svg.append("g")
+    					.attrs({
+    						"class":"legend",
+    						"transform":`translate(${WIDTH-margins.right-legend_width},${margins.top+10})`
+    					});
+    	legend.append("text")
+    			.attrs({
+    				x:0,
+    				y:-5
+    			})
+    			.text("How to read")
+
+    	let range=legend
+					.selectAll("g.range")
+					.data(([0]).concat(buckets))
+					.enter()
+					.append("g")
+					.attr("class","range")
+					.attr("transform",d=>{
+						return `translate(${d*legend_width},0)`
+					});
+		range.append("rect")
+				.attrs({
+					x:0,
+					y:0,
+					height:legend_height
+				})
+				.attr("width",(d,i)=>{
+					if(d<=0.5) {
+						return (buckets[i+1]-d)*legend_width;
+					} else {
+						return (1-d)*legend_width;
+					}
+				})
+				.style("fill",d=>fillThreshold(d))
+		range.append("text")
+				.attr("x",(d,i)=>{
+					//return 0;
+					if(d<=0.5) {
+						return 0;//(buckets[i+1]-d)*legend_width;
+					} else {
+						return 0.5*legend_width;
+					}
+				})
+				.attr("y",legend_height+10)
+				.text((d,i)=>{
+					if(d<=0.5) {
+						return d*100
+					} else {
+						return "100%";
+					}
+				})
+
+		let colors=([0]).concat(buckets);
+    	legend=svg.append("g")
+    					.attrs({
+    						"class":"legend",
+    						"transform":`translate(${WIDTH-margins.right-square_side-40},${margins.top+50})`
+    					});
+    	legend.append("text")
+    			.attrs({
+    				x:0,
+    				y:-5
+    			})
+    			.text("How to read")
+
+    	range=legend
+					.selectAll("g.range")
+					.data(colors.filter(d=>d<=0.5))
+					.enter()
+					.append("g")
+					.attr("class","range")
+					.attr("transform",(d,i)=>{
+						return `translate(0,${i*square_side})`
+					});
+		range.append("rect")
+				.attrs({
+					x:0,
+					y:0,
+					width:square_side-1,
+					height:square_side-1
+				})
+				.style("fill",d=>fillThreshold(d))
+		range.append("text")
+				.attr("x",square_side+2)
+				.attr("y",square_side/2)
+				.attr("dy","0.3em")
+				.style("text-anchor","start")
+				.text((d,i)=>{
+					if(d===0.5) {
+						return (d*100)+"-100%";
+					}
+					return (d*100)+"-"+(colors[i+1]*100)+"%"
+				})
 
 	}
 
-	function highlightLAD(name) {
-		console.log(name,data)
+	function highlightLAD(name,onlyname=false) {
+		//console.log(name,data)
     	lad.classed("highlight",r=>r.name===name)
 
     	let _lad=data.filter(d=>(d.name===name))[0]
@@ -275,11 +379,21 @@ export default function TileSquareMap(data,options) {
 				},
 				{
 					id:"t_lad_failrate",
-					value: d3_format(",.2%")(_lad.info.count[options.indicator].rateFail)
+					value: d3_format(",.1%")(_lad.info.count[options.indicator].rateFail)
+				},
+				{
+					id:"t_lad_sum",
+					value: _lad.info.count[options.indicator].sum
+				},
+				{
+					id:"t_lad_sumfail",
+					value: _lad.info.count[options.indicator].sumFail
 				}
 			],
 			_lad.position.x+square_side/2,
-			_lad.position.y-square_side/2
+			_lad.position.y-square_side/2-0.5,
+			null,
+			onlyname
 		);
 
     }

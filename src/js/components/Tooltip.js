@@ -22,50 +22,66 @@ export default function Tooltip(options) {
 			.attr("class","tooltip-title")
 			.text("title")	
 	}
-	
-
-	var indicator=tooltip.selectAll("div.indicator")
-			.data(options.indicators,function(d){
-				return d.id;
-			})
-			.enter()
-			.append("div")
-				.attr("class","indicator clearfix")
-
-	var value=indicator.append("span")
-				.attr("class","value")
-				.attr("id",function(d){
+	let indicator;
+	if(options.html) {
+		tooltip.html(options.html);
+		indicator=tooltip.selectAll("span.value");
+	} else {
+		indicator=tooltip.selectAll("div.indicator")
+				.data(options.indicators,function(d){
 					return d.id;
-				});
+				})
+				.enter()
+				.append("div")
+					.attr("class","indicator clearfix")
 
-	indicator
-			.filter(d=>(typeof d.title !== 'undefined'))
-			.append("span")
-				.attr("class","title")
-				.text(function(d){
-					return d.title;
-				});
+		var value=indicator.append("span")
+					.attr("class","value")
+					.attr("id",function(d){
+						return d.id;
+					});
+
+		indicator
+				.filter(d=>(typeof d.title !== 'undefined'))
+				.append("span")
+					.attr("class","title")
+					.text(function(d){
+						return d.title;
+					});
+	}
 
 	this.hide=function() {
 		tooltip.classed("visible",false);
 	};
-	this.show=function(data,x,y,title) {
-		//console.log(x,y)
-		//percentage.text(data.percentage+"%");
-		//projection_value.text(data.total)
+	this.show=function(data,x,y,title=null,onlyname=false) {
+	
 
 		if(title) {
 			tooltipTitle.text(title);	
 		}
 		
+		if(options.html) {
 
-		indicator.data(data);
+			if(onlyname) {
+				tooltip.classed("only-name",true);
+			} else {
+				tooltip.classed("only-name",false);
+			}
 
-		indicator.select("span.value")
-			.text(function(d){
-				//console.log("AAAHHHHHHHHHH",d,this)
-				return d.value;
-			})
+			data.forEach(d=>{
+				tooltip.selectAll(`span#${d.id}`).text(d.value)
+			});
+		} else {
+			indicator.data(data);
+
+			indicator.select("span.value")
+				.text(function(d){
+					//console.log("AAAHHHHHHHHHH",d,this)
+					return d.value;
+				})
+		}
+
+		
 
 		tooltip.styles({
 			left:(x+options.margins.left)+"px",
@@ -74,5 +90,6 @@ export default function Tooltip(options) {
 		.classed("visible",true)
 		
 	};
+	
 
 }

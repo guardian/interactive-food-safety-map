@@ -12,52 +12,13 @@ body {
 .interactive-embed {
 }
 
-// map
-.map-gb {
-    path {
-        stroke: #fff;
-        stroke-linejoin: round;
-        stroke-width: 0.2px;
-    }
-    path:hover {
-        stroke:#333;
-        stroke-width: 0.5px;
-        transition: stroke .25s ease;
-        cursor: pointer;
-        z-index: 999;
-    }
-
-    text {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 10px;
-        text-anchor: middle;
-        pointer-events: none;
-    }
-}
-
-
-// btn
-.btns {
-    position: absolute;
-    top: 15px; //temp
-}
-.btn {
-    color: #005689;
-    background: #eaeaea;
-    font-size: 15px;
-    font-weight: bold;
-    border: 0;
-    border-radius: 15px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
 // summary
 .summary {
     position: relative;//absolute;
-    top: 45px;
+    margin-top: 10px;
+    margin-bottom:10px;
     width: 100%;
-    max-width: 480px;
+    //max-width: 480px;
     span {
     //fs-data(*)
     }
@@ -68,6 +29,7 @@ body {
 .v-v { visibility: visible; }
 .v-h { visibility: hidden; }
 @import "layout";
+@import "summary";
 @import "awesomplete";
 @import "madlib";
 @import "failingrate-chart-vertical";

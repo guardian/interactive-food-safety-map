@@ -30,15 +30,18 @@ import {
 import {
 	values
 } from "d3-collection"
+import {
+	format as d3_format
+} from 'd3-format'
 
 /*
-tooltip text
-tooltip background
-map scale
-wrong text in lookup form
-remove mouseenter event -> only click
-show text after lookup [link + avg + bla bla bla]
-titles
+//tooltip text
+//tooltip background
+//map scale
+//wrong text in lookup form
+//remove mouseenter event -> only click
+//show text after lookup [link + avg + bla bla bla]
+//titles
 */
 
 window.init = function init(el, config) {
@@ -117,7 +120,7 @@ window.init = function init(el, config) {
 	    	});
 
 	    	console.log(local_authorities);
-	    	
+	    	let lookup;
 	    	let map=new TileSquareMap(local_authorities,{
 	    		container:el.querySelector(".map"),
 	    		indicator:"all",
@@ -128,20 +131,49 @@ window.init = function init(el, config) {
 		    		top:10
 		    	},
 		    	fsaData:fsaData,
-		    	mouseEnterCallback:(name) => {
+		    	/*mouseEnterCallback:(name) => {
 		    		values(charts).forEach(c=>c.highlightLAD(name))
+		    	},*/
+		    	mouseClickCallback:(name) => {
+		    		values(charts).forEach(c=>c.highlightLAD(name))
+		    		lookup.setItem(name);
 		    	}
 	    	})
 
-	    	new LookupLocalAuthority({
+	    	let avgs={
+	    			"S":0.10,
+	    			"E":0.062,
+	    			"W":0.049,
+	    			"N":0.023
+	    		};
+	    	let countries={
+	    		"S":"Scotland",
+    			"E":"England",
+    			"W":"Wales",
+    			"N":"Northern Ireland"
+	    	}
+	    	let texts={};
+	    	local_authorities.filter(lad=>(typeof lad.info != 'undefined')).forEach(lad=>{
+	    		console.log(lad)
+	    		let rate=lad.info.count["all"].rateFail,
+	    			country=lad.id.slice(0,1),
+	    			diff=+rate*100 - avgs[country]*100;
+	    		texts[lad.name]={
+	    			name:lad.name,
+	    			id:lad.id,
+	    			country:country,
+	    			rate:d3_format(",.1%")(+rate),
+	    			diff:d3_format(",.1f")(diff),
+	    			how:diff>0?"above":"below"
+	    		}
+	    		texts[lad.name].html=`${texts[lad.name].rate} of all food-serving businesses in <b>${lad.name}</b> failed FSA hygiene tests, which is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
+	    	})
+
+	    	console.log(texts);
+
+	    	lookup=new LookupLocalAuthority({
 	    		container:el.querySelector(".js-location"),
 	    		list:local_authorities.map(d=>(d.name)),
-	    		avgs:{
-	    			"S":0.1,
-	    			"E":0.06,
-	    			"W":0.03,
-	    			"N":0.03
-	    		},
 	    		submitCallback:(d,type)=>{
 	    			let name=d;
 	    			if(type==="id") {
@@ -151,9 +183,15 @@ window.init = function init(el, config) {
 	    			}
 	    			console.log("SHOWING",name)
 	    			values(charts).forEach(c=>c.highlightLAD(name))
-	    			map.highlightLAD(name)
+	    			map.highlightLAD(name);
+
+	    			select(".summary")
+	    				.html(texts[name].html)
+
 	    		}
 	    	})
+
+
 	    	
 
 	    	let charts={
@@ -161,11 +199,12 @@ window.init = function init(el, config) {
 				    	container:el.querySelector("#c1.failingrate-chart"),
 				    	indicator:"all",
 				    	margins:{
-				    		left:10,
+				    		left:0,
 				    		right:30,
 				    		bottom:20,
 				    		top:10
 				    	},
+				    	title:"All types",
 				    	mouseEnterCallback:(d=>{
 				    		charts.restaurant.highlightLAD(d);
 				    		charts.takeaway.highlightLAD(d);
@@ -176,11 +215,12 @@ window.init = function init(el, config) {
 				    	container:el.querySelector("#c2.failingrate-chart"),
 				    	indicator:"restaurant",
 				    	margins:{
-				    		left:10,
+				    		left:0,
 				    		right:30,
 				    		bottom:20,
 				    		top:10
 				    	},
+				    	title:"Restaurants, cafes and canteens",
 				    	mouseEnterCallback:(d=>{
 				    		charts.all.highlightLAD(d);
 				    		charts.takeaway.highlightLAD(d);
@@ -191,11 +231,12 @@ window.init = function init(el, config) {
 				    	container:el.querySelector("#c3.failingrate-chart"),
 				    	indicator:"takeaway",
 				    	margins:{
-				    		left:10,
+				    		left:0,
 				    		right:30,
 				    		bottom:20,
 				    		top:10
 				    	},
+				    	title:"Takeaways and sandwich shops",
 				    	mouseEnterCallback:(d=>{
 				    		charts.all.highlightLAD(d);
 				    		charts.restaurant.highlightLAD(d);
