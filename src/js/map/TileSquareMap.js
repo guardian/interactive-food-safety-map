@@ -131,9 +131,9 @@ export default function TileSquareMap(data,options) {
 			square_side=Math.floor((HEIGHT-(margins.top+margins.bottom))/extents.y[1]);
 			WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 			HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;			
-			alert("H:"+WIDTH+","+HEIGHT+","+square_side)
+			//alert("H:"+WIDTH+","+HEIGHT+","+square_side)
 		} else {
-			alert("W:"+WIDTH+","+HEIGHT+","+square_side)
+			//alert("W:"+WIDTH+","+HEIGHT+","+square_side)
 		}
 		
 		
