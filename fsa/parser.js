@@ -1,11 +1,12 @@
 var fs = require('fs');
 var csvjson = require('csvjson');
 
-var src = 'FSA.csv';
+//var src = 'FSA.csv';
+var src = 'FSANew.txt';
 var dst = '../src/assets/data/fsa.json';
 
 var dataCSV = fs.readFileSync(src, { encoding : 'utf8'});
-var options = { delimiter : ','}; //\t
+var options = { delimiter : '\t'};
 var dataArr = csvjson.toArray(dataCSV, options);
 
 // headers
@@ -15,7 +16,8 @@ var headerMap = {};
 headers.forEach(function(header, i) {
     headerMap[header] = i; 
 });
-//console.log(headerMap);
+console.log("headerMap");
+console.log(headerMap);
 
 // rows of data
 var dataArrFiltered = dataArr.filter(function(data) {
@@ -54,9 +56,10 @@ dataArrFiltered.forEach(function(data) {
     if (typeScheme.indexOf(data[headerMap.SchemeType]) === -1) { typeScheme.push(data[headerMap.SchemeType]); }
 });
 console.log("lad count:", lads.length);
-////console.log(typeBiz);
-//console.log(typeRating);
-////console.log(typeScheme);
+
+typeRating.sort();
+console.log("typeRating");
+console.log(typeRating);
 
 /* end of data checking */
 
@@ -65,7 +68,8 @@ var ladMap = {};
 var bizMap = {};
 lads.forEach(function(lad, i) { ladMap[lad.code] = i; });
 typeBiz.forEach(function(biz, i) { bizMap[biz] = i; });
-//console.log(bizMap);
+console.log("bizMap");
+console.log(bizMap);
 
 
 /* row data to local authority districts */
@@ -97,16 +101,12 @@ function initCount(isNotSco, isByType) {
 lads.forEach(function(lad) {
     //lad.count = initCount(lad.flag, false); 
     //lad.countByType = initCount(lad.flag, true);
-    lad.countByType=[];
     lad.count = {
         all: initCount(lad.flag, false),
         takeaway: initCount(lad.flag, false),
         restaurant: initCount(lad.flag, false)
     };
-    //return lad;
 });
-
-console.log(lads.length,"!!")
 
 
 //var dataTest = dataArrFiltered.slice(146200, 146300);//.concat(dataArrFiltered.slice(231715, 231720));
@@ -159,12 +159,12 @@ lads.map(function(lad) {
         //if (isNaN(lad.count[type].rateFail)) {//console.log(lad);}
         if (lad.count[type].sum === 0) { lad.count[type].rateFail = null; }
     });
-    return lad; 
+    //return lad; 
 });
 ////console.log(lads);
 
 /* ranges */
-function getRange(type) {
+/*function getRange(type) {
     return {
         min: Math.min.apply(null, lads.map(function(lad) { return lad.count[type].rateFail;})),
         max: Math.max.apply(null, lads.map(function(lad) { return lad.count[type].rateFail;}))
@@ -175,22 +175,22 @@ Object.keys(lads[0].count).forEach(function(type) {
     ranges[type] = getRange(type);
 });
 console.log(ranges);
-
+*/
 /* arr to obj for topojson mapping */
 var ladObj = {};
 lads.map(function(lad) {
     ladObj[lad.code] = {
         name: lad.name,
         count: lad.count,
-        countByType: lad.countByType
+        //countByType: lad.countByType
     };    
 });
 
 var output = {
-    ranges: ranges,
+    //ranges: ranges,
     lads: ladObj
 };
 fs.writeFile(dst, JSON.stringify(output), function (err) {
-        if (err) return console.log(err);
-        console.log('sfa file saved');
+    if (err) return console.log(err);
+    console.log('fsa file saved');
 });
