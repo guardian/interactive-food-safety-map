@@ -5,25 +5,25 @@ var src = 'FSA.csv';
 var dst = '../src/assets/data/fsa.json';
 
 var dataCSV = fs.readFileSync(src, { encoding : 'utf8'});
-var options = { delimiter : '\t'};
+var options = { delimiter : ','}; //\t
 var dataArr = csvjson.toArray(dataCSV, options);
 
 // headers
 var headers = dataArr.splice(0, 1)[0];
-
+////console.log("H!!!!",headers)
 var headerMap = {};
 headers.forEach(function(header, i) {
     headerMap[header] = i; 
 });
-console.log(headerMap);
+//console.log(headerMap);
 
 // rows of data
 var dataArrFiltered = dataArr.filter(function(data) {
     var ratingValue = data[headerMap.RatingValue]; 
     return ratingValue !== "Exempt" && ratingValue.indexOf("Awaiting") === -1;
 });
-//console.log("restaurant count:", dataArrFiltered.length + "/" + dataArr.length);
-//console.log(dataArrFiltered.length/dataArr.length);
+////console.log("restaurant count:", dataArrFiltered.length + "/" + dataArr.length);
+////console.log(dataArrFiltered.length/dataArr.length);
 
 
 /* data checking and manipulation */
@@ -53,10 +53,10 @@ dataArrFiltered.forEach(function(data) {
     if (typeRating.indexOf(data[headerMap.RatingValue]) === -1) { typeRating.push(data[headerMap.RatingValue]); }
     if (typeScheme.indexOf(data[headerMap.SchemeType]) === -1) { typeScheme.push(data[headerMap.SchemeType]); }
 });
-//console.log("lad count:", lads.length);
-//console.log(typeBiz);
-console.log(typeRating);
-//console.log(typeScheme);
+console.log("lad count:", lads.length);
+////console.log(typeBiz);
+//console.log(typeRating);
+////console.log(typeScheme);
 
 /* end of data checking */
 
@@ -65,7 +65,7 @@ var ladMap = {};
 var bizMap = {};
 lads.forEach(function(lad, i) { ladMap[lad.code] = i; });
 typeBiz.forEach(function(biz, i) { bizMap[biz] = i; });
-console.log(bizMap);
+//console.log(bizMap);
 
 
 /* row data to local authority districts */
@@ -90,21 +90,24 @@ function initCount(isNotSco, isByType) {
     } else {
         ratingObj(typeRatingScotland);
     }
-    
+    //return ratings;
     return JSON.parse(JSON.stringify(ratings));
 }
 
-lads.map(function(lad) {
+lads.forEach(function(lad) {
     //lad.count = initCount(lad.flag, false); 
-    lad.countByType = initCount(lad.flag, true);
-    
+    //lad.countByType = initCount(lad.flag, true);
+    lad.countByType=[];
     lad.count = {
         all: initCount(lad.flag, false),
         takeaway: initCount(lad.flag, false),
         restaurant: initCount(lad.flag, false)
     };
-    return lad;
+    //return lad;
 });
+
+console.log(lads.length,"!!")
+
 
 //var dataTest = dataArrFiltered.slice(146200, 146300);//.concat(dataArrFiltered.slice(231715, 231720));
 //dataTest.forEach(function(data) {
@@ -123,11 +126,11 @@ dataArrFiltered.forEach(function(data, i) {
     } 
 
     // by type
-    var iBiz = parseInt(bizMap[data[headerMap.BusinessType]]);
-    dataLad.countByType[data[headerMap.RatingValue]][iBiz] += 1;
+    //var iBiz = parseInt(bizMap[data[headerMap.BusinessType]]);
+    //dataLad.countByType[data[headerMap.RatingValue]][iBiz] += 1;
     
-    //console.log(data); 
-    //console.log(dataLad);
+    ////console.log(data); 
+    ////console.log(dataLad);
 });
 
 /* calc sum and fail rate */
@@ -140,7 +143,7 @@ function sumObj(obj) {
     return sum;
 }
 lads.map(function(lad) {
-    //console.log(lad.name);
+    ////console.log(lad.name);
     
     // types: all, restaurant, takeaway
     Object.keys(lad.count).forEach(function(type) {
@@ -153,12 +156,12 @@ lads.map(function(lad) {
         lad.count[type].rateFail = Math.round(lad.count[type].sumFail*10000/lad.count[type].sum)/10000;
         
         // 0 units in this type
-        //if (isNaN(lad.count[type].rateFail)) {console.log(lad);}
+        //if (isNaN(lad.count[type].rateFail)) {//console.log(lad);}
         if (lad.count[type].sum === 0) { lad.count[type].rateFail = null; }
     });
     return lad; 
 });
-//console.log(lads);
+////console.log(lads);
 
 /* ranges */
 function getRange(type) {
@@ -188,6 +191,6 @@ var output = {
     lads: ladObj
 };
 fs.writeFile(dst, JSON.stringify(output), function (err) {
-      if (err) return console.log(err);
+        if (err) return console.log(err);
         console.log('sfa file saved');
 });

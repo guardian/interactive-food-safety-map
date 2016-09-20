@@ -1,4 +1,5 @@
 @import "fonts";
+@import "mq";
 
 html,
 body {
@@ -66,10 +67,10 @@ body {
 .d-n { display: none; }
 .v-v { visibility: visible; }
 .v-h { visibility: hidden; }
-
+@import "layout";
 @import "awesomplete";
 @import "madlib";
-@import "failingrate-chart";
+@import "failingrate-chart-vertical";
 @import "square-map";
 @import "grid";
 @import "tooltip";

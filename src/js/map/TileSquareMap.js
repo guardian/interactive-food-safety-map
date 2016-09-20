@@ -121,10 +121,16 @@ export default function TileSquareMap(data,options) {
 		WIDTH=box.width;
 		HEIGHT=box.height;
 
+		square_side=WIDTH/extents.x[1];
 		
-
-		WIDTH=extents.x[1]*square_side+margins.right+margins.left;
+		//WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 		HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;
+
+		if(HEIGHT>600) {
+			HEIGHT=600;
+			square_side=(HEIGHT-(margins.top+margins.bottom))/extents.y[1];
+			WIDTH=extents.x[1]*square_side+margins.right+margins.left;
+		}
 
 		let xscale=d3_scaleLinear().domain(extents.x).range([0,WIDTH-(margins.left+margins.right)]);
 		let yscale=d3_scaleLinear().domain(extents.y).range([0,HEIGHT-(margins.top+margins.bottom)]);

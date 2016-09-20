@@ -24,7 +24,7 @@ import {
 } from 'd3-format'
 import {getWindowSize} from '../lib/windowSize';
 
-export default function FailingRateChart(data,options) {
+export default function FailingRateChartVertical(data,options) {
 
 	let SELECTED_CONSTITUENCY;
 
@@ -122,13 +122,13 @@ export default function FailingRateChart(data,options) {
     	console.log(extents);
     	extents=[0,0.5]
 
-    	let xscale=d3_scaleLinear().domain([0,lads.length-1]).rangeRound([0,WIDTH-(margins.left+margins.right)]);
-    	let yscale=d3_scaleLinear().domain(extents).range([HEIGHT-(margins.top+margins.bottom),0]);
+    	let xscale=d3_scaleLinear().domain(extents).rangeRound([0,WIDTH-(margins.left+margins.right)]);
+    	let yscale=d3_scaleLinear().domain([0,lads.length-1]).range([HEIGHT-(margins.top+margins.bottom),0]);
 
     	let axes=svg.append("g")
     					.attrs({
     						"class":"axes",
-    						"transform":`translate(${margins.left},${margins.top})`
+    						"transform":`translate(${margins.left},${HEIGHT-margins.bottom})`
     					})
 
     	let rates=svg.append("g")    					
@@ -144,27 +144,28 @@ export default function FailingRateChart(data,options) {
 			    		.append("g")
 			    			.attr("class","rate")
 			    			.attr("transform",(d,i)=>{
-			    				let x=xscale(i),
-			    					y=yscale(+d.key)
+			    				let x=0,//xscale(+d.key),
+			    					y=yscale(i)
 			    				//console.log(d,x,y)
 			    				return `translate(${x},${y})`;
 			    			})
-			    			.on("mouseenter",d=>{
+			    			.on("mouseenter",function(d){
 			    				highlightLAD(d.value.name);
 			    				if(options.mouseEnterCallback) {
 			    					console.log(d)
 			    					options.mouseEnterCallback.call(this,d.value.name)
 			    				}
 			    			})
-		let w=(WIDTH/lads.length);
+		let h=(HEIGHT/lads.length);
+		h=1;
 		rate.append("rect")
 				.attrs({
-					x:-w/2,
-					y:0,
-					width:w
+					x:0,
+					y:-h/2,
+					height:h
 				})
-				.attr("height",d=>{
-					return yscale.range()[0]-yscale(+d.key);
+				.attr("width",d=>{
+					return xscale(+d.key);
 				})
 				.style("fill",d=>{
 					return fillThreshold(+d.key)
@@ -180,32 +181,30 @@ export default function FailingRateChart(data,options) {
 				// 	return fillThreshold(+d.key)
 				// })
 
-		rate.append("line")
+		/*rate.append("line")
 				.attrs({
 					x1:-w/2,
 					x2:w/2,
 					y1:0,
 					y2:0
-				})
+				})*/
 
 		rate.append("text")
-				.attrs({
-					x:w,
-					y:-5
-				})
+				.attr("x",d=>(xscale(+d.key)))
+				.attr("y",0)
+				.attr("dx","0.25em")
+				.attr("dy","0.3em")
 				.text(d=>(d.value.name+" "+d3_format(",.2%")(+d.key)))
 
 		rate.append("rect")
 				.attrs({
 					"class":"bg",
-					x:-w/2,
-					width:w
+					x:0,
+					y:0,
+					height:h
 				})
-				.attr("y",d=>{
-					return -yscale(+d.key);
-				})
-				.attr("height",d=>{
-					return yscale.range()[0];
+				.attr("width",d=>{
+					return xscale.range()[1];
 				})
 				// .style("fill",d=>{
 				// 	return fillThreshold(+d.key)
@@ -221,13 +220,14 @@ export default function FailingRateChart(data,options) {
 
 		let xbar=xaxis
 			.selectAll("g.bar")
-			.data([0.05,0.1,0.15,0.2,0.5])
+			.data([0.05,0.1,0.15,0.2,0.3,0.4,0.5])
+			//.data([0.1,0.2,0.3,0.4,0.5])
 			.enter()
 			.append("g")
 				.attr("class","bar")
 				.attr("transform",d=>{
-					let x=0,
-						y=yscale(d);
+					let x=xscale(d),
+						y=0;
 					return `translate(${x},${y})`;
 				})
 
@@ -235,18 +235,24 @@ export default function FailingRateChart(data,options) {
 			.append("line")
 				.attrs({
 					x1:0,
-					x2:xscale.range()[1],
+					x2:0,
 					y1:0,
-					y2:0
+					y2:-yscale.range()[0]
 				})
 
 		xbar
 			.append("text")
 				.attrs({
 					x:0,
-					y:12
+					y:15
 				})
-				.text(d=>(d3_format(".0%")(d)))
+				.text(d=>{
+					let label=(d3_format(".0%")(d));
+					if(d<0.5) {
+						label=label.replace(/%/gi,"")
+					}
+					return label;
+				})
 
 
 		let mean_bar=rates
@@ -254,8 +260,8 @@ export default function FailingRateChart(data,options) {
 					.datum(avg.mean)
 					.attr("class","bar mean")
 					.attr("transform",d=>{
-						let x=0,
-							y=yscale(d);
+						let x=yscale(d),
+							y=0;//yscale(d);
 						return `translate(${x},${y})`;
 					})
 
@@ -263,24 +269,33 @@ export default function FailingRateChart(data,options) {
 			.append("line")
 				.attrs({
 					x1:0,
-					x2:xscale.range()[1],
+					x2:0,
 					y1:0,
-					y2:0
+					y2:yscale.range()[1]
 				})
 
-		mean_bar
+		/*mean_bar
 			.append("text")
 				.attrs({
 					x:xscale.range()[1],
 					y:-2,
 					"class":"avg"
 				})
-				.text(d=>("National avg "+d3_format(".2%")(d)))
+				.text(d=>("National avg "+d3_format(".2%")(d)))*/
 
     }
 
     function highlightLAD(name) {
-    	rate.classed("show",r=>r.value.name===name)
+    	rate
+    		.classed("show",false)
+    		.filter(r=>(r.value.name===name))
+    		.classed("show",true)
+    		.each(function(d){
+    			this.parentElement.appendChild(this);		
+    		})
+
+    	
+    	
     }
 
     this.highlightLAD = (name) => {

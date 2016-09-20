@@ -16,7 +16,7 @@ import lads_info from '../assets/data/lads_info.json!json';
 
 import {postcodeLookup} from './lib/postcode'
 
-import FailingRateChart from './charts/FailingRateChart';
+import FailingRateChart from './charts/FailingRateChartVertical';
 import SquareMap from './map/SquareMap';
 import TileSquareMap from './map/TileSquareMap';
 import LookupLocalAuthority from './components/LookupLocalAuthority';
@@ -58,8 +58,6 @@ window.init = function init(el, config) {
     	})
 
     })*/
-
-    
 
     d3_queue()
 	    .defer(csv, "../../assets/data/grid3.csv")
@@ -110,10 +108,11 @@ window.init = function init(el, config) {
 	    	});
 
 	    	console.log(local_authorities);
-
+	    	
 	    	let map=new TileSquareMap(local_authorities,{
 	    		container:el.querySelector(".map"),
 	    		indicator:"all",
+	    		square_side:20,
 		    	margins:{
 		    		left:20,
 		    		right:20,
@@ -141,16 +140,17 @@ window.init = function init(el, config) {
 	    			map.highlightLAD(name)
 	    		}
 	    	})
+	    	
 
 	    	let charts={
 		    	"all":new FailingRateChart(fsaData,{
 				    	container:el.querySelector("#c1.failingrate-chart"),
 				    	indicator:"all",
 				    	margins:{
-				    		left:30,
-				    		right:30,
-				    		bottom:10,
-				    		top:30
+				    		left:10,
+				    		right:90,
+				    		bottom:20,
+				    		top:10
 				    	},
 				    	mouseEnterCallback:(d=>{
 				    		charts.restaurant.highlightLAD(d);
@@ -162,28 +162,30 @@ window.init = function init(el, config) {
 				    	container:el.querySelector("#c2.failingrate-chart"),
 				    	indicator:"restaurant",
 				    	margins:{
-				    		left:30,
-				    		right:30,
-				    		bottom:10,
-				    		top:30
+				    		left:10,
+				    		right:90,
+				    		bottom:20,
+				    		top:10
 				    	},
 				    	mouseEnterCallback:(d=>{
 				    		charts.all.highlightLAD(d);
 				    		charts.takeaway.highlightLAD(d);
+				    		map.highlightLAD(d);
 				    	})
 				    }),
 		    	"takeaway":new FailingRateChart(fsaData,{
 				    	container:el.querySelector("#c3.failingrate-chart"),
 				    	indicator:"takeaway",
 				    	margins:{
-				    		left:30,
-				    		right:30,
-				    		bottom:10,
-				    		top:30
+				    		left:10,
+				    		right:90,
+				    		bottom:20,
+				    		top:10
 				    	},
 				    	mouseEnterCallback:(d=>{
 				    		charts.all.highlightLAD(d);
 				    		charts.restaurant.highlightLAD(d);
+				    		map.highlightLAD(d);
 				    	})
 				    })
 		    };

@@ -1,0 +1,27 @@
+.fsa-layout {
+	width:100%;
+	max-width:860px;
+	overflow: visible;
+    display: table;
+	
+	.map-col {
+		width:100%;
+	}
+	.lookup-charts-col {
+		width:100%;
+	}
+
+	@include mq(tablet) {
+		.map-col {
+			float:right;
+			width:65%;
+		}
+		.lookup-charts-col {
+			float:left;
+			width:35%;
+		}
+	}
+
+	
+
+}
