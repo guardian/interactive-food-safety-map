@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['src/js/**/*'],
-                tasks: ['shell:interactive', 'shell:embed'],
+                tasks: ['shell:interactive', 'shell:embed','shell:scores'],
             },
             css: {
                 files: ['src/css/**/*'],
@@ -44,6 +44,11 @@ module.exports = function(grunt) {
                 files: {
                     'build/embed.css': 'src/css/embed.scss'
                 }
+            },
+            scores: {
+                files: {
+                    'build/scores.css': 'src/css/scores.scss'
+                }
             }
         },
 
@@ -58,6 +63,14 @@ module.exports = function(grunt) {
             },
             embed: {
                 command: './node_modules/.bin/jspm bundle-sfx <%= visuals.jspmFlags %> src/js/embed build/embed.js',
+                options: {
+                    execOptions: {
+                        cwd: '.'
+                    }
+                }
+            },
+            scores: {
+                command: './node_modules/.bin/jspm bundle-sfx <%= visuals.jspmFlags %> src/js/scores build/scores.js',
                 options: {
                     execOptions: {
                         cwd: '.'
@@ -81,6 +94,11 @@ module.exports = function(grunt) {
                 'files': {
                     'build/embed.html': ['src/embed.html']
                 }
+            },
+            'scores': {
+                'files': {
+                    'build/scores.html': ['src/scores.html']
+                }
             }
         },
 
@@ -102,10 +120,16 @@ module.exports = function(grunt) {
                         src: ['boot.js', 'embed.html'],
                         dest: 'deploy/<%= visuals.timestamp %>'
                     },
+                    { // BOOT and SCORES
+                        expand: true, cwd: 'build/',
+                        src: ['boot.js', 'scores.html'],
+                        dest: 'deploy/<%= visuals.timestamp %>'
+                    },
                     { // ASSETS
                         expand: true, cwd: 'build/',
                         src: ['main.js', 'main.css', 'main.js.map', 'main.css.map',
                             'embed.js', 'embed.css', 'embed.js.map', 'embed.css.map',
+                            'scores.js', 'scores.css', 'scores.js.map', 'scores.css.map',
                             'assets/**/*'],
                         dest: 'deploy/<%= visuals.timestamp %>/<%= visuals.timestamp %>'
                     }
@@ -183,6 +207,13 @@ module.exports = function(grunt) {
                         src: ['embed.html'],
                         dest: '<%= visuals.s3.path %>/embed',
                         params: { CacheControl: 'max-age=60' }
+                    },
+                    { // SCORES
+                        expand: true,
+                        cwd: 'deploy/<%= visuals.timestamp %>',
+                        src: ['scores.html'],
+                        dest: '<%= visuals.s3.path %>/embed',
+                        params: { CacheControl: 'max-age=60' }
                     }
                 ]
             }
@@ -223,15 +254,18 @@ module.exports = function(grunt) {
 
         grunt.log.write('\nEMBED URL: '['green'].bold)
         grunt.log.writeln(grunt.template.process('<%= visuals.s3.domain %><%= visuals.s3.path %>/embed/embed.html'))
+
+        grunt.log.write('\nSCORES URL: '['green'].bold)
+        grunt.log.writeln(grunt.template.process('<%= visuals.s3.domain %><%= visuals.s3.path %>/embed/scores.html'))
     })
 
+    grunt.registerTask('scores', ['shell:scores', 'template:scores', 'sass:scores']);
     grunt.registerTask('embed', ['shell:embed', 'template:embed', 'sass:embed']);
     grunt.registerTask('interactive', ['shell:interactive', 'template:bootjs', 'sass:interactive']);
-    grunt.registerTask('all', ['interactive', 'embed', 'copy:assets'])
+    grunt.registerTask('all', ['interactive', 'embed', 'scores', 'copy:assets'])
     grunt.registerTask('default', ['clean', 'copy:harness', 'all', 'connect', 'watch']);
     grunt.registerTask('build', ['clean', 'all']);
     grunt.registerTask('deploy', ['loadDeployConfig', 'prompt:visuals', 'build', 'copy:deploy', 'aws_s3', 'boot_url']);
-
     grunt.loadNpmTasks('grunt-aws');
 
 }

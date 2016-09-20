@@ -53,30 +53,17 @@ export default function TileSquareMap(data,options) {
 	data.forEach(d=>{
 		d.info=options.fsaData.lads[d.index];
 		let borders={};
-		/*data.forEach(n=>{
-			if(n.x==d.x-1 && n.y==d.y) {
-				borders.left=(n.region_name!==d.region_name)
-			}
-			if(n.x==d.x+1 && n.y==d.y) {
-				borders.right=(n.region_name!==d.region_name)
-			}
-			if(n.x==d.x && n.y-1==d.y) {
-				borders.bottom=(n.region_name!==d.region_name)
-			}
-			if(n.x==d.x && n.y+1==d.y) {
-				borders.top=(n.region_name!==d.region_name)
-			}
-		})*/
-		let left=data.find(n=>(n.x==d.x-1 && n.y==d.y));
+
+		let left=data.filter(n=>(n.x==d.x-1 && n.y==d.y))[0];
 		borders.left=left?(left.region_name!==d.region_name):true;
 
-		let right=data.find(n=>(n.x==d.x+1 && n.y==d.y));
+		let right=data.filter(n=>(n.x==d.x+1 && n.y==d.y))[0];
 		borders.right=right?(right.region_name!==d.region_name):true;
 
-		let top=data.find(n=>(n.x==d.x && n.y==d.y-1));
+		let top=data.filter(n=>(n.x==d.x && n.y==d.y-1))[0];
 		borders.top=top?(top.region_name!==d.region_name):true;
 
-		let bottom=data.find(n=>(n.x==d.x && n.y==d.y+1));
+		let bottom=data.filter(n=>(n.x==d.x && n.y==d.y+1))[0];
 		borders.bottom=bottom?(bottom.region_name!==d.region_name):true;
 
 		d.borders=borders;
@@ -86,15 +73,8 @@ export default function TileSquareMap(data,options) {
 
 	let fillThreshold = d3_scaleThreshold()
         .domain(buckets)
-        //.range(["#eaeaea",'#f1eef6','#d7b5d8','#df65b0','#dd1c77','#980043'])
         .range(["#f6f6f6","#eaeaea","#ffd400","#ffa300","#ff5b3a","#cc2b12"])
-/*
-#f6f6f6 0-5%
-#eaeaea 5-10%
-#f9f1c5 10-15%
-#ffe900 15-20%
-#ffce00 Above 25%
-*/
+
 	let margins=options.margins || {
 		left:0,
 		right:0,
@@ -102,10 +82,13 @@ export default function TileSquareMap(data,options) {
 		bottom:0
 	};
 
+	let lad;
 	let tooltip;
 
 	let WIDTH,
 		HEIGHT;
+
+	let square_side=options.square_side || 15;
 
 	let extents={
 		x:extent(data,d=>d.x),
@@ -138,7 +121,7 @@ export default function TileSquareMap(data,options) {
 		WIDTH=box.width;
 		HEIGHT=box.height;
 
-		let square_side=15;
+		
 
 		WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 		HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;
@@ -159,13 +142,13 @@ export default function TileSquareMap(data,options) {
     						"transform":`translate(${margins.left},${margins.top})`
     					});
 
-    	let lad=grid.selectAll("lad")
+    	lad=grid.selectAll("lad")
     			.data(data,d=>d.id)
     			.enter()
     			.append("g")
     				.attr("id",d=>d.id)
     				.attr("rel",d=>d.name)
-    				.attr("data-fail",d=>(d.index?d.info.count.all.rateFail:"none"))
+    				.attr("data-fail",d=>(d.index?d.info.count[options.indicator].rateFail:"none"))
     				.attr("data-grid",d=>(d.x+"x"+d.y))
     				.attr("data-coords",d=>(d.o_x+"x"+d.o_y))
     				.attr("data-region",d=>(`${d.region_name?d.region_name.toLowerCase().replace(/\s/gi,"-"):"none"}`))
@@ -181,19 +164,7 @@ export default function TileSquareMap(data,options) {
     					return `translate(${x},${y})`
     				})
     				.on("mouseenter",d=>{
-    					tooltip.show([
-								{
-									id:"t_lad_name",
-									value:d.name
-								},
-								{
-									id:"t_lad_failrate",
-									value: d3_format(",.2%")(d.info.count.all.rateFail)
-								}
-							],
-							d.position.x,
-							d.position.y+margins.top+square_side/2
-						);
+						highlightLAD(d.name);
     				})
 
     	lad.append("rect")
@@ -209,7 +180,7 @@ export default function TileSquareMap(data,options) {
     					return "#fff";
     				}
     				//console.log(d)
-    				return fillThreshold(d.info.count.all.rateFail)
+    				return fillThreshold(d.info.count[options.indicator].rateFail)
     			})
 
     	/*lad.append("text")
@@ -266,5 +237,34 @@ export default function TileSquareMap(data,options) {
 
 	}
 
+	function highlightLAD(name) {
+		console.log(name,data)
+    	lad.classed("highlight",r=>r.name===name)
+
+    	let _lad=data.filter(d=>(d.name===name))[0]
+
+    	console.log(_lad)
+
+    	tooltip.show([
+				{
+					id:"t_lad_name",
+					value:_lad.name
+				},
+				{
+					id:"t_lad_failrate",
+					value: d3_format(",.2%")(_lad.info.count[options.indicator].rateFail)
+				}
+			],
+			_lad.position.x,
+			_lad.position.y+margins.top+square_side/2
+		);
+
+    }
+
+    this.highlightLAD = (name) => {
+
+    	highlightLAD(name);
+
+    }
 
 }

@@ -150,9 +150,10 @@ export default function FailingRateChart(data,options) {
 			    				return `translate(${x},${y})`;
 			    			})
 			    			.on("mouseenter",d=>{
-			    				highlightLAD(d);
+			    				highlightLAD(d.value.name);
 			    				if(options.mouseEnterCallback) {
-			    					options.mouseEnterCallback.call(this,d)
+			    					console.log(d)
+			    					options.mouseEnterCallback.call(this,d.value.name)
 			    				}
 			    			})
 		let w=(WIDTH/lads.length);
@@ -279,13 +280,13 @@ export default function FailingRateChart(data,options) {
 
     }
 
-    function highlightLAD(d) {
-    	rate.classed("show",r=>r.value.name===d.value.name)
+    function highlightLAD(name) {
+    	rate.classed("show",r=>r.value.name===name)
     }
 
-    this.highlightLAD = (d) => {
+    this.highlightLAD = (name) => {
 
-    	highlightLAD(d);
+    	highlightLAD(name);
 
     }
 
