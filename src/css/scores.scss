@@ -1,7 +1,79 @@
+@import "fonts";
+
+.scores-container {
+	max-width: 620px;
+	@include fs-bodyCopy(2);
+}
+
 .scores {
-	b {
-		i {
-			font-weight: bold;
-		}
+margin-bottom: 30px;
+position:relative;
+display:block;
+float:left;
+width:100%;
+}
+
+.scores-number-pass, .scores-number-fail {
+@include fs-data(6);
+font-weight:800;
+border-radius: 50%;
+width: 28px;
+height: 28px;
+padding: 15px;
+background: transparent;
+border: 2px solid #000;
+color: #333;
+text-align: center;
+//min-width: 100px;
+margin-right:20px;
+position:relative;
+display: block;
+float:left;
+}
+
+.scores-labels {
+	margin-left:81px;
+	display: block;
+}
+
+.scores-number-fail {
+border: 2px solid #ffe900;
+}
+
+.scores-copy {
+	position:relative;
+	display: block;
+	float:left;
+	width:80%;
+}
+
+.score-label {
+@include fs-data(4);
+font-weight:600;
+display:block;
+width:100%;
+float:left;
+}
+
+#l-line {
+	border-bottom: 1px solid #333;
+}
+
+
+@media screen and (max-width: 480px){
+
+	.scores-number-pass, .scores-number-fail {
+	width: 20px;
+	height: 20px;
+	padding: 10px;
 	}
+
+	.scores-labels {
+		margin-left:0px;
+	}
+
+	.scores-copy {
+		width:75%;
+	}
+
 }
