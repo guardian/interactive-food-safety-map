@@ -161,6 +161,7 @@ window.init = function init(el, config) {
 	    		texts[lad.name]={
 	    			name:lad.name,
 	    			id:lad.id,
+	    			index:lad.index,
 	    			country:country,
 	    			rate:d3_format(",.1%")(+rate),
 	    			diff:d3_format(",.1f")(diff),
@@ -188,6 +189,15 @@ window.init = function init(el, config) {
 	    			select(".summary")
 	    				.html(texts[name].html)
 
+	    			select(".link-to-fsa")
+	    				.classed("visible",true)
+	    				.select("a")
+		    				.attr("href",d=>{
+		    					return `http://ratings.food.gov.uk/authority-search/en-GB/%5E/%5E/Relevance/0/${texts[name].index}/%5E/0/1/10`
+		    				})
+		    				.text(d=>{
+		    					return `See ${name} on FSA website`;
+		    				})
 	    		}
 	    	})
 

@@ -23,7 +23,15 @@ body {
     //fs-data(*)
     }
 }
-
+.link-to-fsa {
+    visibility: hidden;
+    &.visible {
+        visibility: visible;
+    }
+    a {
+        color:#005689;
+    }
+}
 /* atomic css*/
 .d-n { display: none; }
 .v-v { visibility: visible; }
