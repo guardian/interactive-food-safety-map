@@ -33,10 +33,21 @@ body {
 
 }
 .lookup-result {
-    visibility: hidden;
+
+    height: 0;
+    overflow: hidden;
     &.visible {
-        visibility: visible;
+        height: auto;
     }
+
+    @include mq(tablet) {
+        height: auto;
+        visibility: hidden;
+        &.visible {
+            visibility: visible;
+        }
+    }
+    
     h3 {
         margin:0;
         padding:0;
@@ -51,7 +62,8 @@ body {
     }
     a {
         color:#005689;
-        @include fs-textSans(2)
+        @include fs-textSans(1);
+        line-height: 14px;
     }
 }
 /* atomic css*/
@@ -63,6 +75,6 @@ body {
 @import "awesomplete";
 @import "madlib";
 @import "failingrate-chart-vertical";
-@import "square-map";
+//@import "square-map";
 @import "grid";
 @import "tooltip";

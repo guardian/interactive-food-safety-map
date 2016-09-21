@@ -1,14 +1,9 @@
 import iframeMessenger from 'guardian/iframe-messenger';
 import embedHTML from './text/embed.html!text';
 
-//import d3 from 'd3';
-
 import {
 	selection
 } from 'd3-selection-multi'
-
-//import fetchMapData from './map/fetchMapData';
-//import drawMap from './map/drawMap';
 
 import fsaData from '../assets/data/fsa.json!json';
 import fsaMap from  '../assets/data/fsa_map.json!json';
@@ -17,7 +12,7 @@ import lads_info from '../assets/data/lads_info.json!json';
 import {postcodeLookup} from './lib/postcode'
 
 import FailingRateChart from './charts/FailingRateChartVertical';
-import SquareMap from './map/SquareMap';
+//import SquareMap from './map/SquareMap';
 import TileSquareMap from './map/TileSquareMap';
 import LookupLocalAuthority from './components/LookupLocalAuthority';
 
@@ -242,9 +237,10 @@ window.init = function init(el, config) {
 				    		left:0,
 				    		right:30,
 				    		bottom:15,
-				    		top:5
+				    		top:7
 				    	},
-				    	title:"All types",
+				    	title:"All food establishment",
+				    	label:"failed the inspections",
 				    	mouseEnterCallback:(d=>{
 				    		charts.restaurant.highlightLAD(d);
 				    		charts.takeaway.highlightLAD(d);
@@ -258,7 +254,7 @@ window.init = function init(el, config) {
 				    		left:0,
 				    		right:30,
 				    		bottom:15,
-				    		top:5
+				    		top:7
 				    	},
 				    	title:"Restaurants, cafes and canteens",
 				    	mouseEnterCallback:(d=>{
@@ -274,7 +270,7 @@ window.init = function init(el, config) {
 				    		left:0,
 				    		right:30,
 				    		bottom:15,
-				    		top:5
+				    		top:7
 				    	},
 				    	title:"Takeaways and sandwich shops",
 				    	mouseEnterCallback:(d=>{

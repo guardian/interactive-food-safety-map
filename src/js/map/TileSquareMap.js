@@ -50,24 +50,47 @@ export default function TileSquareMap(data,options) {
 			"yorkshire-and-the-humber":"#ff7200"
 		};*/
 
+
+
 	data.forEach(d=>{
 		d.info=options.fsaData.lads[d.index];
 		let borders={};
 
 		let left=data.filter(n=>(n.x==d.x-1 && n.y==d.y))[0];
-		borders.left=left?(left.region_name!==d.region_name):true;
+		borders.left=left?(left.id[0]!==d.id[0]):true;
 
 		let right=data.filter(n=>(n.x==d.x+1 && n.y==d.y))[0];
-		borders.right=right?(right.region_name!==d.region_name):true;
+		borders.right=right?(right.id[0]!==d.id[0]):true;
 
 		let top=data.filter(n=>(n.x==d.x && n.y==d.y-1))[0];
-		borders.top=top?(top.region_name!==d.region_name):true;
+		borders.top=top?(top.id[0]!==d.id[0]):true;
 
 		let bottom=data.filter(n=>(n.x==d.x && n.y==d.y+1))[0];
-		borders.bottom=bottom?(bottom.region_name!==d.region_name):true;
+		borders.bottom=bottom?(bottom.id[0]!==d.id[0]):true;
 
 		d.borders=borders;
 	})
+
+	data
+		.filter(d=>(d.region_name==="London"))
+		.forEach(d=>{
+			d.info=options.fsaData.lads[d.index];
+			let borders={};
+
+			let left=data.filter(n=>(n.x==d.x-1 && n.y==d.y))[0];
+			borders.left=left?(left.region_name!==d.region_name):true;
+
+			let right=data.filter(n=>(n.x==d.x+1 && n.y==d.y))[0];
+			borders.right=right?(right.region_name!==d.region_name):true;
+
+			let top=data.filter(n=>(n.x==d.x && n.y==d.y-1))[0];
+			borders.top=top?(top.region_name!==d.region_name):true;
+
+			let bottom=data.filter(n=>(n.x==d.x && n.y==d.y+1))[0];
+			borders.bottom=bottom?(bottom.region_name!==d.region_name):true;
+
+			d.borders=borders;
+		})
 
 	let buckets=[0.05,0.1,0.15,0.2,0.5,0.51]
 
@@ -85,6 +108,9 @@ export default function TileSquareMap(data,options) {
 	let lad;
 	let tooltip;
 	let hover_square;
+
+	let legend,
+		LEGEND_SPACE=40;
 
 	let WIDTH,
 		HEIGHT;
@@ -169,8 +195,8 @@ export default function TileSquareMap(data,options) {
 					.select(".grid-map")
 	    				.append("svg")
 	    				.attrs({
-	    					width:WIDTH,
-	    					height:HEIGHT
+	    					width:box.width,
+	    					height:HEIGHT + LEGEND_SPACE
 	    				})
 
     	let grid=svg.append("g")
@@ -300,11 +326,11 @@ export default function TileSquareMap(data,options) {
     	
 
     	let legend_width=150,
-    		legend_height=15;
+    		legend_height=10;
     	let legend=svg.append("g")
     					.attrs({
     						"class":"legend",
-    						"transform":`translate(${WIDTH-margins.right-legend_width},${margins.top+50})`
+    						"transform":`translate(${box.width-margins.right-legend_width},${svg.attr("height")-LEGEND_SPACE + 15})`
     					});
     	legend.append("text")
     			.attrs({

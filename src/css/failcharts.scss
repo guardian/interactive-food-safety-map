@@ -1,0 +1,38 @@
+@import "fonts";
+@import "mq";
+
+html,
+body {
+    @include fs-bodyCopy(2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+@import "failingrate-chart-vertical";
+
+h1 {
+    @include fs-header(2);
+}
+
+.failcharts {
+    overflow: hidden;
+    .failingrate-chart {
+
+        width:40%;
+        float: left;
+        
+        &:first-child {
+            float:left;
+        }
+        &:last-child {
+            float:right;
+        }
+        h2 {
+            @include fs-textSans(2);
+        }
+        div.chart {
+            height:200px;
+        }
+    }
+}

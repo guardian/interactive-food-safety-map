@@ -41,6 +41,11 @@
 						fill:#333;
 						text-anchor:start;
 						visibility: hidden;
+
+						&.bg {
+							stroke: #fff;
+    						stroke-width: 2px;
+						}
 					}
 					&.show {
 						rect {

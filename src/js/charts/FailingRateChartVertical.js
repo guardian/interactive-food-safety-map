@@ -199,12 +199,21 @@ export default function FailingRateChartVertical(data,options) {
 				})*/
 
 		rate.append("text")
+				.attr("class","bg")
 				.attr("x",d=>(xscale(+d.key)))
 				.attr("y",0)
 				.attr("dx","0.25em")
 				.attr("dy","0.3em")
 				//.text(d=>(d.value.name+" "+d3_format(",.2%")(+d.key)))
-				.text(d=>(d3_format(",.1%")(+d.key)))
+				.text(d=>(d3_format(",.1%")(+d.key)+" "+(options.label || "")))
+
+		rate.append("text")
+				.attr("x",d=>(xscale(+d.key)))
+				.attr("y",0)
+				.attr("dx","0.25em")
+				.attr("dy","0.3em")
+				//.text(d=>(d.value.name+" "+d3_format(",.2%")(+d.key)))
+				.text(d=>(d3_format(",.1%")(+d.key)+" "+(options.label || "")))
 
 		rate.append("rect")
 				.attrs({
