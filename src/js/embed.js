@@ -192,7 +192,7 @@ window.init = function init(el, config) {
 	    			all:lad.info.count["all"].sum
 	    		}
 	    		//texts[lad.name].html=`With a ${texts[lad.name].rate} failing rate overall, <b>${lad.name}</b> is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
-	    		texts[lad.name].html=`${texts[lad.name].n} out of ${texts[lad.name].all} establishments failed the FSA hygiene inspection in <b>${lad.name}</b>, that is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;	
+	    		texts[lad.name].html=`${texts[lad.name].n} out of ${texts[lad.name].all} establishments failed the FSA hygiene inspection in <b>${lad.name}</b>. That is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;	
 	    	})
 
 	    	//console.log(texts);

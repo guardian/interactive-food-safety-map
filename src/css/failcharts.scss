@@ -18,8 +18,12 @@ h1 {
 .failcharts {
     overflow: hidden;
     .failingrate-chart {
-
-        width:40%;
+        
+        width:48%;
+        
+        @include mq(tablet) {
+            width:40%;
+        }
         float: left;
         
         &:first-child {
