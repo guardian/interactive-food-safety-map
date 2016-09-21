@@ -84,6 +84,7 @@ export default function TileSquareMap(data,options) {
 
 	let lad;
 	let tooltip;
+	let hover_square;
 
 	let WIDTH,
 		HEIGHT;
@@ -127,32 +128,42 @@ export default function TileSquareMap(data,options) {
 		WIDTH=box.width;
 		HEIGHT=box.height;
 
-		square_side=Math.floor((WIDTH-(margins.left+margins.right))/extents.x[1]);
-
+		square_side=Math.floor((WIDTH-(margins.left+margins.right))/(extents.x[1]-extents.x[0]));
+		square_side=Math.floor(square_side/2)*2;
 		//WIDTH=extents.x[1]*square_side+margins.right+margins.left;
-		HEIGHT=extents.y[1]*square_side+(margins.top+margins.bottom);
+		HEIGHT=(extents.y[1]-extents.y[0])*square_side+(margins.top+margins.bottom);
 		console.log("EXTENTS",extents)
 		if(HEIGHT>600) {
 			HEIGHT=600;
-			square_side=Math.floor((HEIGHT-(margins.top+margins.bottom))/extents.y[1]);
-			WIDTH=extents.x[1]*square_side+margins.right+margins.left;
-			HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;
+			square_side=Math.floor((HEIGHT-(margins.top+margins.bottom))/(extents.y[1]-extents.y[0]));
+			square_side=Math.floor(square_side/2)*2;
+			WIDTH=(extents.x[1]-extents.y[0])*square_side+margins.right+margins.left;
+			HEIGHT=(extents.y[1]-extents.y[0])*square_side+margins.top+margins.bottom;
 			//alert("H:"+WIDTH+","+HEIGHT+","+square_side)
 		} else {
 			//alert("W:"+WIDTH+","+HEIGHT+","+square_side)
 		}
 
+		console.log("W",WIDTH,"H",HEIGHT,"S",square_side)
+
+		WIDTH+=square_side;
+		HEIGHT+=square_side;
+
+		margins.top+=square_side/2;
+		margins.bottom+=square_side/2;
+		margins.left+=square_side/2;
+		margins.right+=square_side/2;
 
 		let xscale=d3_scaleLinear().domain(extents.x).range([0,WIDTH-(margins.left+margins.right)]);
 		let yscale=d3_scaleLinear().domain(extents.y).range([0,HEIGHT-(margins.top+margins.bottom)]);
 
-		/*xscale=(x)=>{
+		xscale=(x)=>{
 			return x*square_side
 		}
 
 		yscale=(y)=>{
 			return y*square_side
-		}*/
+		}
 
 		let svg=select(options.container)
 					.select(".grid-map")
@@ -167,6 +178,24 @@ export default function TileSquareMap(data,options) {
     						"class":"lads",
     						"transform":`translate(${margins.left},${margins.top})`
     					});
+    	let border_grid=svg.append("g")
+    					.attrs({
+    						"class":"borders",
+    						"transform":`translate(${margins.left},${margins.top})`
+    					});
+    	let overlay=svg.append("g")
+    					.attrs({
+    						"class":"overlay",
+    						"transform":`translate(${margins.left},${margins.top})`
+    					});
+
+    	hover_square=overlay.append("rect")
+    				.attrs({
+	    				x:-(square_side/2-0.5),
+	    				y:-(square_side/2-0.5),
+	    				width:square_side,
+	    				height:square_side
+	    			})
 
     	lad=grid.selectAll("lad")
     			.data(data,d=>d.id)
@@ -190,17 +219,21 @@ export default function TileSquareMap(data,options) {
     					return `translate(${x},${y})`
     				})
     				.on("mouseenter",d=>{
-						highlightLAD(d.name,true);
+						highlightLAD(d.name,false);
 						if(options.mouseEnterCallback) {
 							options.mouseEnterCallback.call(this,d.name)
 						}
     				})
     				.on("click",d=>{
-						highlightLAD(d.name);
+						//highlightLAD(d.name);
 						if(options.mouseClickCallback) {
 							options.mouseClickCallback.call(this,d.name)
 						}
     				})
+
+    	
+
+    	
 
     	lad.append("rect")
     			.attrs({
@@ -218,55 +251,55 @@ export default function TileSquareMap(data,options) {
     				return fillThreshold(d.info.count[options.indicator].rateFail)
     			})
 
-    	/*lad.append("text")
-    			.attrs({
-    				x:0,
-    				y:0
-    			})
-    			.text(d=>d.name.slice(0,3))*/
+    	
+    	let border=border_grid.selectAll("border")
+			    			.data(data,d=>d.id)
+			    			.enter()
+			    			.append("g")
+			    			.attr("class","border")
+			    			.attr("transform",d=>{
+		    					return `translate(${d.position.x},${d.position.y})`
+		    				})
 
-    	lad.filter(d=>d.borders.top)
+		border.filter(d=>d.borders.top)
     			.append("line")
     			.attrs({
-    				"class":"border",
-    				x1:-square_side/2-0.5,
-    				x2:square_side/2+0.5,
-    				y1:-square_side/2,
-    				y2:-square_side/2
+    				x1:-(square_side/2),
+    				x2:(square_side/2),
+    				y1:-(square_side/2),
+    				y2:-(square_side/2)
     			})
-
-    	lad.filter(d=>d.borders.bottom)
+    	border.filter(d=>d.borders.bottom)
     			.append("line")
     			.attrs({
-    				"class":"border",
-    				x1:-square_side/2-0.5,
-    				x2:square_side/2+0.5,
+    				x1:-square_side/2,
+    				x2:square_side/2,
     				y1:square_side/2,
     				y2:square_side/2
     			})
 
-    	lad.filter(d=>d.borders.left)
+    	border.filter(d=>d.borders.left)
     			.append("line")
     			.attrs({
-    				"class":"border",
     				x1:-square_side/2,
     				x2:-square_side/2,
-    				y1:-square_side/2-0.5,
-    				y2:square_side/2+0.5
+    				y1:-square_side/2,
+    				y2:square_side/2
     			})
 
-    	lad.filter(d=>d.borders.right)
+    	border.filter(d=>d.borders.right)
     			.append("line")
     			.attrs({
-    				"class":"border",
     				x1:square_side/2,
     				x2:square_side/2,
-    				y1:-square_side/2-0.5,
-    				y2:square_side/2+0.5
+    				y1:-square_side/2,
+    				y2:square_side/2
     			})
 
-    	let legend_width=160,
-    		legend_height=10;
+    	
+
+    	let legend_width=150,
+    		legend_height=15;
     	let legend=svg.append("g")
     					.attrs({
     						"class":"legend",
@@ -302,7 +335,10 @@ export default function TileSquareMap(data,options) {
 					}
 				})
 				.style("fill",d=>fillThreshold(d))
-		range.append("text")
+		range
+			.filter(d=>(([0,0.5,0.51]).indexOf(d)>-1))
+			.classed("first-child",d=>(d===0))
+			.append("text")
 				.attr("x",(d,i)=>{
 					//return 0;
 					if(d<=0.5) {
@@ -314,63 +350,25 @@ export default function TileSquareMap(data,options) {
 				.attr("y",legend_height+10)
 				.text((d,i)=>{
 					if(d<=0.5) {
-						return d*100
+						return (d*100)+"%"
 					} else {
 						return "100%";
 					}
 				})
 
-		let colors=([0]).concat(buckets);
-    	legend=svg.append("g")
-    					.attrs({
-    						"class":"legend",
-    						"transform":`translate(${WIDTH-margins.right-square_side-40},${margins.top+50})`
-    					});
-    	legend.append("text")
-    			.attrs({
-    				x:0,
-    				y:-5
-    			})
-    			.text("How to read")
-
-    	range=legend
-					.selectAll("g.range")
-					.data(colors.filter(d=>d<=0.5))
-					.enter()
-					.append("g")
-					.attr("class","range")
-					.attr("transform",(d,i)=>{
-						return `translate(0,${i*square_side})`
-					});
-		range.append("rect")
-				.attrs({
-					x:0,
-					y:0,
-					width:square_side-1,
-					height:square_side-1
-				})
-				.style("fill",d=>fillThreshold(d))
-		range.append("text")
-				.attr("x",square_side+2)
-				.attr("y",square_side/2)
-				.attr("dy","0.3em")
-				.style("text-anchor","start")
-				.text((d,i)=>{
-					if(d===0.5) {
-						return (d*100)+"-100%";
-					}
-					return (d*100)+"-"+(colors[i+1]*100)+"%"
-				})
+		
 
 	}
 
 	function highlightLAD(name,onlyname=false) {
 		//console.log(name,data)
-    	lad.classed("highlight",r=>r.name===name)
+    	//lad.classed("highlight",r=>r.name===name)
 
     	let _lad=data.filter(d=>(d.name===name))[0]
 
     	console.log(_lad)
+
+    	hover_square.attr("transform",`translate(${_lad.position.x},${_lad.position.y})`)
 
     	tooltip.show([
 				{
@@ -390,8 +388,8 @@ export default function TileSquareMap(data,options) {
 					value: _lad.info.count[options.indicator].sumFail
 				}
 			],
-			_lad.position.x+square_side/2,
-			_lad.position.y-square_side/2-0.5,
+			_lad.position.x+square_side/2+2,
+			_lad.position.y-square_side/2,
 			null,
 			onlyname
 		);

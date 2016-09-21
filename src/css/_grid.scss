@@ -12,19 +12,14 @@
 					stroke-opacity:0;
 					shape-rendering: crispEdges;
 				}
-				&:hover,
+				/* &:hover,
 				&.highlight {
 					rect {
 						stroke:#333;
 						stroke-opacity:1;
 					}
-				}
-				line.border {
-					stroke:#bdbdbd;
-					stroke-width:1;
-					stroke-opacity:0;
-					shape-rendering: crispEdges;
-				}
+				} */
+				 
 				text {
 					@include fs-textSans(1);
 					font-size: 12px;
@@ -33,19 +28,37 @@
 					//display: none;
 					text-transform: uppercase;
 				}
-				&[data-region='london'] {
-					line.border {
+				
+			}
+		}
+		g.borders {
+			g.border {
+				line {
+					stroke:#bdbdbd;
+					stroke-width:1;
+					stroke-opacity:1;
+					shape-rendering: crispEdges;
+				}
+				/* &[data-region='london'] {
+					line {
 						stroke-opacity:1;
 					}
 				}
 				&[data-region='scotland'] {
-					line.border {
+					line {
 						stroke-opacity:1;
 					}
-				}
+				} */
 			}
-
-
+		}
+		g.overlay {
+			rect {
+				fill:none;
+				stroke:#767676;
+				stroke-width:1;
+				stroke-opacity:1;
+				shape-rendering: crispEdges;
+			}
 		}
 		g.legend {
 			text {
@@ -60,6 +73,11 @@
 					font-size: 11px;
 					color:#bdbdbd;
 					text-anchor:middle;
+				}
+				&.first-child {
+					text {
+						text-anchor:start;
+					}
 				}
 				&:last-child {
 					text {

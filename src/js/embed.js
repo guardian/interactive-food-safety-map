@@ -33,6 +33,9 @@ import {
 import {
 	format as d3_format
 } from 'd3-format'
+import {
+	extent
+} from 'd3-array'
 
 /*
 //tooltip text
@@ -101,10 +104,19 @@ window.init = function init(el, config) {
 	    			region.name=lads_info[lad.id].region_name;
 	    		}
 
+
+
 	    		let x=(+d.x + (+d.dx)),
 	    			y=((+d.y) + (+d.dy));
 
-	    		x=Math.floor(x/30);
+	    		if(lad.id[0]==="N") {
+	    			x = x + (32.5*3);
+	    			y = y - (30*5);
+	    		}
+
+	    		let n_x=Math.floor(x/30);
+	    		n_x=n_x>18?n_x:n_x+1
+	    		n_x=n_x<7?n_x+1:n_x
 
 	    		return {
 	    			id:lad.id,
@@ -112,7 +124,7 @@ window.init = function init(el, config) {
 	    			name:lad.name,
 	    			region_code:region.code,
 	    			region_name:region.name,
-	    			x:x>18?x:x+1,
+	    			x:n_x,
 	    			y:Math.round(y/30),
 	    			o_x:x,
 	    			o_y:y
@@ -120,15 +132,28 @@ window.init = function init(el, config) {
 	    	});
 
 	    	console.log(local_authorities);
+
+	    	let extents={
+	    		x:extent(local_authorities,d=>d.x),
+	    		y:extent(local_authorities,d=>d.y)
+	    	}
+
+	    	console.log("GRID EXTENTS",extents)
+
+	    	console.log(JSON.stringify(local_authorities.map(d=>{
+	    		    		return d.id+","+d.x+","+d.y
+	    		    	})))
+
+
 	    	let lookup;
 	    	let map=new TileSquareMap(local_authorities,{
 	    		container:el.querySelector(".map"),
 	    		indicator:"all",
 		    	margins:{
-		    		left:10,
-		    		right:10,
-		    		bottom:10,
-		    		top:10
+		    		left:5,
+		    		right:5,
+		    		bottom:5,
+		    		top:5
 		    	},
 		    	fsaData:fsaData,
 		    	/*mouseEnterCallback:(name) => {
@@ -139,7 +164,7 @@ window.init = function init(el, config) {
 		    		lookup.setItem(name);
 		    	}
 	    	})
-
+	    	return;
 	    	let avgs={
 	    			"S":0.10,
 	    			"E":0.062,
