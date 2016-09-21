@@ -23,6 +23,15 @@ body {
     //fs-data(*)
     }
 }
+
+.lookup-s {
+  @include fs-textSans(4);
+  font-size:20px;
+  color:#333;
+  font-weight:600;
+  padding-bottom:4px;
+
+}
 .link-to-fsa {
     visibility: hidden;
     &.visible {
@@ -30,6 +39,7 @@ body {
     }
     a {
         color:#005689;
+        @include fs-textSans(3)
     }
 }
 /* atomic css*/

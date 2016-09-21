@@ -1,19 +1,21 @@
 .failingrate-chart {
-	
+
 	width:100%;
 	margin-top:20px;
 	h2 {
 		margin: 0;
 		padding: 0;
-		@include fs-header(1);
+		@include fs-textSans(3);
+		font-weight:normal;
+		//@include fs-header(1);
 	}
-	
+
 	div.chart {
-		//overflow:hidden;	
+		//overflow:hidden;
 		height:150px;
 
 		svg {
-		
+
 			.rates {
 				.rate {
 					circle {
@@ -83,8 +85,8 @@
 							fill:#bdbdbd;
 							text-anchor:middle;
 						}
-					
-						
+
+
 					}
 				}
 			}
@@ -92,6 +94,6 @@
 		}
 
 	}
-	
+
 
 }

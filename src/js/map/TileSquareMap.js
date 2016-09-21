@@ -100,7 +100,7 @@ export default function TileSquareMap(data,options) {
 	buildVisual();
 
 	function buildVisual() {
-		
+
 		tooltip=new Tooltip({
 	    	container:options.container,
 	    	margins:margins,
@@ -118,7 +118,7 @@ export default function TileSquareMap(data,options) {
 	    		{
 	    			id:"t_lad_sumfail"
 	    		}
-	    		
+
 	    	],
 	    	html:"<div class='content'><span id='t_lad_sumfail' class='value'></span> out of <span id='t_lad_sum' class='value'></span> failed the FSA hygiene inspection in <span id='t_lad_name' class='value b'></span>, a <span id='t_lad_failrate' class='value'>XX</span></div><div class='name'><span id='t_lad_name' class='value'></span></div>"
 	    });
@@ -126,9 +126,9 @@ export default function TileSquareMap(data,options) {
 		let box=options.container.getBoundingClientRect();
 		WIDTH=box.width;
 		HEIGHT=box.height;
-		
+
 		square_side=Math.floor((WIDTH-(margins.left+margins.right))/extents.x[1]);
-		
+
 		//WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 		HEIGHT=extents.y[1]*square_side+(margins.top+margins.bottom);
 		console.log("EXTENTS",extents)
@@ -136,13 +136,13 @@ export default function TileSquareMap(data,options) {
 			HEIGHT=600;
 			square_side=Math.floor((HEIGHT-(margins.top+margins.bottom))/extents.y[1]);
 			WIDTH=extents.x[1]*square_side+margins.right+margins.left;
-			HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;			
+			HEIGHT=extents.y[1]*square_side+margins.top+margins.bottom;
 			//alert("H:"+WIDTH+","+HEIGHT+","+square_side)
 		} else {
 			//alert("W:"+WIDTH+","+HEIGHT+","+square_side)
 		}
-		
-		
+
+
 		let xscale=d3_scaleLinear().domain(extents.x).range([0,WIDTH-(margins.left+margins.right)]);
 		let yscale=d3_scaleLinear().domain(extents.y).range([0,HEIGHT-(margins.top+margins.bottom)]);
 
@@ -264,20 +264,20 @@ export default function TileSquareMap(data,options) {
     				y1:-square_side/2-0.5,
     				y2:square_side/2+0.5
     			})
-    
-    	let legend_width=200,
+
+    	let legend_width=160,
     		legend_height=10;
     	let legend=svg.append("g")
     					.attrs({
     						"class":"legend",
-    						"transform":`translate(${WIDTH-margins.right-legend_width},${margins.top+10})`
+    						"transform":`translate(${WIDTH-margins.right-legend_width},${margins.top+50})`
     					});
     	legend.append("text")
     			.attrs({
     				x:0,
     				y:-5
     			})
-    			.text("How to read")
+    			.text("Percentage of failing food locations")
 
     	let range=legend
 					.selectAll("g.range")

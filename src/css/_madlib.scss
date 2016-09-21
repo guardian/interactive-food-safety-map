@@ -4,7 +4,7 @@
 }
 //from https://github.com/guardian/interactive-house-prices/blob/master/app/src/css/_madlib.scss
 .hp-madlib {
-    border: 1px solid #eaeaea;//#bdbdbd;
+    border: 1px solid #333333; //#eaeaea;//#bdbdbd;
     border-radius: 100px;
     background: white;
 
@@ -27,6 +27,7 @@
     outline: 0;
     margin: 0;
     padding: 4px 10px 3px;
+    @include fs-textSans(2);
 }
 
 .hp-madlib__input__btn {
@@ -53,9 +54,9 @@
 
     &[data-focus] {
         color: white;
-        background: #005689;
+        background: #000000;
         &:hover {
-            background: #00456E
+            background: #999999
         }
         .icon-submit {
             display: block;
@@ -132,7 +133,7 @@
     box-sizing: border-box;
 
     .hp-madlib__input__text {
-        text-transform: uppercase;
+        //text-transform: uppercase;
         padding-left: 4px;
     }
     .hp-madlib__input__btn {

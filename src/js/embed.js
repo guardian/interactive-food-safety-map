@@ -48,7 +48,7 @@ window.init = function init(el, config) {
     iframeMessenger.enableAutoResize();
 
     el.innerHTML = embedHTML;
-    
+
     /*csv("../assets/data/centroids.csv",d=>{
     	d.x= +d.x;
     	d.y= +d.y;
@@ -77,7 +77,7 @@ window.init = function init(el, config) {
 	    .defer(json, config.assetPath+"/assets/data/lads_info.json")
 	    .await((err, grid, centroids,lads_info)=>{
 	    	console.log(grid)
-	    	
+
 	    	let lads=values(lads_info);
 
 	    	console.log(lads)
@@ -95,7 +95,7 @@ window.init = function init(el, config) {
 	    			if(lad.id[0]==="S") {
 		    			region.code="S",
 		    			region.name="Scotland"
-		    		}	
+		    		}
 	    		} else {
 	    			region.code=lads_info[lad.id].region_code;
 	    			region.name=lads_info[lad.id].region_name;
@@ -167,7 +167,7 @@ window.init = function init(el, config) {
 	    			diff:d3_format(",.1f")(diff),
 	    			how:diff>0?"above":"below"
 	    		}
-	    		texts[lad.name].html=`${texts[lad.name].rate} of all food-serving businesses in <b>${lad.name}</b> failed FSA hygiene tests, which is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
+	    		texts[lad.name].html=`With ${texts[lad.name].rate} of food-serving locations failing hygiene inspections, <b>${lad.name}</b> is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
 	    	})
 
 	    	console.log(texts);
@@ -196,13 +196,13 @@ window.init = function init(el, config) {
 		    					return `http://ratings.food.gov.uk/authority-search/en-GB/%5E/%5E/Relevance/0/${texts[name].index}/%5E/0/1/10`
 		    				})
 		    				.text(d=>{
-		    					return `See ${name} on FSA website`;
+		    					return `Go to FSA to see all listings for ${name}`;
 		    				})
 	    		}
 	    	})
 
 
-	    	
+
 
 	    	let charts={
 		    	"all":new FailingRateChart(fsaData,{
@@ -254,18 +254,18 @@ window.init = function init(el, config) {
 				    	})
 				    })
 		    };
-	    	
+
 
 	    });
 
-    
 
-    
+
+
 
     /*select(".hp-location__form")
     	.on('submit', () => {
 	        let inputboxVal = document.querySelector(".hp-madlib__input__text").value;
-	        
+
 	        if (localNames.indexOf(inputboxVal) !== -1) {
 	            this.showResultByName(inputboxVal);
 	        } else { // not a constituency
@@ -282,14 +282,14 @@ window.init = function init(el, config) {
     	.select("input")*/
 
 
-    
+
     //fetchMapData(drawMap);
-    
-    
-    
 
-    
 
-    
+
+
+
+
+
 
 };
