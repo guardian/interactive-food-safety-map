@@ -32,6 +32,12 @@ body {
   padding-bottom:4px;
 
 }
+.lookup-result {
+    visibility: hidden;
+    &.visible {
+        visibility: visible;
+    }
+}
 .link-to-fsa {
     visibility: hidden;
     &.visible {

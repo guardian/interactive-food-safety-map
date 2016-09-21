@@ -75,7 +75,7 @@ window.init = function init(el, config) {
     })*/
 
     d3_queue()
-	    .defer(csv, config.assetPath+"/assets/data/grid3.csv")
+	    .defer(csv, config.assetPath+"/assets/data/grid.csv")
 	    .defer(csv, config.assetPath+"/assets/data/centroids.csv")
 	    .defer(json, config.assetPath+"/assets/data/lads_info.json")
 	    .await((err, grid, centroids,lads_info)=>{
@@ -106,7 +106,7 @@ window.init = function init(el, config) {
 
 
 
-	    		let x=(+d.x + (+d.dx)),
+	    		/*let x=(+d.x + (+d.dx)),
 	    			y=((+d.y) + (+d.dy));
 
 	    		if(lad.id[0]==="N") {
@@ -116,7 +116,7 @@ window.init = function init(el, config) {
 
 	    		let n_x=Math.floor(x/30);
 	    		n_x=n_x>18?n_x:n_x+1
-	    		n_x=n_x<7?n_x+1:n_x
+	    		n_x=n_x<7?n_x+1:n_x*/
 
 	    		return {
 	    			id:lad.id,
@@ -124,10 +124,12 @@ window.init = function init(el, config) {
 	    			name:lad.name,
 	    			region_code:region.code,
 	    			region_name:region.name,
-	    			x:n_x,
+	    			x:+d.x,
+	    			y:+d.y
+	    			/*x:n_x-4,
 	    			y:Math.round(y/30),
 	    			o_x:x,
-	    			o_y:y
+	    			o_y:y*/
 	    		};
 	    	});
 
@@ -164,7 +166,7 @@ window.init = function init(el, config) {
 		    		lookup.setItem(name);
 		    	}
 	    	})
-	    	return;
+	    	
 	    	let avgs={
 	    			"S":0.10,
 	    			"E":0.062,
@@ -213,6 +215,9 @@ window.init = function init(el, config) {
 
 	    			select(".summary")
 	    				.html(texts[name].html)
+
+	    			select(".lookup-result")
+	    				.classed("visible",true)
 
 	    			select(".link-to-fsa")
 	    				.classed("visible",true)

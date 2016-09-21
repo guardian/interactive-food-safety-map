@@ -128,15 +128,15 @@ export default function TileSquareMap(data,options) {
 		WIDTH=box.width;
 		HEIGHT=box.height;
 
-		square_side=Math.floor((WIDTH-(margins.left+margins.right))/(extents.x[1]-extents.x[0]));
-		square_side=Math.floor(square_side/2)*2;
+		square_side=Math.ceil((WIDTH-(margins.left+margins.right))/(extents.x[1]-extents.x[0]));
+		square_side=Math.ceil(square_side/2)*2;
 		//WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 		HEIGHT=(extents.y[1]-extents.y[0])*square_side+(margins.top+margins.bottom);
 		console.log("EXTENTS",extents)
 		if(HEIGHT>600) {
 			HEIGHT=600;
-			square_side=Math.floor((HEIGHT-(margins.top+margins.bottom))/(extents.y[1]-extents.y[0]));
-			square_side=Math.floor(square_side/2)*2;
+			square_side=Math.ceil((HEIGHT-(margins.top+margins.bottom))/(extents.y[1]-extents.y[0]));
+			square_side=Math.ceil(square_side/2)*2;
 			WIDTH=(extents.x[1]-extents.y[0])*square_side+margins.right+margins.left;
 			HEIGHT=(extents.y[1]-extents.y[0])*square_side+margins.top+margins.bottom;
 			//alert("H:"+WIDTH+","+HEIGHT+","+square_side)
@@ -194,7 +194,8 @@ export default function TileSquareMap(data,options) {
 	    				x:-(square_side/2-0.5),
 	    				y:-(square_side/2-0.5),
 	    				width:square_side,
-	    				height:square_side
+	    				height:square_side,
+	    				"transform":"translate(-100,-100)"
 	    			})
 
     	lad=grid.selectAll("lad")
@@ -203,15 +204,15 @@ export default function TileSquareMap(data,options) {
     			.append("g")
     				.attr("id",d=>d.id)
     				.attr("rel",d=>d.name)
-    				.attr("data-fail",d=>(d.index?d.info.count[options.indicator].rateFail:"none"))
+    				//.attr("data-fail",d=>(d.index?d.info.count[options.indicator].rateFail:"none"))
     				.attr("data-grid",d=>(d.x+"x"+d.y))
-    				.attr("data-coords",d=>(d.o_x+"x"+d.o_y))
-    				.attr("data-region",d=>(`${d.region_name?d.region_name.toLowerCase().replace(/\s/gi,"-"):"none"}`))
+    				//.attr("data-coords",d=>(d.o_x+"x"+d.o_y))
+    				//.attr("data-region",d=>(`${d.region_name?d.region_name.toLowerCase().replace(/\s/gi,"-"):"none"}`))
     				.attr("class","lad")
-    				.classed("b-t",d=>d.borders.top)
-    				.classed("b-b",d=>d.borders.bottom)
-    				.classed("b-l",d=>d.borders.left)
-    				.classed("b-r",d=>d.borders.right)
+    				// .classed("b-t",d=>d.borders.top)
+    				// .classed("b-b",d=>d.borders.bottom)
+    				// .classed("b-l",d=>d.borders.left)
+    				// .classed("b-r",d=>d.borders.right)
     				.attr("transform",d=>{
     					let x=xscale(d.x),
     						y=yscale(d.y);
