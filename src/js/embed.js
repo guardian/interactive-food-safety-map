@@ -53,7 +53,7 @@ window.init = function init(el, config) {
     	return d;
     },data=>{
     	// 34 x 40
-    	console.log(data)
+    	//console.log(data)
 
     	new SquareMap(data,{
     		container:el.querySelector(".square-map"),
@@ -74,20 +74,20 @@ window.init = function init(el, config) {
 	    .defer(csv, config.assetPath+"/assets/data/centroids.csv")
 	    .defer(json, config.assetPath+"/assets/data/lads_info.json")
 	    .await((err, grid, centroids,lads_info)=>{
-	    	console.log(grid)
+	    	//console.log(grid)
 
 	    	let lads=values(lads_info);
 
-	    	console.log(lads)
+	    	//console.log(lads)
 
 	    	let local_authorities=grid.map(d=>{
 	    		let lad=centroids.filter(l=>{
 	    			return d.id.toLowerCase() === l.id.replace(/\s/gi,"_").toLowerCase();
 	    		})[0]
 	    		if(!lad) {
-	    			console.log("can't find",d.name)
+	    			//console.log("can't find",d.name)
 	    		}
-	    		//console.log(lad,d)
+	    		////console.log(lad,d)
 	    		let region={}
 	    		if(!lads_info[lad.id]) {
 	    			if(lad.id[0]==="S") {
@@ -128,18 +128,18 @@ window.init = function init(el, config) {
 	    		};
 	    	});
 
-	    	console.log(local_authorities);
+	    	//console.log(local_authorities);
 
 	    	let extents={
 	    		x:extent(local_authorities,d=>d.x),
 	    		y:extent(local_authorities,d=>d.y)
 	    	}
 
-	    	console.log("GRID EXTENTS",extents)
+	    	//console.log("GRID EXTENTS",extents)
 
-	    	console.log(JSON.stringify(local_authorities.map(d=>{
-	    		    		return d.id+","+d.x+","+d.y
-	    		    	})))
+	    	// console.log(JSON.stringify(local_authorities.map(d=>{
+	    	// 	    		return d.id+","+d.x+","+d.y
+	    	// 	    	})))
 
 
 	    	let lookup;
@@ -176,7 +176,7 @@ window.init = function init(el, config) {
 	    	}
 	    	let texts={};
 	    	local_authorities.filter(lad=>(typeof lad.info != 'undefined')).forEach(lad=>{
-	    		console.log(lad)
+	    		//console.log(lad)
 	    		let rate=lad.info.count["all"].rateFail,
 	    			country=lad.id.slice(0,1),
 	    			diff=+rate*100 - avgs[country]*100;
@@ -187,12 +187,15 @@ window.init = function init(el, config) {
 	    			country:country,
 	    			rate:d3_format(",.1%")(+rate),
 	    			diff:d3_format(",.1f")(diff),
-	    			how:diff>0?"above":"below"
+	    			how:diff>0?"above":"below",
+	    			n:lad.info.count["all"].sumFail,
+	    			all:lad.info.count["all"].sum
 	    		}
-	    		texts[lad.name].html=`With a ${texts[lad.name].rate} failing rate overall, <b>${lad.name}</b> is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
+	    		//texts[lad.name].html=`With a ${texts[lad.name].rate} failing rate overall, <b>${lad.name}</b> is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
+	    		texts[lad.name].html=`${texts[lad.name].n} out of ${texts[lad.name].all} establishments failed the FSA hygiene inspection in <b>${lad.name}</b>, that is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;	
 	    	})
 
-	    	console.log(texts);
+	    	//console.log(texts);
 
 	    	lookup=new LookupLocalAuthority({
 	    		container:el.querySelector(".js-location"),
@@ -200,11 +203,11 @@ window.init = function init(el, config) {
 	    		submitCallback:(d,type)=>{
 	    			let name=d;
 	    			if(type==="id") {
-	    				console.log(d,local_authorities)
+	    				//console.log(d,local_authorities)
 	    				let lad=local_authorities.filter(l=>(d==l.id))[0];
 	    				name=lad.name;
 	    			}
-	    			console.log("SHOWING",name)
+	    			//console.log("SHOWING",name)
 	    			values(charts).forEach(c=>c.highlightLAD(name))
 	    			map.highlightLAD(name);
 
@@ -239,7 +242,7 @@ window.init = function init(el, config) {
 				    		bottom:15,
 				    		top:7
 				    	},
-				    	title:"All food establishment",
+				    	title:"All food establishments",
 				    	label:"failed the inspections",
 				    	mouseEnterCallback:(d=>{
 				    		charts.restaurant.highlightLAD(d);

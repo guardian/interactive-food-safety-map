@@ -154,15 +154,22 @@ export default function TileSquareMap(data,options) {
 		WIDTH=box.width;
 		HEIGHT=box.height;
 
-		square_side=Math.ceil((WIDTH-(margins.left+margins.right))/(extents.x[1]-extents.x[0]));
-		square_side=Math.ceil(square_side/2)*2;
+		let round = (n) =>{
+			if(WIDTH<480) {
+				return Math.floor(n);
+			}
+			return Math.ceil(n);
+		}
+
+		square_side=round((WIDTH-(margins.left+margins.right))/(extents.x[1]-extents.x[0]));
+		square_side=round(square_side/2)*2;
 		//WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 		HEIGHT=(extents.y[1]-extents.y[0])*square_side+(margins.top+margins.bottom);
-		console.log("EXTENTS",extents)
+		//console.log("EXTENTS",extents)
 		if(HEIGHT>600) {
 			HEIGHT=600;
-			square_side=Math.ceil((HEIGHT-(margins.top+margins.bottom))/(extents.y[1]-extents.y[0]));
-			square_side=Math.ceil(square_side/2)*2;
+			square_side=round((HEIGHT-(margins.top+margins.bottom))/(extents.y[1]-extents.y[0]));
+			square_side=round(square_side/2)*2;
 			WIDTH=(extents.x[1]-extents.y[0])*square_side+margins.right+margins.left;
 			HEIGHT=(extents.y[1]-extents.y[0])*square_side+margins.top+margins.bottom;
 			//alert("H:"+WIDTH+","+HEIGHT+","+square_side)
@@ -246,7 +253,7 @@ export default function TileSquareMap(data,options) {
     					return `translate(${x},${y})`
     				})
     				.on("mouseenter",d=>{
-						highlightLAD(d.name,false);
+						highlightLAD(d.name);
 						if(options.mouseEnterCallback) {
 							options.mouseEnterCallback.call(this,d.name)
 						}
@@ -387,7 +394,7 @@ export default function TileSquareMap(data,options) {
 
 	}
 
-	function highlightLAD(name,onlyname=false) {
+	function highlightLAD(name,onlyname=true) {
 		//console.log(name,data)
     	//lad.classed("highlight",r=>r.name===name)
 
