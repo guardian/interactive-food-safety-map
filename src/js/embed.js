@@ -194,7 +194,7 @@ window.init = function init(el, config) {
 	    			diff:d3_format(",.1f")(diff),
 	    			how:diff>0?"above":"below"
 	    		}
-	    		texts[lad.name].html=`With ${texts[lad.name].rate} of food-serving locations failing hygiene inspections, <b>${lad.name}</b> is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
+	    		texts[lad.name].html=`With a ${texts[lad.name].rate} failing rate overall, <b>${lad.name}</b> is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
 	    	})
 
 	    	console.log(texts);
@@ -241,8 +241,8 @@ window.init = function init(el, config) {
 				    	margins:{
 				    		left:0,
 				    		right:30,
-				    		bottom:20,
-				    		top:10
+				    		bottom:15,
+				    		top:5
 				    	},
 				    	title:"All types",
 				    	mouseEnterCallback:(d=>{
@@ -257,8 +257,8 @@ window.init = function init(el, config) {
 				    	margins:{
 				    		left:0,
 				    		right:30,
-				    		bottom:20,
-				    		top:10
+				    		bottom:15,
+				    		top:5
 				    	},
 				    	title:"Restaurants, cafes and canteens",
 				    	mouseEnterCallback:(d=>{
@@ -273,8 +273,8 @@ window.init = function init(el, config) {
 				    	margins:{
 				    		left:0,
 				    		right:30,
-				    		bottom:20,
-				    		top:10
+				    		bottom:15,
+				    		top:5
 				    	},
 				    	title:"Takeaways and sandwich shops",
 				    	mouseEnterCallback:(d=>{

@@ -311,7 +311,7 @@ export default function TileSquareMap(data,options) {
     				x:0,
     				y:-5
     			})
-    			.text("Percentage of failing food locations")
+    			.text("Rate of failed inspections")
 
     	let range=legend
 					.selectAll("g.range")

@@ -1,18 +1,19 @@
 .failingrate-chart {
 
 	width:100%;
-	margin-top:20px;
+	margin-bottom:20px;
 	h2 {
 		margin: 0;
 		padding: 0;
-		@include fs-textSans(3);
+		@include fs-textSans(2);
+		line-height: 10px;
 		font-weight:normal;
 		//@include fs-header(1);
 	}
 
 	div.chart {
 		//overflow:hidden;
-		height:150px;
+		height:120px;
 
 		svg {
 
