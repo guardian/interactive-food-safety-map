@@ -24,6 +24,9 @@
 		}
 	}
 
-
+	.note {
+		  @include fs-textSans(1);
+		  color:#bdbdbd;
+	}
 
 }
