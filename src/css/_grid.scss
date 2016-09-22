@@ -63,6 +63,7 @@
 			}
 		}
 		g.labels {
+			pointer-events:none;
 			g.label {
 				text {
 					@include fs-textSans(1);

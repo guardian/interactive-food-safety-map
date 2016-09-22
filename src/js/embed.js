@@ -179,14 +179,13 @@ window.init = function init(el, config) {
 		    		values(charts).forEach(c=>c.highlightLAD(name))
 		    		lookup.setItem(name);
 		    	},
-		    	labels:[],
-		    	labels2:[
+		    	labels:[
 		    		{
 		    			id:"E07000120", //Hyndburn
-		    			dx:-(3+5),
-		    			align:"end"
+		    			dx:-1,//-(3),
+		    			align:"middle"
 		    		}, 
-		    		{
+		    		/*{
 		    			id:"E09000025", //Newham
 		    			dx:3,
 		    			align:"start"
@@ -195,6 +194,22 @@ window.init = function init(el, config) {
 		    			id:"E09000009", //Ealing
 		    			dx:8,
 		    			align:"start"	
+		    		},*/
+		    		
+		    		{
+		    			id:"E08000025", //Birmingham
+		    			dx:-1,
+		    			align:"middle"
+		    		},
+		    		{
+		    			id:"E08000003", //Manchester
+		    			dx:-1,
+		    			align:"middle"
+		    		},
+		    		{
+		    			id:"E08000035", //Leeds
+		    			dx:0,
+		    			align:"start"
 		    		},
 		    		{
 		    			id:"S12000036", //Edinburgh
@@ -208,8 +223,14 @@ window.init = function init(el, config) {
 		    		},
 		    		{
 		    			id:"E06000032", //Luton
-		    			dx:6,
-		    			align:"start"
+		    			dx:-1,
+		    			align:"middle"
+		    		},
+		    		{
+		    			id:"E09000033",
+		    			dx:-1,
+		    			align:"middle",
+		    			label:"London"
 		    		}
 		    		
 

@@ -111,7 +111,7 @@ export default function TileSquareMap(data,options) {
 	let hover_square;
 
 	let legend,
-		LEGEND_SPACE=50;
+		LEGEND_SPACE=35;
 
 	let WIDTH,
 		HEIGHT;
@@ -218,17 +218,17 @@ export default function TileSquareMap(data,options) {
     						"class":"borders",
     						"transform":`translate(${margins.left},${margins.top})`
     					});
-    	let overlay=svg.append("g")
-    					.attrs({
-    						"class":"overlay",
-    						"transform":`translate(${margins.left},${margins.top})`
-    					});
+    	
     	labels=svg.append("g")
     					.attrs({
     						"class":"labels",
     						"transform":`translate(${margins.left},${margins.top})`
     					});
-
+    	let overlay=svg.append("g")
+    					.attrs({
+    						"class":"overlay",
+    						"transform":`translate(${margins.left},${margins.top})`
+    					});
     	hover_square=overlay.append("rect")
     				.attrs({
 	    				x:-(square_side/2-0.5),
@@ -350,27 +350,27 @@ export default function TileSquareMap(data,options) {
     						"class":"legend",
     						"transform":`translate(${svg.attr("width")-margins.right-legend_width},${svg.attr("height")-LEGEND_SPACE + 15})`
     					});
-    	legend.append("text")
+    	/*legend.append("text")
     			.attrs({
     				x:legend_width-15,
     				y:-5
     			})
     			.style("text-anchor","end")
-    			.text("More likely")
+    			.text("More likely")*/
     	
     	legend.append("text")
     			.attrs({
     				x:0,
-    				y:34
+    				y:-5
     			})
     			.text("Rate of failed inspections")
-    	legend.append("path")
+    	/*legend.append("path")
     				.attrs({
     					"class":"arrow",
     					"marker-end":'url(#head)',
     					d:'M0,0l10,0',
     					transform:`translate(${legend_width-14},-8)`
-    				})
+    				})*/
     	let range=legend
 					.selectAll("g.range")
 					.data(([0]).concat(buckets))
@@ -435,7 +435,7 @@ export default function TileSquareMap(data,options) {
 						.attr("transform",d=>{
 							return `translate(${d.position.x+(d.dx*square_side)},${d.position.y})`;
 						})
-						.style("text-anchor",d=>d.align)
+						
 
 		label
 				.append("text")
@@ -445,8 +445,9 @@ export default function TileSquareMap(data,options) {
 				.attr("y",d=>{
 					return 0;
 				})
+				.style("text-anchor",d=>d.align)
 				.attr("dy","0.3em")
-				.text(d=>d.name)
+				.text(d=>(d.label || d.name))
 	}
 
 	function highlightLAD(name,onlyname=true) {
@@ -457,7 +458,9 @@ export default function TileSquareMap(data,options) {
 
     	console.log(_lad)
 
-    	hover_square.attr("transform",`translate(${_lad.position.x},${_lad.position.y})`)
+    	hover_square
+    		.attr("transform",`translate(${_lad.position.x},${_lad.position.y})`)
+    		.style("fill",fillThreshold(_lad.info.count[options.indicator].rateFail))
 
     	tooltip.show([
 				{
