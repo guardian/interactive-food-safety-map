@@ -13,9 +13,17 @@ export default function Tooltip(options) {
 	var tooltip=select(options.container)
 					.append("div")
 						.attr("class","tooltip arrow_box clearfix")
+						.styles({
+							"min-height":options.h?((options.h+2)+"px"):"auto",
+							"line-height":options.h?((options.h+2)+"px"):"15px"
+						})
 						//.style("width",function(){
 						//	return (options.indicators.length * 52 + 12)+"px";
 						//})
+
+	let box=options.container.getBoundingClientRect();
+	let WIDTH=box.width;
+
 	var tooltipTitle;
 	if(options.title) {
 		tooltipTitle=tooltip.append("h1")
@@ -81,7 +89,9 @@ export default function Tooltip(options) {
 				})
 		}
 
-		
+		if(x>WIDTH*0.75) {
+
+		}
 
 		tooltip.styles({
 			left:(x+options.margins.left)+"px",

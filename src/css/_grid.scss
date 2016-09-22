@@ -60,6 +60,16 @@
 				shape-rendering: crispEdges;
 			}
 		}
+		g.labels {
+			g.label {
+				text {
+					@include fs-textSans(1);
+					font-size: 12px;
+					fill:#333;
+					text-anchor:start;
+				}
+			}
+		}
 		g.legend {
 			text {
 				@include fs-textSans(1);
@@ -67,6 +77,15 @@
 				font-size: 11px;
 				fill:#999;
 				font-weight:200;
+				tspan {
+					font-size:13px;
+				}
+			}
+			path.arrow {
+				stroke:#999;
+				stroke-width:2;
+				fill:none;
+				shape-rendering: crispEdges;
 			}
 			g.range {
 				text {

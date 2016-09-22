@@ -32,15 +32,6 @@ import {
 	extent
 } from 'd3-array'
 
-/*
-//tooltip text
-//tooltip background
-//map scale
-//wrong text in lookup form
-//remove mouseenter event -> only click
-//show text after lookup [link + avg + bla bla bla]
-//titles
-*/
 
 window.init = function init(el, config) {
     iframeMessenger.enableAutoResize();
@@ -77,9 +68,37 @@ window.init = function init(el, config) {
 	    	//console.log(grid)
 
 	    	let lads=values(lads_info);
+	    	/*let counts={
+	    		takeaway:{
+	    			n:0,
+	    			m20:0,
+	    			lad:[]
+	    		},
+	    		restaurant:{
+	    			n:0,
+	    			m20:0,
+	    			lad:[]
+	    		}
+	    	}
+	    	values(fsaData.lads).forEach(d=>{
+	    		//console.log(d)
+	    		if(d.count.restaurant.rateFail>d.count.takeaway.rateFail) {
+	    			counts.restaurant.n++;
+					if(d.count.restaurant.rateFail>=0.2) {
+						counts.restaurant.m20++;
+					}
+	    			counts.restaurant.lad.push(d)
+	    		} else {
+	    			counts.takeaway.n++;
+	    			if(d.count.takeaway.rateFail>=0.2) {
+						counts.takeaway.m20++;
+					}
+	    			counts.takeaway.lad.push(d)
+	    		}
+	    	})
+	    	console.log(counts)
 
-	    	//console.log(lads)
-
+	    	return;*/
 	    	let local_authorities=grid.map(d=>{
 	    		let lad=centroids.filter(l=>{
 	    			return d.id.toLowerCase() === l.id.replace(/\s/gi,"_").toLowerCase();
@@ -159,7 +178,42 @@ window.init = function init(el, config) {
 		    	mouseClickCallback:(name) => {
 		    		values(charts).forEach(c=>c.highlightLAD(name))
 		    		lookup.setItem(name);
-		    	}
+		    	},
+		    	labels:[],
+		    	labels2:[
+		    		{
+		    			id:"E07000120", //Hyndburn
+		    			dx:-(3+5),
+		    			align:"end"
+		    		}, 
+		    		{
+		    			id:"E09000025", //Newham
+		    			dx:3,
+		    			align:"start"
+		    		},
+		    		{
+		    			id:"E09000009", //Ealing
+		    			dx:8,
+		    			align:"start"	
+		    		},
+		    		{
+		    			id:"S12000036", //Edinburgh
+		    			dx:0,
+		    			align:"start"
+		    		},
+		    		{
+		    			id:"S12000027", //Shetland
+		    			dx:0,
+		    			align:"start"
+		    		},
+		    		{
+		    			id:"E06000032", //Luton
+		    			dx:6,
+		    			align:"start"
+		    		}
+		    		
+
+		    	]
 	    	})
 	    	
 	    	let avgs={

@@ -106,11 +106,12 @@ export default function TileSquareMap(data,options) {
 	};
 
 	let lad;
+	let labels;
 	let tooltip;
 	let hover_square;
 
 	let legend,
-		LEGEND_SPACE=40;
+		LEGEND_SPACE=50;
 
 	let WIDTH,
 		HEIGHT;
@@ -132,6 +133,7 @@ export default function TileSquareMap(data,options) {
 	    	container:options.container,
 	    	margins:margins,
 	    	title:false,
+	    	h:square_side,
 	    	indicators:[
 	    		{
 	    			id:"t_lad_name"
@@ -161,7 +163,7 @@ export default function TileSquareMap(data,options) {
 			return Math.ceil(n);
 		}
 
-		square_side=round((WIDTH-(margins.left+margins.right))/(extents.x[1]-extents.x[0]));
+		square_side=round((WIDTH-(margins.left+margins.right))/((extents.x[1]+1)-extents.x[0]));
 		square_side=round(square_side/2)*2;
 		//WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 		HEIGHT=(extents.y[1]-extents.y[0])*square_side+(margins.top+margins.bottom);
@@ -205,7 +207,7 @@ export default function TileSquareMap(data,options) {
 	    					width:box.width,
 	    					height:HEIGHT + LEGEND_SPACE
 	    				})
-
+	    addArrowDef(svg);
     	let grid=svg.append("g")
     					.attrs({
     						"class":"lads",
@@ -219,6 +221,11 @@ export default function TileSquareMap(data,options) {
     	let overlay=svg.append("g")
     					.attrs({
     						"class":"overlay",
+    						"transform":`translate(${margins.left},${margins.top})`
+    					});
+    	labels=svg.append("g")
+    					.attrs({
+    						"class":"labels",
     						"transform":`translate(${margins.left},${margins.top})`
     					});
 
@@ -330,7 +337,7 @@ export default function TileSquareMap(data,options) {
     				y2:square_side/2
     			})
 
-    	
+    	addLabels();
 
     	let legend_width=150,
     		legend_height=10;
@@ -341,11 +348,25 @@ export default function TileSquareMap(data,options) {
     					});
     	legend.append("text")
     			.attrs({
-    				x:0,
+    				x:legend_width-15,
     				y:-5
     			})
+    			.style("text-anchor","end")
+    			.text("More likely")
+    	
+    	legend.append("text")
+    			.attrs({
+    				x:0,
+    				y:34
+    			})
     			.text("Rate of failed inspections")
-
+    	legend.append("path")
+    				.attrs({
+    					"class":"arrow",
+    					"marker-end":'url(#head)',
+    					d:'M0,0l10,0',
+    					transform:`translate(${legend_width-14},-8)`
+    				})
     	let range=legend
 					.selectAll("g.range")
 					.data(([0]).concat(buckets))
@@ -394,6 +415,36 @@ export default function TileSquareMap(data,options) {
 
 	}
 
+	function addLabels() {
+		let label=labels
+					.selectAll("g.label")
+					//.data(data.filter(lad=>(options.labels.indexOf(lad.id)>-1)))
+					.data(options.labels.map(d=>{
+						let lad=data.filter(lad=>(lad.id===d.id))[0];
+						d.position=lad.position;
+						d.name=lad.name;
+						return d;
+					}))
+					.enter()
+					.append("g")
+						.attr("class","label")
+						.attr("transform",d=>{
+							return `translate(${d.position.x+(d.dx*square_side)},${d.position.y})`;
+						})
+						.style("text-anchor",d=>d.align)
+
+		label
+				.append("text")
+				.attr("x",d=>{
+					return square_side;
+				})
+				.attr("y",d=>{
+					return 0;
+				})
+				.attr("dy","0.3em")
+				.text(d=>d.name)
+	}
+
 	function highlightLAD(name,onlyname=true) {
 		//console.log(name,data)
     	//lad.classed("highlight",r=>r.name===name)
@@ -434,6 +485,24 @@ export default function TileSquareMap(data,options) {
 
     	highlightLAD(name);
 
+    }
+
+    function addArrowDef(svg) {
+    	let defs=svg.append("defs")
+    	defs.append("marker")
+    			.attrs({
+    				id:'head',
+    				orient:'auto',
+    				markerWidth:2,
+    				markerHeight:4,
+    				refX:0.1,
+    				refY:2
+    			})
+    			.append("path")
+    				.attrs({
+    					d:"M0,0 V4 L2,2 Z",
+    					fill:"#999"
+    				})
     }
 
 }

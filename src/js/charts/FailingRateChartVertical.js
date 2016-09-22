@@ -179,6 +179,7 @@ export default function FailingRateChartVertical(data,options) {
 				.style("fill",d=>{
 					return fillThreshold(+d.key)
 				})
+				
 
 		// rates.append("circle")
 		// 		.attrs({
