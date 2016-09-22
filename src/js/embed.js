@@ -214,7 +214,8 @@ window.init = function init(el, config) {
 		    		{
 		    			id:"S12000036", //Edinburgh
 		    			dx:0,
-		    			align:"start"
+		    			align:"start",
+		    			label:"Edinburgh"
 		    		},
 		    		{
 		    			id:"S12000027", //Shetland

@@ -297,7 +297,7 @@ module.exports = function(grunt) {
     grunt.registerTask('failcharts', ['shell:failcharts', 'template:failcharts', 'sass:failcharts']);
     grunt.registerTask('embed', ['shell:embed', 'template:embed', 'sass:embed']);
     grunt.registerTask('interactive', ['shell:interactive', 'template:bootjs', 'sass:interactive']);
-    grunt.registerTask('all', ['interactive', 'embed', 'scores', 'failcharts', 'copy:assets'])
+    grunt.registerTask('all', ['interactive', 'embed', 'scores', 'copy:assets'])
     grunt.registerTask('default', ['clean', 'copy:harness', 'all', 'connect', 'watch']);
     grunt.registerTask('build', ['clean', 'all']);
     grunt.registerTask('deploy', ['loadDeployConfig', 'prompt:visuals', 'build', 'copy:deploy', 'aws_s3', 'boot_url']);

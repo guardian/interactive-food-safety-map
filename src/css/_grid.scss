@@ -54,6 +54,7 @@
 			}
 		}
 		g.overlay {
+			pointer-events:none;
 			rect {
 				fill:none;
 				stroke:#767676;
