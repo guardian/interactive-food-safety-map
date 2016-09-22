@@ -233,8 +233,8 @@ export default function TileSquareMap(data,options) {
     				.attrs({
 	    				x:-(square_side/2-0.5),
 	    				y:-(square_side/2-0.5),
-	    				width:square_side,
-	    				height:square_side,
+	    				width:square_side-0.5,
+	    				height:square_side-0.5,
 	    				"transform":"translate(-100,-100)"
 	    			})
 
@@ -260,15 +260,19 @@ export default function TileSquareMap(data,options) {
     					return `translate(${x},${y})`
     				})
     				.on("mouseenter",d=>{
-						highlightLAD(d.name);
-						if(options.mouseEnterCallback) {
-							options.mouseEnterCallback.call(this,d.name)
-						}
+    					if(box.width>480) {
+    						highlightLAD(d.name);
+							if(options.mouseEnterCallback) {
+								options.mouseEnterCallback.call(this,d.name)
+							}	
+    					}
+						
     				})
     				.on("click",d=>{
-						//highlightLAD(d.name);
-						if(options.mouseClickCallback) {
-							options.mouseClickCallback.call(this,d.name)
+						if(box.width>480) {
+							if(options.mouseClickCallback) {
+								options.mouseClickCallback.call(this,d.name)
+							}
 						}
     				})
 
@@ -344,7 +348,7 @@ export default function TileSquareMap(data,options) {
     	let legend=svg.append("g")
     					.attrs({
     						"class":"legend",
-    						"transform":`translate(${box.width-margins.right-legend_width},${svg.attr("height")-LEGEND_SPACE + 15})`
+    						"transform":`translate(${svg.attr("width")-margins.right-legend_width},${svg.attr("height")-LEGEND_SPACE + 15})`
     					});
     	legend.append("text")
     			.attrs({
