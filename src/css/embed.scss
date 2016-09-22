@@ -10,13 +10,14 @@ body {
 }
 
 .interactive-embed {
+
 }
 
 // summary
 .summary {
     position: relative;//absolute;
     margin-top: 10px;
-    margin-bottom:10px;
+    margin-bottom:0px;
     width: 100%;
     //max-width: 480px;
     span {
@@ -47,7 +48,7 @@ body {
             visibility: visible;
         }
     }
-    
+
     h3 {
         margin:0;
         padding:0;
@@ -64,6 +65,7 @@ body {
         color:#005689;
         @include fs-textSans(1);
         line-height: 14px;
+        margin-bottom: 15px;
     }
 }
 /* atomic css*/

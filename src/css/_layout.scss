@@ -3,7 +3,9 @@
 	max-width:860px;
 	overflow: visible;
     display: table;
-	
+		border-top: 1px solid #eaeaea;
+		padding-top: 15px;
+
 	.map-col {
 		width:100%;
 	}
@@ -22,6 +24,6 @@
 		}
 	}
 
-	
+
 
 }
