@@ -35,7 +35,7 @@ import {
 
 window.init = function init(el, config) {
     iframeMessenger.enableAutoResize();
-
+    console.log(iframeMessenger)
     el.innerHTML = embedHTML;
 
     /*csv("../assets/data/centroids.csv",d=>{
@@ -296,6 +296,7 @@ window.init = function init(el, config) {
 	    	lookup=new LookupLocalAuthority({
 	    		container:el.querySelector(".js-location"),
 	    		list:local_authorities.map(d=>(d.name)),
+	    		iframeMessenger:iframeMessenger,
 	    		submitCallback:(d,type)=>{
 	    			let name=d;
 	    			if(type==="id") {

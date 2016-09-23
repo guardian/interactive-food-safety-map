@@ -29,6 +29,12 @@ export default function LookupLocalAuthority(options) {
 	    	//console.log("!!!!")
 	        //bean.fire(this.els.form, 'submit');
 	    })
+	    .on('awesomplete-open', () => {
+	    	//options.iframeMessenger.resize();
+	    })
+	    .on('awesomplete-close', () => {
+	    	//options.iframeMessenger.resize();
+	    })
     function submit() {
     	let inputboxVal = input.value;
         if (!inputboxVal) {

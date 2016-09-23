@@ -153,7 +153,7 @@ module.exports = function(grunt) {
                         expand: true, cwd: 'build/',
                         src: ['main.js', 'main.css', 'main.js.map', 'main.css.map',
                             'embed.js', 'embed.css', 'embed.js.map', 'embed.css.map',
-                            //'scores.js', 'scores.css', 'scores.js.map', 'scores.css.map',
+                            'scores.js', 'scores.css', 'scores.js.map', 'scores.css.map',
                             //'failcharts.js', 'failcharts.css', 'failcharts.js.map', 'failcharts.css.map',
                             'assets/**/*'],
                         dest: 'deploy/<%= visuals.timestamp %>/<%= visuals.timestamp %>'
