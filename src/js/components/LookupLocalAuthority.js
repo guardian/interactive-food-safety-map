@@ -23,10 +23,10 @@ export default function LookupLocalAuthority(options) {
     	.on("focus",()=>{
     		//console.log(event)
     		event.preventDefault();
-    		console.log("FOCUS")
+    		//console.log("FOCUS")
     	})
     	.on('awesomplete-selectcomplete', () => {
-	    	console.log("!!!!")
+	    	//console.log("!!!!")
 	        //bean.fire(this.els.form, 'submit');
 	    })
 
@@ -35,13 +35,13 @@ export default function LookupLocalAuthority(options) {
 
 			event.preventDefault();
 
-			console.log("SUBMIT")
+			//console.log("SUBMIT")
 
 			let inputboxVal = input.value;
             if (!inputboxVal) {
             	return;
             } else if (list.indexOf(inputboxVal) !== -1) {
-                console.log("SHOW",inputboxVal);
+                //console.log("SHOW",inputboxVal);
                 if(options.submitCallback) {
                 	options.submitCallback(inputboxVal,"name")
                 }
@@ -53,20 +53,20 @@ export default function LookupLocalAuthority(options) {
 					let url = `https://interactive.guim.co.uk/2016/may/ukelex/postcodes/${sanitizedPostcode}.json`;
 					//return json(url,callback());
 					json(url,(data)=>{
-						console.log("YES!",data)
+						//console.log("YES!",data)
 						if(!data) {
 							console.log("BOOOOOH")
 							showError("Invalid postcode");
 							return;
 						}
-						console.log(inputboxVal,"->",data.adminDistrictCode)
+						//console.log(inputboxVal,"->",data.adminDistrictCode)
 						if(options.submitCallback) {
 		                	options.submitCallback(data.adminDistrictCode,"id")
 		                }
 					})
 				} else {
-					console.log(`${sanitizedPostcode} (length ${sanitizedPostcode.length})`)
-					console.log("WROOONG");
+					//console.log(`${sanitizedPostcode} (length ${sanitizedPostcode.length})`)
+					//console.log("WROOONG");
 					showError("Invalid postcode");
 					//return new Promise((resolve, reject) => reject('Invalid postcode'));
 				}
