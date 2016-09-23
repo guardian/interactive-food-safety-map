@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['src/js/**/*'],
-                tasks: ['shell:embed'],
+                tasks: ['shell:embed','shell:scores'],
                 //tasks: ['shell:interactive', 'shell:embed','shell:scores','shell:failcharts'],
             },
             css: {
@@ -299,7 +299,7 @@ module.exports = function(grunt) {
     grunt.registerTask('embed', ['shell:embed', 'template:embed', 'sass:embed']);
     grunt.registerTask('interactive', ['shell:interactive', 'template:bootjs', 'sass:interactive']);
     //grunt.registerTask('all', ['interactive', 'embed',  'copy:assets'])
-    grunt.registerTask('all', ['embed',  'copy:assets'])
+    grunt.registerTask('all', ['embed', 'scores', 'copy:assets'])
     grunt.registerTask('default', ['clean', 'copy:harness', 'all', 'connect', 'watch']);
     grunt.registerTask('build', ['clean', 'all']);
     grunt.registerTask('deploy', ['loadDeployConfig', 'prompt:visuals', 'build', 'copy:deploy', 'aws_s3', 'boot_url']);
