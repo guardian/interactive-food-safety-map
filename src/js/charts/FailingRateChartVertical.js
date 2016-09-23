@@ -50,14 +50,14 @@ export default function FailingRateChartVertical(data,options) {
         //.range(["#f6f6f6","#eaeaea","#f9f1c5","#ffe900","#ffce00"])
         .range(["#f6f6f6","#eaeaea","#ffd400","#ffa300","#ff5b3a","#cc2b12"])
 
-	console.log(data.lads)
+	//console.log(data.lads)
 
 	let lads=d3_entries(data.lads).map(d=>{
 										d.key=d.value.count[options.indicator].rateFail;
 								    	return d;
 								    })
 
-	console.log(lads)
+	//console.log(lads)
 
 	lads=lads.sort((a,b)=>{
     	return +a.key - +b.key;
@@ -68,7 +68,7 @@ export default function FailingRateChartVertical(data,options) {
     /*let nested_data=d3_nest()
         .key(d=>{
             if(d.value.name==="Highland" || d.value.name==="Newham") {
-                console.log(d)    
+                //console.log(d)    
             }
             
             return d.value.count.restaurant.rateFail
@@ -85,7 +85,7 @@ export default function FailingRateChartVertical(data,options) {
     	return +a.key - +b.key;
     })
 
-    console.log(nested_data);*/
+    //console.log(nested_data);*/
 
     buildVisual();
 
@@ -128,7 +128,7 @@ export default function FailingRateChartVertical(data,options) {
 	    	})
 	    }
     	
-    	console.log(extents);
+    	//console.log(extents);
     	extents=[0,0.5]
 
     	let xscale=d3_scaleLinear().domain(extents).rangeRound([0,WIDTH-(margins.left+margins.right)]);
@@ -155,13 +155,13 @@ export default function FailingRateChartVertical(data,options) {
 			    			.attr("transform",(d,i)=>{
 			    				let x=0,//xscale(+d.key),
 			    					y=yscale(i)
-			    				//console.log(d,x,y)
+			    				////console.log(d,x,y)
 			    				return `translate(${x},${y})`;
 			    			})
 			    			/*.on("mouseenter",function(d){
 			    				highlightLAD(d.value.name);
 			    				if(options.mouseEnterCallback) {
-			    					console.log(d)
+			    					//console.log(d)
 			    					options.mouseEnterCallback.call(this,d.value.name)
 			    				}
 			    			})*/

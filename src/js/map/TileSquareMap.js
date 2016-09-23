@@ -34,7 +34,7 @@ import Tooltip from '../components/Tooltip'
 
 export default function TileSquareMap(data,options) {
 
-	console.log("TileSquareMap",data,options.fsaData)
+	//console.log("TileSquareMap",data,options.fsaData)
 
 	/*let colors={
 			"london":"#efd255",
@@ -123,7 +123,7 @@ export default function TileSquareMap(data,options) {
 		y:extent(data,d=>d.y)
 	}
 
-	console.log("EXTENTS",extents)
+	//console.log("EXTENTS",extents)
 
 	buildVisual();
 
@@ -167,7 +167,7 @@ export default function TileSquareMap(data,options) {
 		square_side=round(square_side/2)*2;
 		//WIDTH=extents.x[1]*square_side+margins.right+margins.left;
 		HEIGHT=(extents.y[1]-extents.y[0])*square_side+(margins.top+margins.bottom);
-		//console.log("EXTENTS",extents)
+		////console.log("EXTENTS",extents)
 		if(HEIGHT>600) {
 			HEIGHT=600;
 			square_side=round((HEIGHT-(margins.top+margins.bottom))/(extents.y[1]-extents.y[0]));
@@ -179,7 +179,7 @@ export default function TileSquareMap(data,options) {
 			//alert("W:"+WIDTH+","+HEIGHT+","+square_side)
 		}
 
-		console.log("W",WIDTH,"H",HEIGHT,"S",square_side)
+		//console.log("W",WIDTH,"H",HEIGHT,"S",square_side)
 
 		WIDTH+=square_side;
 		HEIGHT+=square_side;
@@ -292,7 +292,7 @@ export default function TileSquareMap(data,options) {
     				if(!d.index) {
     					return "#fff";
     				}
-    				//console.log(d)
+    				////console.log(d)
     				return fillThreshold(d.info.count[options.indicator].rateFail)
     			})
 
@@ -387,7 +387,10 @@ export default function TileSquareMap(data,options) {
 					height:legend_height
 				})
 				.attr("width",(d,i)=>{
+					//console.log(d)
 					if(d<=0.5) {
+						if(!buckets[i+1])
+							return 0;
 						return (buckets[i+1]-d)*legend_width;
 					} else {
 						return (1-d)*legend_width;
@@ -451,40 +454,50 @@ export default function TileSquareMap(data,options) {
 	}
 
 	function highlightLAD(name,onlyname=true) {
-		//console.log(name,data)
+		////console.log(name,data)
     	//lad.classed("highlight",r=>r.name===name)
 
     	let _lad=data.filter(d=>(d.name===name))[0]
 
-    	console.log(_lad)
+    	//console.log(_lad)
+    	/*if(!_lad || !_lad.info) {
+    		console.log(_lad);
+    	}*/
+    	try {
 
-    	hover_square
-    		.attr("transform",`translate(${_lad.position.x},${_lad.position.y})`)
-    		.style("fill",fillThreshold(_lad.info.count[options.indicator].rateFail))
 
-    	tooltip.show([
-				{
-					id:"t_lad_name",
-					value:_lad.name
-				},
-				{
-					id:"t_lad_failrate",
-					value: d3_format(",.1%")(_lad.info.count[options.indicator].rateFail)
-				},
-				{
-					id:"t_lad_sum",
-					value: _lad.info.count[options.indicator].sum
-				},
-				{
-					id:"t_lad_sumfail",
-					value: _lad.info.count[options.indicator].sumFail
-				}
-			],
-			_lad.position.x+square_side/2+2,
-			_lad.position.y-square_side/2,
-			null,
-			onlyname
-		);
+	    	hover_square
+	    		.attr("transform",`translate(${_lad.position.x},${_lad.position.y})`)
+	    		.style("fill",fillThreshold(_lad.info.count[options.indicator].rateFail))
+
+	    	tooltip.show([
+					{
+						id:"t_lad_name",
+						value:_lad.name
+					},
+					{
+						id:"t_lad_failrate",
+						value: d3_format(",.1%")(_lad.info.count[options.indicator].rateFail)
+					},
+					{
+						id:"t_lad_sum",
+						value: _lad.info.count[options.indicator].sum
+					},
+					{
+						id:"t_lad_sumfail",
+						value: _lad.info.count[options.indicator].sumFail
+					}
+				],
+				_lad.position.x+square_side/2+2,
+				_lad.position.y-square_side/2,
+				null,
+				onlyname
+			);
+
+		} catch(e) {
+			console.log("can't find lad or info");
+			tooltip.hide();
+		}
 
     }
 

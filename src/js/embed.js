@@ -16,11 +16,11 @@ import FailingRateChart from './charts/FailingRateChartVertical';
 import TileSquareMap from './map/TileSquareMap';
 import LookupLocalAuthority from './components/LookupLocalAuthority';
 
-import {queue as d3_queue} from 'd3-queue';
+//import {queue as d3_queue} from 'd3-queue';
 import {select} from 'd3-selection';
 import {
-	csv,
-	json
+	csv//,
+	// json
 } from "d3-request"
 import {
 	values
@@ -60,11 +60,13 @@ window.init = function init(el, config) {
 
     })*/
 
-    d3_queue()
+    /*d3_queue()
 	    .defer(csv, config.assetPath+"/assets/data/grid.csv")
-	    .defer(csv, config.assetPath+"/assets/data/centroids.csv")
-	    .defer(json, config.assetPath+"/assets/data/lads_info.json")
-	    .await((err, grid, centroids,lads_info)=>{
+	    //.defer(csv, config.assetPath+"/assets/data/centroids.csv")
+	    //.defer(json, config.assetPath+"/assets/data/lads_info.json")
+	    //.await((err, grid, centroids,lads_info)=>{
+	    .await((err, grid)=>{*/
+	csv(config.assetPath+"/assets/data/grid.csv",grid=>{
 	    	//console.log(grid)
 
 	    	let lads=values(lads_info);
@@ -100,22 +102,22 @@ window.init = function init(el, config) {
 
 	    	return;*/
 	    	let local_authorities=grid.map(d=>{
-	    		let lad=centroids.filter(l=>{
-	    			return d.id.toLowerCase() === l.id.replace(/\s/gi,"_").toLowerCase();
-	    		})[0]
-	    		if(!lad) {
-	    			//console.log("can't find",d.name)
-	    		}
+	    		// let lad=centroids.filter(l=>{
+	    		// 	return d.id.toLowerCase() === l.id.replace(/\s/gi,"_").toLowerCase();
+	    		// })[0]
+	    		// if(!lad) {
+	    		// 	//console.log("can't find",d.name)
+	    		// }
 	    		////console.log(lad,d)
 	    		let region={}
-	    		if(!lads_info[lad.id]) {
-	    			if(lad.id[0]==="S") {
+	    		if(!lads_info[d.id]) {
+	    			if(d.id[0]==="S") {
 		    			region.code="S",
 		    			region.name="Scotland"
 		    		}
 	    		} else {
-	    			region.code=lads_info[lad.id].region_code;
-	    			region.name=lads_info[lad.id].region_name;
+	    			region.code=lads_info[d.id].region_code;
+	    			region.name=lads_info[d.id].region_name;
 	    		}
 
 
@@ -131,11 +133,12 @@ window.init = function init(el, config) {
 	    		let n_x=Math.floor(x/30);
 	    		n_x=n_x>18?n_x:n_x+1
 	    		n_x=n_x<7?n_x+1:n_x*/
-
+	    		let index=fsaMap[d.id];
+	    		//console.log(d.id,index,fsaData.lads[index])
 	    		return {
-	    			id:lad.id,
-	    			index:fsaMap[lad.id],
-	    			name:lad.name,
+	    			id:d.id,
+	    			index:index,
+	    			name:index?fsaData.lads[index].name:"",
 	    			region_code:region.code,
 	    			region_name:region.name,
 	    			x:+d.x,
