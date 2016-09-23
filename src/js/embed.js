@@ -66,6 +66,7 @@ window.init = function init(el, config) {
 	    //.defer(json, config.assetPath+"/assets/data/lads_info.json")
 	    //.await((err, grid, centroids,lads_info)=>{
 	    .await((err, grid)=>{*/
+
 	csv(config.assetPath+"/assets/data/grid.csv",grid=>{
 	    	//console.log(grid)
 
@@ -133,12 +134,16 @@ window.init = function init(el, config) {
 	    		let n_x=Math.floor(x/30);
 	    		n_x=n_x>18?n_x:n_x+1
 	    		n_x=n_x<7?n_x+1:n_x*/
-	    		let index=fsaMap[d.id];
+	    		let index=fsaMap[d.id],
+	    			name=index?fsaData.lads[index].name:"";
 	    		//console.log(d.id,index,fsaData.lads[index])
+	    		if(!index) {
+	    			name=lads_info[d.id].la_name;
+	    		}
 	    		return {
 	    			id:d.id,
 	    			index:index,
-	    			name:index?fsaData.lads[index].name:"",
+	    			name:name,
 	    			region_code:region.code,
 	    			region_name:region.name,
 	    			x:+d.x,
@@ -163,7 +168,7 @@ window.init = function init(el, config) {
 	    	// 	    		return d.id+","+d.x+","+d.y
 	    	// 	    	})))
 
-
+	    	let charts;
 	    	let lookup;
 	    	let map=new TileSquareMap(local_authorities,{
 	    		container:el.querySelector(".map"),
@@ -179,8 +184,10 @@ window.init = function init(el, config) {
 		    		values(charts).forEach(c=>c.highlightLAD(name))
 		    	},*/
 		    	mouseClickCallback:(name) => {
-		    		values(charts).forEach(c=>c.highlightLAD(name))
+		    		//console.log("--->",name)
 		    		lookup.setItem(name);
+		    		values(charts).forEach(c=>c.highlightLAD(name))
+		    		
 		    	},
 		    	labels:[
 		    		{
@@ -211,8 +218,8 @@ window.init = function init(el, config) {
 		    		},
 		    		{
 		    			id:"E08000035", //Leeds
-		    			dx:0,
-		    			align:"start"
+		    			dx:-1,
+		    			align:"middle"
 		    		},
 		    		{
 		    			id:"S12000036", //Edinburgh
@@ -236,8 +243,6 @@ window.init = function init(el, config) {
 		    			align:"middle",
 		    			label:"London"
 		    		}
-		    		
-
 		    	]
 	    	})
 	    	
@@ -254,26 +259,38 @@ window.init = function init(el, config) {
     			"N":"Northern Ireland"
 	    	}
 	    	let texts={};
-	    	local_authorities.filter(lad=>(typeof lad.info != 'undefined')).forEach(lad=>{
+	    	//local_authorities.filter(lad=>(typeof lad.info != 'undefined')).forEach(lad=>{
+	    	local_authorities.forEach(lad=>{
 	    		//console.log(lad)
-	    		let rate=lad.info.count["all"].rateFail,
-	    			country=lad.id.slice(0,1),
-	    			diff=+rate*100 - avgs[country]*100;
-	    		texts[lad.name]={
-	    			name:lad.name,
-	    			id:lad.id,
-	    			index:lad.index,
-	    			country:country,
-	    			rate:d3_format(",.1%")(+rate),
-	    			diff:d3_format(",.1f")(diff),
-	    			how:diff>0?"above":"below",
-	    			n:lad.info.count["all"].sumFail,
-	    			all:lad.info.count["all"].sum
-	    		}
-	    		//texts[lad.name].html=`With a ${texts[lad.name].rate} failing rate overall, <b>${lad.name}</b> is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
-	    		texts[lad.name].html=`${texts[lad.name].n} out of ${texts[lad.name].all} establishments failed the FSA hygiene inspection in <b>${lad.name}</b>. That is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;	
-	    	})
+	    		if(typeof lad.info != 'undefined') {
 
+		    		let rate=lad.info.count["all"].rateFail,
+		    			country=lad.id.slice(0,1),
+		    			diff=+rate*100 - avgs[country]*100;
+		    		texts[lad.name]={
+		    			name:lad.name,
+		    			id:lad.id,
+		    			index:lad.index,
+		    			country:country,
+		    			rate:d3_format(",.1%")(+rate),
+		    			diff:d3_format(",.1f")(diff),
+		    			how:diff>0?"above":"below",
+		    			n:lad.info.count["all"].sumFail,
+		    			all:lad.info.count["all"].sum
+		    		}
+		    		//texts[lad.name].html=`With a ${texts[lad.name].rate} failing rate overall, <b>${lad.name}</b> is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;
+		    		texts[lad.name].html=`${texts[lad.name].n} out of ${texts[lad.name].all} establishments failed the FSA hygiene inspection in <b>${lad.name}</b>. That is ${Math.abs(texts[lad.name].diff)} percentage points ${texts[lad.name].how} the average in ${countries[country]}.`;	
+		    	} else {
+		    		//console.log("!!!",lad)
+		    		texts[lad.name]={
+		    			name:lad.name,
+		    			id:lad.id,
+		    			country:lad.id.slice(0,1),
+		    			html:`Data for ${lad.name} not available`
+		    		}
+		    	}
+	    	})
+	    	
 	    	//console.log(texts);
 
 	    	lookup=new LookupLocalAuthority({
@@ -288,30 +305,43 @@ window.init = function init(el, config) {
 	    			}
 	    			//console.log("SHOWING",name)
 	    			values(charts).forEach(c=>c.highlightLAD(name))
+	    			
 	    			map.highlightLAD(name);
+
 
 	    			select(".summary")
 	    				.html(texts[name].html)
 
 	    			select(".lookup-result")
-	    				.classed("visible",true)
+		    				.classed("visible",true)
 
-	    			select(".link-to-fsa")
-	    				.classed("visible",true)
-	    				.select("a")
-		    				.attr("href",d=>{
-		    					return `http://ratings.food.gov.uk/authority-search/en-GB/%5E/%5E/Relevance/0/${texts[name].index}/%5E/0/1/10`
-		    				})
-		    				.text(d=>{
-		    					return `Go to FSA to see all listings for ${name}`;
-		    				})
+	    			if(texts[name].index) {
+	    				
+	    				select(".lookup-result")
+		    				.classed("no-data",false)
+
+		    			select(".link-to-fsa")
+		    				.classed("visible",true)
+		    				.select("a")
+			    				.attr("href",d=>{
+			    					return `http://ratings.food.gov.uk/authority-search/en-GB/%5E/%5E/Relevance/0/${texts[name].index}/%5E/0/1/10`
+			    				})
+			    				.text(d=>{
+			    					return `Go to FSA to see all listings for ${name}`;
+			    				})	
+	    			} else {
+	    				select(".lookup-result")
+		    				.classed("no-data",true)
+	    			}
+
+	    			
 	    		}
 	    	})
 
 
 
 
-	    	let charts={
+	    	charts={
 		    	"all":new FailingRateChart(fsaData,{
 				    	container:el.querySelector("#c1.failingrate-chart"),
 				    	indicator:"all",
@@ -362,6 +392,10 @@ window.init = function init(el, config) {
 				    	})
 				    })
 		    };
+
+
+		    select(".note")
+		    	.classed("hidden",false)
 
 
 	    });

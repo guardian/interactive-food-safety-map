@@ -454,11 +454,11 @@ export default function TileSquareMap(data,options) {
 	}
 
 	function highlightLAD(name,onlyname=true) {
-		////console.log(name,data)
+		//console.log(name,data)
     	//lad.classed("highlight",r=>r.name===name)
 
     	let _lad=data.filter(d=>(d.name===name))[0]
-
+    	//console.log(_lad)
     	//console.log(_lad)
     	/*if(!_lad || !_lad.info) {
     		console.log(_lad);
@@ -468,7 +468,7 @@ export default function TileSquareMap(data,options) {
 
 	    	hover_square
 	    		.attr("transform",`translate(${_lad.position.x},${_lad.position.y})`)
-	    		.style("fill",fillThreshold(_lad.info.count[options.indicator].rateFail))
+	    		.style("fill",_lad.info?fillThreshold(_lad.info.count[options.indicator].rateFail):"#fff")
 
 	    	tooltip.show([
 					{
@@ -477,15 +477,15 @@ export default function TileSquareMap(data,options) {
 					},
 					{
 						id:"t_lad_failrate",
-						value: d3_format(",.1%")(_lad.info.count[options.indicator].rateFail)
+						value: _lad.info?d3_format(",.1%")(_lad.info.count[options.indicator].rateFail):0
 					},
 					{
 						id:"t_lad_sum",
-						value: _lad.info.count[options.indicator].sum
+						value: _lad.info?_lad.info.count[options.indicator].sum:0
 					},
 					{
 						id:"t_lad_sumfail",
-						value: _lad.info.count[options.indicator].sumFail
+						value: _lad.info?_lad.info.count[options.indicator].sumFail:0
 					}
 				],
 				_lad.position.x+square_side/2+2,

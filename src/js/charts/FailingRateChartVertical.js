@@ -146,25 +146,25 @@ export default function FailingRateChartVertical(data,options) {
     						"transform":`translate(${margins.left},${margins.top})`
     					});
     	rate=rates
-			    		.selectAll("g.rate")
-			    		//.data(nested_data)
-			    		.data(lads)
-			    		.enter()
-			    		.append("g")
-			    			.attr("class","rate")
-			    			.attr("transform",(d,i)=>{
-			    				let x=0,//xscale(+d.key),
-			    					y=yscale(i)
-			    				////console.log(d,x,y)
-			    				return `translate(${x},${y})`;
-			    			})
-			    			/*.on("mouseenter",function(d){
-			    				highlightLAD(d.value.name);
-			    				if(options.mouseEnterCallback) {
-			    					//console.log(d)
-			    					options.mouseEnterCallback.call(this,d.value.name)
-			    				}
-			    			})*/
+	    		.selectAll("g.rate")
+	    		//.data(nested_data)
+	    		.data(lads)
+	    		.enter()
+	    		.append("g")
+	    			.attr("class","rate")
+	    			.attr("transform",(d,i)=>{
+	    				let x=0,//xscale(+d.key),
+	    					y=yscale(i)
+	    				////console.log(d,x,y)
+	    				return `translate(${x},${y})`;
+	    			})
+	    			.on("mouseenter",function(d){
+	    				/*highlightLAD(d.value.name);
+	    				if(options.mouseEnterCallback) {
+	    					//console.log(d)
+	    					options.mouseEnterCallback.call(this,d.value.name)
+	    				}*/
+	    			})
 		let h=(HEIGHT/lads.length);
 		h=1;
 		rate.append("rect")
@@ -311,7 +311,8 @@ export default function FailingRateChartVertical(data,options) {
     		.filter(r=>(r.value.name===name))
     		.classed("show",true)
     		.each(function(d){
-    			this.parentElement.appendChild(this);		
+    			//console.log(this,this.parentElement,this.parentNode)
+    			this.parentNode.appendChild(this);		
     		})
 
     	

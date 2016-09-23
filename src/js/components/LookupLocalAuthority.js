@@ -29,57 +29,61 @@ export default function LookupLocalAuthority(options) {
 	    	//console.log("!!!!")
 	        //bean.fire(this.els.form, 'submit');
 	    })
-
+    function submit() {
+    	let inputboxVal = input.value;
+        if (!inputboxVal) {
+        	return;
+        } else if (list.indexOf(inputboxVal) !== -1) {
+            //console.log("SHOW",inputboxVal);
+            if(options.submitCallback) {
+            	options.submitCallback(inputboxVal,"name")
+            }
+        }
+        else { // not a constituency
+        	let sanitizedPostcode = inputboxVal.toUpperCase().replace(/\s/g, '');
+			let postcodeRegex = /^([A-Z][A-Z0-9]?[A-Z0-9]?[A-Z0-9]?[0-9][A-Z0-9]{2})$/i;
+			if (postcodeRegex.test(sanitizedPostcode)) {
+				let url = `https://interactive.guim.co.uk/2016/may/ukelex/postcodes/${sanitizedPostcode}.json`;
+				//return json(url,callback());
+				json(url,(data)=>{
+					//console.log("YES!",data)
+					if(!data) {
+						//console.log("BOOOOOH")
+						showError("Invalid postcode");
+						return;
+					}
+					//console.log(inputboxVal,"->",data.adminDistrictCode)
+					if(options.submitCallback) {
+	                	options.submitCallback(data.adminDistrictCode,"id")
+	                }
+				})
+			} else {
+				//console.log(`${sanitizedPostcode} (length ${sanitizedPostcode.length})`)
+				//console.log("WROOONG");
+				showError("Invalid postcode");
+				//return new Promise((resolve, reject) => reject('Invalid postcode'));
+			}
+        }
+    }
 	select(form)
 		.on("submit",(d)=>{
 
 			event.preventDefault();
 
-			//console.log("SUBMIT")
-
-			let inputboxVal = input.value;
-            if (!inputboxVal) {
-            	return;
-            } else if (list.indexOf(inputboxVal) !== -1) {
-                //console.log("SHOW",inputboxVal);
-                if(options.submitCallback) {
-                	options.submitCallback(inputboxVal,"name")
-                }
-            }
-            else { // not a constituency
-            	let sanitizedPostcode = inputboxVal.toUpperCase().replace(/\s/g, '');
-				let postcodeRegex = /^([A-Z][A-Z0-9]?[A-Z0-9]?[A-Z0-9]?[0-9][A-Z0-9]{2})$/i;
-				if (postcodeRegex.test(sanitizedPostcode)) {
-					let url = `https://interactive.guim.co.uk/2016/may/ukelex/postcodes/${sanitizedPostcode}.json`;
-					//return json(url,callback());
-					json(url,(data)=>{
-						//console.log("YES!",data)
-						if(!data) {
-							console.log("BOOOOOH")
-							showError("Invalid postcode");
-							return;
-						}
-						//console.log(inputboxVal,"->",data.adminDistrictCode)
-						if(options.submitCallback) {
-		                	options.submitCallback(data.adminDistrictCode,"id")
-		                }
-					})
-				} else {
-					//console.log(`${sanitizedPostcode} (length ${sanitizedPostcode.length})`)
-					//console.log("WROOONG");
-					showError("Invalid postcode");
-					//return new Promise((resolve, reject) => reject('Invalid postcode'));
-				}
-            }
+			//console.log("SUBMIT",d)
+			submit();
+			
 		})
 	select(btn)
 		.on("click",()=>{
-			select(form).dispatch("submit")
+			submit();
+			//select(form).dispatch("submit")
 		})
 
 	this.setItem=(name)=>{
 		input.value=name;
-		select(form).dispatch("submit");
+		submit();
+		//select(form).dispatch("submit");
 	}
 
 	let errorTimeout;

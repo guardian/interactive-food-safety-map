@@ -2,7 +2,7 @@
     <div class="map-col">
         <div class="map">
             <div class="grid-map"></div>
-            <span class="note">Source: Food Standards Agency. Data as of 19 September 2016</span>
+            <span class="note hidden">Source: Food Standards Agency. Data as of 19 September 2016</span>
         </div>
     </div>
     <div class="lookup-charts-col">
@@ -10,7 +10,6 @@
           <div class="lookup-s">Your area's food hygiene fail rate</div>
             <form class="hp-madlib hp-location__form">
                 <button class="hp-madlib__input__btn" type="button" tabindex="2" data-focus="1">
-                    <svg class="icon-clear" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30"><path fill="currentColor" d="M21 9.8l-.8-.8-5.2 4.8-5.2-4.8-.8.8 4.8 5.2-4.8 5.2.8.8 5.2-4.8 5.2 4.8.8-.8-4.8-5.2 4.8-5.2"/></svg>
                     <svg class="icon-submit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30"><path fill="currentColor" d="M22.82 14.63l-7.62-7.63-.72.7 5.5 6.57h-13.98v1.46h13.97l-5.5 6.56.73.7 7.62-7.63v-.74"/></svg>
                 </button>
                 <div class="lookup-error">Invalid postcode</div>
@@ -23,10 +22,12 @@
                 <div class="link-to-fsa">
                     <a href="#" target="_blank" title="Open on FSA">Go to FSA to see all listings in </a>
                 </div>
-                <h3>How it compares to other areas</h3>
-                <div id="c1" class="chart failingrate-chart"></div>
-                <div id="c2" class="chart failingrate-chart"></div>
-                <div id="c3" class="chart failingrate-chart"></div>
+                <div class="charts">
+                    <h3>How it compares to other areas</h3>
+                    <div id="c1" class="chart failingrate-chart"></div>
+                    <div id="c2" class="chart failingrate-chart"></div>
+                    <div id="c3" class="chart failingrate-chart"></div>
+                </div>
 
             </div>
         </div>

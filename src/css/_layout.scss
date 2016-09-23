@@ -29,6 +29,9 @@
 		  color:#bdbdbd;
 		  margin-bottom:15px;
 		  display: block;
+		  &:hidden {
+		  	visibility: hidden;
+		  }
 	}
 
 }

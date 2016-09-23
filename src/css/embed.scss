@@ -56,6 +56,13 @@ body {
         margin-bottom:10px;
         margin-top:15px;
     }
+
+    &.no-data {
+        .link-to-fsa,
+        .charts {
+            display: none;
+        }
+    }
 }
 .link-to-fsa {
     visibility: hidden;

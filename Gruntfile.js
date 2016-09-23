@@ -11,7 +11,8 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['src/js/**/*'],
-                tasks: ['shell:interactive', 'shell:embed','shell:scores','shell:failcharts'],
+                tasks: ['shell:embed'],
+                //tasks: ['shell:interactive', 'shell:embed','shell:scores','shell:failcharts'],
             },
             css: {
                 files: ['src/css/**/*'],
@@ -152,8 +153,8 @@ module.exports = function(grunt) {
                         expand: true, cwd: 'build/',
                         src: ['main.js', 'main.css', 'main.js.map', 'main.css.map',
                             'embed.js', 'embed.css', 'embed.js.map', 'embed.css.map',
-                            'scores.js', 'scores.css', 'scores.js.map', 'scores.css.map',
-                            'failcharts.js', 'failcharts.css', 'failcharts.js.map', 'failcharts.css.map',
+                            //'scores.js', 'scores.css', 'scores.js.map', 'scores.css.map',
+                            //'failcharts.js', 'failcharts.css', 'failcharts.js.map', 'failcharts.css.map',
                             'assets/**/*'],
                         dest: 'deploy/<%= visuals.timestamp %>/<%= visuals.timestamp %>'
                     }
@@ -289,15 +290,16 @@ module.exports = function(grunt) {
         grunt.log.write('\nSCORES URL: '['green'].bold)
         grunt.log.writeln(grunt.template.process('<%= visuals.s3.domain %><%= visuals.s3.path %>/embed/scores.html'))
 
-        grunt.log.write('\FAILCHARTS URL: '['green'].bold)
-        grunt.log.writeln(grunt.template.process('<%= visuals.s3.domain %><%= visuals.s3.path %>/embed/failcharts.html'))
+        //grunt.log.write('\FAILCHARTS URL: '['green'].bold)
+        //grunt.log.writeln(grunt.template.process('<%= visuals.s3.domain %><%= visuals.s3.path %>/embed/failcharts.html'))
     })
 
     grunt.registerTask('scores', ['shell:scores', 'template:scores', 'sass:scores']);
     grunt.registerTask('failcharts', ['shell:failcharts', 'template:failcharts', 'sass:failcharts']);
     grunt.registerTask('embed', ['shell:embed', 'template:embed', 'sass:embed']);
     grunt.registerTask('interactive', ['shell:interactive', 'template:bootjs', 'sass:interactive']);
-    grunt.registerTask('all', ['interactive', 'embed', 'scores', 'copy:assets'])
+    //grunt.registerTask('all', ['interactive', 'embed',  'copy:assets'])
+    grunt.registerTask('all', ['embed',  'copy:assets'])
     grunt.registerTask('default', ['clean', 'copy:harness', 'all', 'connect', 'watch']);
     grunt.registerTask('build', ['clean', 'all']);
     grunt.registerTask('deploy', ['loadDeployConfig', 'prompt:visuals', 'build', 'copy:deploy', 'aws_s3', 'boot_url']);
