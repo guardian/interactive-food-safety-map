@@ -38,22 +38,14 @@ export default function FailingRateChartVertical(data,options) {
 	let WIDTH,
 		HEIGHT;
 
-	let buckets=[0, 0.05, 0.1, 0.15, 0.2, 0.27];
-
-	buckets=[0,0.1,0.2,0.3,0.4,0.5]
-	buckets=[0.05,0.1,0.15,0.2,0.25,0.251]
-	buckets=[0.05,0.1,0.15,0.2,0.5,0.51]
+	let buckets=[0.05,0.1,0.15,0.2,0.5,0.51]
 
 	let fillThreshold = d3_scaleThreshold()
         .domain(buckets)
-        //.range(["#eaeaea",'#f1eef6','#d7b5d8','#df65b0','#dd1c77','#980043'])
-        //.range(["#f6f6f6","#eaeaea","#f9f1c5","#ffe900","#ffce00"])
         .range(["#f6f6f6","#eaeaea","#ffd400","#ffa300","#ff5b3a","#cc2b12"])
 
-	//console.log(data.lads)
-
 	let lads=d3_entries(data.lads).map(d=>{
-										d.key=d.value.count[options.indicator].rateFail;
+										d.key=d.value.c[options.indicator].r;
 								    	return d;
 								    })
 
@@ -64,28 +56,6 @@ export default function FailingRateChartVertical(data,options) {
     })
 
 	let rate;
-
-    /*let nested_data=d3_nest()
-        .key(d=>{
-            if(d.value.name==="Highland" || d.value.name==="Newham") {
-                //console.log(d)    
-            }
-            
-            return d.value.count.restaurant.rateFail
-        })
-        .rollup(leaves=>{
-        	return {
-        		n:leaves.length,
-        		constituencies:leaves.map(d=>d.value.name)
-        	}
-        })
-        .entries(lads)
-
-    nested_data=nested_data.sort((a,b)=>{
-    	return +a.key - +b.key;
-    })
-
-    //console.log(nested_data);*/
 
     buildVisual();
 
@@ -127,8 +97,7 @@ export default function FailingRateChartVertical(data,options) {
 	    		return +d.key;
 	    	})
 	    }
-    	
-    	//console.log(extents);
+
     	extents=[0,0.5]
 
     	let xscale=d3_scaleLinear().domain(extents).rangeRound([0,WIDTH-(margins.left+margins.right)]);
@@ -180,24 +149,6 @@ export default function FailingRateChartVertical(data,options) {
 					return fillThreshold(+d.key)
 				})
 				
-
-		// rates.append("circle")
-		// 		.attrs({
-		// 			cx:0,
-		// 			cy:0,
-		// 			r:1
-		// 		})
-				// .style("fill",d=>{
-				// 	return fillThreshold(+d.key)
-				// })
-
-		/*rate.append("line")
-				.attrs({
-					x1:-w/2,
-					x2:w/2,
-					y1:0,
-					y2:0
-				})*/
 
 		rate.append("text")
 				.attr("class","bg")
@@ -294,21 +245,13 @@ export default function FailingRateChartVertical(data,options) {
 					y2:yscale.range()[1]
 				})
 
-		/*mean_bar
-			.append("text")
-				.attrs({
-					x:xscale.range()[1],
-					y:-2,
-					"class":"avg"
-				})
-				.text(d=>("National avg "+d3_format(".2%")(d)))*/
-
     }
 
     function highlightLAD(name) {
+    	//console.log(name)
     	rate
     		.classed("show",false)
-    		.filter(r=>(r.value.name===name))
+    		.filter(r=>(r.value.n===name))
     		.classed("show",true)
     		.each(function(d){
     			//console.log(this,this.parentElement,this.parentNode)

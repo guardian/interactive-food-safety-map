@@ -244,15 +244,8 @@ export default function TileSquareMap(data,options) {
     			.append("g")
     				.attr("id",d=>d.id)
     				.attr("rel",d=>d.name)
-    				//.attr("data-fail",d=>(d.index?d.info.count[options.indicator].rateFail:"none"))
     				.attr("data-grid",d=>(d.x+"x"+d.y))
-    				//.attr("data-coords",d=>(d.o_x+"x"+d.o_y))
-    				//.attr("data-region",d=>(`${d.region_name?d.region_name.toLowerCase().replace(/\s/gi,"-"):"none"}`))
     				.attr("class","lad")
-    				// .classed("b-t",d=>d.borders.top)
-    				// .classed("b-b",d=>d.borders.bottom)
-    				// .classed("b-l",d=>d.borders.left)
-    				// .classed("b-r",d=>d.borders.right)
     				.attr("transform",d=>{
     					let x=xscale(d.x),
     						y=yscale(d.y);
@@ -293,7 +286,7 @@ export default function TileSquareMap(data,options) {
     					return "#fff";
     				}
     				////console.log(d)
-    				return fillThreshold(d.info.count[options.indicator].rateFail)
+    				return fillThreshold(d.info.c[options.indicator].r)
     			})
 
     	
@@ -468,7 +461,7 @@ export default function TileSquareMap(data,options) {
 
 	    	hover_square
 	    		.attr("transform",`translate(${_lad.position.x},${_lad.position.y})`)
-	    		.style("fill",_lad.info?fillThreshold(_lad.info.count[options.indicator].rateFail):"#fff")
+	    		.style("fill",_lad.info?fillThreshold(_lad.info.c[options.indicator].r):"#fff")
 
 	    	tooltip.show([
 					{
@@ -477,15 +470,15 @@ export default function TileSquareMap(data,options) {
 					},
 					{
 						id:"t_lad_failrate",
-						value: _lad.info?d3_format(",.1%")(_lad.info.count[options.indicator].rateFail):0
+						value: _lad.info?d3_format(",.1%")(_lad.info.c[options.indicator].r):0
 					},
 					{
 						id:"t_lad_sum",
-						value: _lad.info?_lad.info.count[options.indicator].sum:0
+						value: _lad.info?_lad.info.c[options.indicator].s:0
 					},
 					{
 						id:"t_lad_sumfail",
-						value: _lad.info?_lad.info.count[options.indicator].sumFail:0
+						value: _lad.info?_lad.info.c[options.indicator].f:0
 					}
 				],
 				_lad.position.x+square_side/2+2,
